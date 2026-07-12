@@ -319,3 +319,177 @@ body{
     color:#555;
 
 }
+
+/* ==========================
+   FEATURED PLAYERS
+========================== */
+
+.featured-players{
+    padding:80px 8%;
+    background:#f7f9fc;
+}
+
+.featured-players h2{
+    text-align:center;
+    font-size:42px;
+    color:#00695c;
+    margin-bottom:50px;
+}
+
+.player-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.player-card{
+
+    background:white;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+    text-align:center;
+
+}
+
+.player-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.player-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+.player-card h3{
+
+    margin-top:20px;
+
+    color:#00695c;
+
+}
+
+.player-card p{
+
+    margin:8px 0;
+
+    color:#555;
+
+}
+
+.btn-profile{
+
+    display:inline-block;
+
+    margin:20px 0;
+
+    padding:10px 24px;
+
+    background:#00695c;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+.btn-profile:hover{
+
+    background:#009688;
+
+}
+
+/*==========================
+PLAYER HERO
+==========================*/
+
+.player-hero{
+
+    padding:80px 10%;
+
+    background:#f5f7fa;
+
+}
+
+.player-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+}
+
+.player-image img{
+
+    width:320px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.player-info{
+
+    flex:1;
+
+}
+
+.player-info h1{
+
+    font-size:52px;
+
+    color:#00695c;
+
+    margin-bottom:15px;
+
+}
+
+.player-info p{
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+    line-height:1.7;
+
+}
+
+.country{
+
+    font-weight:bold;
+
+}
+
+.role{
+
+    color:#00A8E8;
+
+    font-weight:bold;
+
+}
