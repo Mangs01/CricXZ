@@ -493,3 +493,199 @@ PLAYER HERO
     font-weight:bold;
 
 }
+
+/*==========================
+CAREER STATS
+==========================*/
+
+.career-stats{
+
+    padding:80px 10%;
+
+    background:white;
+
+}
+
+.career-stats h2{
+
+    text-align:center;
+
+    color:#00695c;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+
+}
+
+.career-stats table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.career-stats th{
+
+    background:#00695c;
+
+    color:white;
+
+    padding:18px;
+
+}
+
+.career-stats td{
+
+    padding:18px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+.career-stats tr:hover{
+
+    background:#f7f7f7;
+
+}
+
+/* Career Highlights */
+
+.career-highlights{
+
+padding:80px 0;
+
+background:#fff;
+
+}
+
+.career-highlights h2{
+
+text-align:center;
+
+font-size:42px;
+
+color:#00695c;
+
+margin-bottom:50px;
+
+}
+
+.highlights-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.highlight-box{
+
+background:#f7f7f7;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.highlight-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.highlight-box h3{
+
+margin-bottom:15px;
+
+color:#00695c;
+
+}
+
+.highlight-box p{
+
+line-height:1.8;
+
+color:#555;
+
+}
+
+.achievements{
+
+padding:80px 0;
+
+background:#ffffff;
+
+}
+
+.achievements h2{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:50px;
+
+color:#00695c;
+
+}
+
+.achievement-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+}
+
+.achievement-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:15px;
+
+text-align:center;
+
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.achievement-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.achievement-card h3{
+
+color:#009688;
+
+margin-bottom:15px;
+
+font-size:24px;
+
+}
+
+.achievement-card p{
+
+color:#555;
+
+}
