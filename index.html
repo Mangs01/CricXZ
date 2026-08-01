@@ -12,35 +12,23 @@
 
 <body>
 
-    <div class="hero">
-
-    <div>
-
-        <h1>CRICXZ</h1>
-
-        <p>Everything Cricket. Fast. Smart. Reliable.</p>
-
-    </div>
-
-</div>
+<!-- Navbar -->
 
 <nav class="navbar">
 
     <div class="logo">
-        CRICXZ
+        <h1>CRICXZ</h1>
     </div>
 
     <ul class="menu">
 
-        <li><a href="#">Home</a></li>
+        <li><a href="index.html">Home</a></li>
 
-        <li><a href="#">News</a></li>
+        <li><a href="pages/news.html">News</a></li>
 
-        <li><a href="#">Live Scores</a></li>
+        <li><a href="pages/live-scores.html">Live Scores</a></li>
 
         <li><a href="pages/players.html">Players</a></li>
-
-        
 
         <li><a href="pages/about.html">About</a></li>
 
@@ -49,6 +37,56 @@
     </ul>
 
 </nav>
+
+<!-- Hero -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>CRICXZ</h1>
+
+        <p>Everything Cricket. Fast. Smart. Reliable.</p>
+
+        <div class="hero-buttons">
+
+            <a href="pages/news.html" class="btn btn-primary">
+                Latest News
+            </a>
+
+            <a href="pages/live-scores.html" class="btn btn-secondary">
+                Live Scores
+            </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div class="stat-card">
+                <h3>500+</h3>
+                <p>News Articles</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>150+</h3>
+                <p>Player Profiles</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>100+</h3>
+                <p>Live Matches</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>24×7</h3>
+                <p>Updates</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <section class="latest-news">
 
@@ -146,6 +184,8 @@
 
 </section>
 
+<!-- Featured Players -->
+
 <section class="featured-players">
 
     <div class="container">
@@ -154,59 +194,99 @@
 
         <div class="player-grid">
 
+            <!-- Virat -->
+
             <div class="player-card">
 
                 <img src="assets/images/players/kohli.jpg" alt="Virat Kohli">
 
-                <h3>Virat Kohli</h3>
+                <div class="player-info">
 
-                <p>🇮🇳 India</p>
+                    <h3>Virat Kohli</h3>
 
-                <p>Batsman</p>
+                    <p>🇮🇳 India</p>
 
-                <a href="pages/virat.html" class="btn-profile">View Profile</a>
+                    <span class="player-role">
+                        Top Order Batter
+                    </span>
+
+                    <a href="pages/virat.html" class="player-btn">
+                        View Profile
+                    </a>
+
+                </div>
 
             </div>
+
+            <!-- Rohit -->
 
             <div class="player-card">
 
                 <img src="assets/images/players/rohit.jpg" alt="Rohit Sharma">
 
-                <h3>Rohit Sharma</h3>
+                <div class="player-info">
 
-                <p>🇮🇳 India</p>
+                    <h3>Rohit Sharma</h3>
 
-                <p>Batsman</p>
+                    <p>🇮🇳 India</p>
 
-                <a href="pages/players.html" class="btn-profile">View Profile</a>
+                    <span class="player-role">
+                        Opening Batter
+                    </span>
+
+                    <a href="pages/rohit.html" class="player-btn">
+                        View Profile
+                    </a>
+
+                </div>
 
             </div>
+
+            <!-- Bumrah -->
 
             <div class="player-card">
 
                 <img src="assets/images/players/bumrah.jpg" alt="Jasprit Bumrah">
 
-                <h3>Jasprit Bumrah</h3>
+                <div class="player-info">
 
-                <p>🇮🇳 India</p>
+                    <h3>Jasprit Bumrah</h3>
 
-                <p>Bowler</p>
+                    <p>🇮🇳 India</p>
 
-                <a href="pages/players.html" class="btn-profile">View Profile</a>
+                    <span class="player-role">
+                        Fast Bowler
+                    </span>
+
+                    <a href="pages/bumrah.html" class="player-btn">
+                        View Profile
+                    </a>
+
+                </div>
 
             </div>
+
+            <!-- Gill -->
 
             <div class="player-card">
 
                 <img src="assets/images/players/gill.jpg" alt="Shubman Gill">
 
-                <h3>Shubman Gill</h3>
+                <div class="player-info">
 
-                <p>🇮🇳 India</p>
+                    <h3>Shubman Gill</h3>
 
-                <p>Opening Batsman</p>
+                    <p>🇮🇳 India</p>
 
-                <a href="pages/players.html" class="btn-profile">View Profile</a>
+                    <span class="player-role">
+                        Opening Batter
+                    </span>
+
+                    <a href="pages/shubman.html" class="player-btn">
+                        View Profile
+                    </a>
+
+                </div>
 
             </div>
 
@@ -215,6 +295,68 @@
     </div>
 
 </section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div>
+
+            <h2 class="footer-logo">CRICXZ</h2>
+
+            <p>
+                CricXZ brings you the latest cricket news,
+                live scores, player profiles,
+                rankings and match updates from around the world.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="pages/news.html">News</a></li>
+
+                <li><a href="pages/live-scores.html">Live Scores</a></li>
+
+                <li><a href="pages/players.html">Players</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="#">IPL</a></li>
+
+                <li><a href="#">ICC</a></li>
+
+                <li><a href="#">ODI</a></li>
+
+                <li><a href="#">Test Cricket</a></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © 2026 CricXZ • All Rights Reserved.
+
+    </div>
+
+</footer>
 
 </body>
 

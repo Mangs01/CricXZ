@@ -1,0 +1,103 @@
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-hero{
+
+    text-align:center;
+
+    padding:120px 20px 70px;
+
+}
+
+.about-hero h1{
+
+    font-size:60px;
+
+    color:#006d66;
+
+    margin-bottom:15px;
+
+}
+
+.about-hero p{
+
+    font-size:24px;
+
+    color:#555;
+
+}
+
+.about-section{
+
+    width:85%;
+
+    margin:70px auto;
+
+    text-align:center;
+
+}
+
+.about-section h2{
+
+    font-size:40px;
+
+    color:#006d66;
+
+    margin-bottom:20px;
+
+}
+
+.about-section p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+
+.features{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.feature-box{
+
+    width:320px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.feature-box:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.feature-box h3{
+
+    color:#006d66;
+
+    margin-bottom:15px;
+
+}

@@ -1,0 +1,133 @@
+.live-hero{
+
+    padding-top: 140px;
+
+    padding-bottom: 60px;
+    
+    text-align: center;
+
+}
+
+.live-hero h1{
+
+    font-size:52px;
+
+    color:#00695c;
+
+    margin-bottom:20px;
+
+}
+
+.live-hero p{
+
+    font-size:22px;
+
+    color:#555;
+
+}
+
+
+
+.live-matches{
+
+    padding:20px 0 80px;
+
+}
+
+.live-matches .container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.match-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+
+
+.match-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.status{
+
+    font-weight:bold;
+
+}
+
+
+
+.live-text{
+
+    color:red;
+
+}
+
+
+
+.upcoming-text{
+
+    color:orange;
+
+}
+
+
+
+.finished-text{
+
+    color:green;
+
+}
+
+
+
+.score{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin:20px 0;
+
+}
+
+
+
+.match-btn{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    background:#00695c;
+
+    color:#fff;
+
+    padding:12px 24px;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+}

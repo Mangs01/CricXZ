@@ -1,0 +1,304 @@
+/* ===========================
+   PLAYER PAGE
+=========================== */
+
+.player-hero{
+    text-align:center;
+    padding:140px 20px 60px;
+    background:#f5f7fa;
+}
+
+.player-hero img{
+    width:320px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+}
+
+.player-hero h1{
+    font-size:52px;
+    color:#006d6f;
+    margin-top:25px;
+}
+
+.player-hero p{
+    font-size:22px;
+    color:#555;
+}
+
+.player-details{
+    width:90%;
+    max-width:900px;
+    margin:50px auto;
+}
+
+.player-card-info{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.player-card-info h2{
+    color:#006d6f;
+    margin-bottom:30px;
+}
+
+.player-card-info table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.player-card-info td{
+    padding:18px;
+    border-bottom:1px solid #ddd;
+    font-size:18px;
+}
+
+/* ===========================
+   Career Statistics
+=========================== */
+
+.player-stats{
+    width:90%;
+    max-width:1100px;
+    margin:60px auto;
+}
+
+.player-stats h2{
+    text-align:center;
+    font-size:40px;
+    color:#006d6f;
+    margin-bottom:40px;
+}
+
+.stats-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+
+}
+
+.stat-box{
+
+    background:#fff;
+    padding:35px;
+    text-align:center;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stat-box h3{
+
+    font-size:42px;
+    color:#006d6f;
+    margin-bottom:10px;
+
+}
+
+.stat-box p{
+
+    font-size:20px;
+    color:#555;
+
+}
+
+/* ===========================
+   PLAYER PROFILE PAGE
+=========================== */
+
+.player-profile{
+    max-width:1200px;
+    margin:80px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:80px;
+    padding:40px;
+}
+
+.player-image img{
+    width:360px;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.player-image img:hover{
+    transform:scale(1.03);
+}
+
+.player-details{
+    max-width:600px;
+}
+
+.player-details h1{
+    font-size:60px;
+    color:#006d77;
+    margin-bottom:10px;
+}
+
+.player-details h3{
+    font-size:28px;
+    color:#444;
+    margin-bottom:15px;
+}
+
+.player-details h2{
+    font-size:36px;
+    color:#222;
+    margin-bottom:25px;
+}
+
+.player-details p{
+    font-size:20px;
+    line-height:1.8;
+    color:#555;
+}
+
+
+/* ===========================
+PLAYER INFORMATION
+=========================== */
+
+.player-info{
+    max-width:1100px;
+    margin:80px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.player-info h2{
+    color:#006d77;
+    margin-bottom:30px;
+}
+
+.player-info table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.player-info th,
+.player-info td{
+    padding:18px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+}
+
+.player-info th{
+    width:35%;
+}
+
+
+/* ===========================
+CAREER STATS
+=========================== */
+
+.player-stats{
+    max-width:1100px;
+    margin:80px auto;
+}
+
+.player-stats h2{
+    text-align:center;
+    color:#006d77;
+    font-size:42px;
+    margin-bottom:40px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.stat-box{
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+}
+
+.stat-box h3{
+    font-size:42px;
+    color:#006d77;
+}
+
+.stat-box p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+
+/* ===========================
+ACHIEVEMENTS & RECORDS
+=========================== */
+
+.player-achievements,
+.player-records{
+    max-width:1100px;
+    margin:70px auto;
+    background:#fff;
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.player-achievements h2,
+.player-records h2{
+    color:#006d77;
+    margin-bottom:25px;
+}
+
+.player-achievements ul,
+.player-records ul{
+    padding-left:25px;
+}
+
+.player-achievements li,
+.player-records li{
+    margin:18px 0;
+    font-size:19px;
+    line-height:1.8;
+}
+
+
+/* ===========================
+BACK BUTTON
+=========================== */
+
+.back-button{
+    text-align:center;
+    margin:60px 0;
+}
+
+.back-button .btn{
+    display:inline-block;
+    padding:14px 35px;
+    background:#006d77;
+    color:#fff;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.back-button .btn:hover{
+    background:#0096a6;
+}
