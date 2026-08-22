@@ -1,8 +1,6 @@
 @import url("navbar.css");
 @import url("home.css");
-@import url("players.css");
 @import url("news.css");
-@import url("live.css");
 @import url("about.css");
 @import url("contact.css");
 @import url("footer.css");
@@ -58,7 +56,7 @@ body{
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
-}.
+}
 
 .btn-primary{
     background:#ffffff;
@@ -124,12 +122,6 @@ body{
     color:#00695c;
 }
 
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
 .news-card{
     background:white;
     border-radius:15px;
@@ -191,26 +183,6 @@ body{
 
 }
 
-.score-card{
-
-    background:white;
-
-    border-radius:15px;
-
-    padding:30px;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.12);
-
-    transition:.3s;
-
-}
-
-.score-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
 .status{
 
     display:inline-block;
@@ -232,22 +204,6 @@ body{
 .upcoming-status{
 
     background:#1976d2;
-
-}
-
-.score-card h3{
-
-    margin-bottom:15px;
-
-    color:#00695c;
-
-}
-
-.score-card p{
-
-    margin:10px 0;
-
-    color:#555;
 
 }
 
@@ -296,32 +252,6 @@ body{
 .player-card:hover{
 
     transform:translateY(-8px);
-
-}
-
-.player-card img{
-
-    width:100%;
-
-    height:280px;
-
-    object-fit:cover;
-
-}
-
-.player-card h3{
-
-    margin-top:20px;
-
-    color:#00695c;
-
-}
-
-.player-card p{
-
-    margin:8px 0;
-
-    color:#555;
 
 }
 
@@ -999,56 +929,6 @@ PLAYER SEARCH
 
 }
 
-.player-card{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.player-card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.player-card img{
-
-    width:100%;
-
-    height:280px;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-.player-card h3{
-
-    margin-top:20px;
-
-    color:#00695c;
-
-}
-
-.player-card p{
-
-    color:#555;
-
-    margin:10px 0;
-
-}
-
 .profile-btn{
 
     display:inline-block;
@@ -1183,10 +1063,6 @@ text-decoration:none;
 
 }
 
-.hero-buttons{
-    margin-top:35px;
-}
-
 .btn{
     display:inline-block;
     padding:14px 32px;
@@ -1317,4 +1193,3203 @@ text-decoration:none;
 
 .player-btn:hover{
     background:#009688;
+}
+
+.search-box{
+    position:relative;
+}
+
+.search-suggestions{
+
+    position:absolute;
+
+    top:65px;
+
+    left:0;
+
+    width:100%;
+
+    background:#fff;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    overflow:hidden;
+
+    display:none;
+
+    z-index:999;
+}
+
+.search-item{
+
+    padding:15px 20px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    border-bottom:1px solid #eee;
+
+    transition:.3s;
+}
+
+.search-item:hover{
+
+    background:#f3f8fb;
+
+    color:#006d77;
+}
+
+.search-item.active{
+    background:#007b8f;
+    color:#fff;
+}
+
+/* ===============================
+   Breaking News Slider
+================================= */
+
+.news-slider{
+    max-width:900px;
+    margin:40px auto 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+}
+
+.slider-container{
+    flex:1;
+    background:#ffffff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
+}
+
+.slide{
+    display:none;
+    padding:18px 25px;
+    font-size:18px;
+    font-weight:600;
+    color:#0b7285;
+    text-align:center;
+}
+
+.slide.active{
+    display:block;
+}
+
+.slide-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    color:#fff;
+    background:#0b7285;
+    transition:0.3s;
+}
+
+.slide-btn:hover{
+    transform:scale(1.1);
+}
+
+/* =========================================
+   QUICK STATS
+========================================= */
+
+.quick-stats{
+    padding:70px 20px;
+
+    background:#fff;
+}
+
+.quick-stats h2,
+.profile-information h2,
+.profile-statistics h2,
+.profile-achievements h2,
+.career-timeline h2,
+.profile-records h2,
+.related-news h2{
+    text-align:center;
+
+    font-size:40px;
+
+    color:#006d77;
+
+    margin-bottom:40px;
+}
+
+.quick-stats-grid{
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.quick-stat{
+    padding:35px 20px;
+
+    text-align:center;
+
+    background:#f5f7fa;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+
+    transition:.3s;
+}
+
+.quick-stat:hover{
+    transform:translateY(-7px);
+}
+
+.quick-stat h3{
+    margin:0;
+
+    font-size:42px;
+
+    color:#006d77;
+}
+
+.quick-stat p{
+    margin-top:10px;
+
+    color:#555;
+
+    font-size:17px;
+}
+
+
+/* =========================================
+   PLAYER INFORMATION
+========================================= */
+
+.profile-information{
+    padding:70px 20px;
+
+    background:#f5f7fa;
+}
+
+.information-card{
+    max-width:900px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:10px 35px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+}
+
+.information-row{
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:20px 5px;
+
+    border-bottom:1px solid #eee;
+
+    font-size:18px;
+}
+
+.information-row:last-child{
+    border-bottom:none;
+}
+
+.information-row strong{
+    color:#333;
+}
+
+.information-row span{
+    color:#006d77;
+    font-weight:600;
+}
+
+
+/* =========================================
+   CAREER STATISTICS
+========================================= */
+
+.profile-statistics{
+    padding:80px 20px;
+
+    background:#fff;
+}
+
+.table-wrapper{
+    max-width:1100px;
+
+    margin:auto;
+
+    overflow-x:auto;
+}
+
+.table-wrapper table{
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+    border-radius:15px;
+
+    overflow:hidden;
+}
+
+.table-wrapper th{
+    padding:18px;
+
+    background:#006d77;
+
+    color:#fff;
+
+    text-align:center;
+}
+
+.table-wrapper td{
+    padding:18px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+    font-size:17px;
+}
+
+.table-wrapper tr:hover td{
+    background:#f1fafa;
+}
+
+
+/* =========================================
+   ACHIEVEMENTS
+========================================= */
+
+.profile-achievements{
+    padding:80px 20px;
+
+    background:#f5f7fa;
+}
+
+.achievement-grid{
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.achievement-card{
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+
+    transition:.3s;
+}
+
+.achievement-card:hover{
+    transform:translateY(-7px);
+}
+
+.achievement-card span{
+    color:#006d77;
+
+    font-size:18px;
+
+    font-weight:800;
+}
+
+.achievement-card h3{
+    margin:15px 0 10px;
+
+    color:#222;
+}
+
+.achievement-card p{
+    color:#666;
+
+    line-height:1.6;
+}
+
+/* =========================================
+   RECORDS
+========================================= */
+
+.profile-records{
+    padding:80px 20px;
+
+    background:#f5f7fa;
+}
+
+.records-grid{
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+}
+
+.record-card{
+    background:#fff;
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+
+    transition:.3s;
+}
+
+.record-card:hover{
+    transform:translateY(-7px);
+}
+
+.record-card h3{
+    margin:0;
+
+    font-size:38px;
+
+    color:#006d77;
+}
+
+.record-card p{
+    margin-top:10px;
+
+    color:#555;
+
+    line-height:1.5;
+}
+
+
+/* =========================================
+   RELATED NEWS
+========================================= */
+
+.related-news{
+    padding:80px 20px;
+
+    background:#fff;
+}
+
+.related-grid{
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+}
+
+.related-card{
+    padding:30px;
+
+    background:#f5f7fa;
+
+    border-radius:20px;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.related-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.related-card h3{
+    color:#006d77;
+}
+
+.related-card p{
+    color:#666;
+
+    line-height:1.6;
+}
+
+.related-card span{
+    color:#006d77;
+
+    font-weight:700;
+}
+
+
+/* =========================================
+   BACK TO PLAYERS
+========================================= */
+
+.back-to-players{
+    text-align:center;
+
+    padding:50px 20px;
+}
+
+.back-to-players a{
+    display:inline-block;
+
+    padding:14px 30px;
+
+    background:#006d77;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.back-to-players a:hover{
+    background:#0096a6;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   PLAYER PROFILE RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+    .profile-hero-container{
+        flex-direction:column;
+
+        text-align:center;
+    }
+
+    .profile-image{
+        flex:0 0 auto;
+
+        max-width:380px;
+    }
+
+    .profile-intro h1{
+        font-size:48px;
+    }
+
+    .profile-tags{
+        justify-content:center;
+    }
+
+    .quick-stats-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .achievement-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .records-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .profile-hero{
+        padding-top:120px;
+    }
+
+    .profile-intro h1{
+        font-size:40px;
+    }
+
+    .profile-intro h3{
+        font-size:21px;
+    }
+
+    .profile-intro p{
+        font-size:17px;
+    }
+
+    .quick-stats-grid,
+    .achievement-grid,
+    .records-grid,
+    .related-grid{
+        grid-template-columns:1fr;
+    }
+
+    .information-row{
+        flex-direction:column;
+
+        gap:6px;
+    }
+
+    .timeline-item{
+        gap:15px;
+    }
+
+    .timeline-year{
+        flex:0 0 75px;
+    }
+
+}
+
+/* =====================================================
+   CRICXZ LIVE SCORE CENTER
+===================================================== */
+
+.live-hero{
+    padding:150px 20px 80px;
+    text-align:center;
+    background:linear-gradient(135deg,#006d77,#003f46);
+    color:#fff;
+}
+
+.live-hero .container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.live-label{
+    display:inline-block;
+    padding:8px 18px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:20px;
+}
+
+.live-hero h1{
+    font-size:52px;
+    margin-bottom:20px;
+}
+
+.live-hero p{
+    max-width:750px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.7;
+}
+
+
+/* =========================
+   SCORE FILTER
+========================= */
+
+.score-filter{
+    background:#fff;
+    padding:25px 20px;
+    border-bottom:1px solid #eee;
+    text-align:center;
+}
+
+.score-filter .container{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.score-tab{
+    border:none;
+    background:#f1f5f6;
+    color:#333;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.score-tab:hover,
+.score-tab.active{
+    background:#006d77;
+    color:#fff;
+}
+
+
+/* =========================
+   MATCH SECTION
+========================= */
+
+.live-matches{
+    padding:70px 20px 90px;
+    background:#f5f7fa;
+}
+
+.live-matches .container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:#006d77;
+    font-size:32px;
+    margin:45px 0 30px;
+}
+
+.section-title:first-child{
+    margin-top:0;
+}
+
+
+/* =========================
+   SCORE CARD
+========================= */
+
+.score-card-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.match-status{
+    display:inline-block;
+    padding:7px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.match-status.live{
+    background:#ffe8e8;
+    color:#d60000;
+}
+
+.match-status.upcoming{
+    background:#fff4d8;
+    color:#9a6800;
+}
+
+.match-status.result{
+    background:#e7f6ed;
+    color:#08753c;
+}
+
+.match-format{
+    background:#eef2f3;
+    color:#555;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:700;
+}
+
+
+/* =========================
+   TEAMS
+========================= */
+
+.teams{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:30px;
+    text-align:center;
+}
+
+.team-name{
+    font-size:23px;
+    font-weight:800;
+    color:#222;
+}
+
+.team-score{
+    font-size:34px;
+    font-weight:800;
+    color:#006d77;
+    margin-top:10px;
+}
+
+.overs{
+    color:#777;
+    margin-top:5px;
+}
+
+.vs{
+    font-size:16px;
+    font-weight:800;
+    color:#999;
+}
+
+
+.match-message{
+    text-align:center;
+    margin:30px 0;
+    padding:15px;
+    background:#f7f9fa;
+    border-radius:12px;
+    color:#555;
+    line-height:1.7;
+}
+
+
+/* =========================
+   SCORE BUTTON
+========================= */
+
+.score-btn{
+    display:block;
+    width:max-content;
+    margin:0 auto;
+    padding:13px 28px;
+    background:#006d77;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.score-btn:hover{
+    background:#004f55;
+    transform:translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    .live-hero{
+        padding:130px 15px 60px;
+    }
+
+    .live-hero h1{
+        font-size:38px;
+    }
+
+    .live-hero p{
+        font-size:17px;
+    }
+
+    .teams{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .vs{
+        font-size:14px;
+    }
+
+    .team-name{
+        font-size:20px;
+    }
+
+    .team-score{
+        font-size:28px;
+    }
+
+    .score-card-top{
+        margin-bottom:20px;
+    }
+
+}
+
+/* =========================================
+   LIVE SCORE HERO
+========================================= */
+
+.live-hero{
+    padding:150px 20px 90px;
+    background:linear-gradient(135deg,#006d77,#003f46);
+    text-align:center;
+    color:#ffffff;
+}
+
+.live-hero .container{
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* Main Heading */
+
+.live-hero h1{
+    margin:0 0 22px;
+    color:#ffffff;
+    font-size:56px;
+    font-weight:800;
+    line-height:1.15;
+}
+
+/* Subtitle */
+
+.live-hero p{
+    max-width:850px;
+    margin:0 auto;
+    color:rgba(255,255,255,0.92);
+    font-size:21px;
+    line-height:1.7;
+}
+
+
+/* =========================================
+   LIVE SCORE MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+    .live-hero{
+        padding:120px 20px 70px;
+    }
+
+    .live-hero h1{
+        font-size:38px;
+    }
+
+    .live-hero p{
+        font-size:17px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .live-hero h1{
+        font-size:32px;
+    }
+
+    .live-hero p{
+        font-size:16px;
+    }
+
+}
+
+/* =========================================
+   CRICXZ PREMIUM SCORE CARDS
+========================================= */
+
+.live-matches{
+    padding:70px 20px 90px;
+    background:#f5f7fa;
+}
+
+/* =========================================
+   SCORE CARD
+========================================= */
+
+.score-card{
+    position:relative;
+    background:#ffffff;
+    padding:32px 28px;
+    border-radius:22px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    text-align:center;
+
+    transition:.35s ease;
+    overflow:hidden;
+}
+
+.score-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.14);
+}
+
+
+/* Top Accent */
+
+.score-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:#006d77;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.score-card .status{
+    display:inline-block;
+
+    padding:7px 16px;
+
+    border-radius:30px;
+
+    font-size:13px;
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:22px;
+}
+
+.live-text{
+    background:#ffe5e5;
+    color:#d60000;
+}
+
+.upcoming-text{
+    background:#fff3d6;
+    color:#a56700;
+}
+
+.finished-text{
+    background:#e5f5e8;
+    color:#19733b;
+}
+
+
+/* =========================================
+   TEAMS
+========================================= */
+
+.score-card h2{
+    margin:10px 0 18px;
+
+    font-size:25px;
+
+    color:#17202a;
+
+    line-height:1.4;
+}
+
+
+/* =========================================
+   SCORE
+========================================= */
+
+.score-card .score{
+    font-size:25px;
+
+    font-weight:800;
+
+    color:#006d77;
+
+    margin:15px 0;
+}
+
+.score-card > p:not(.score){
+    color:#666;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    margin-bottom:22px;
+}
+
+
+/* =========================================
+   MATCH BUTTON
+========================================= */
+
+.match-btn{
+    display:inline-block;
+
+    padding:12px 25px;
+
+    background:#006d77;
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+}
+
+.match-btn:hover{
+    background:#004f55;
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   LIVE CARD SPECIAL
+========================================= */
+
+.live-card::before{
+    background:#e00000;
+}
+
+
+/* =========================================
+   UPCOMING CARD
+========================================= */
+
+.upcoming-card::before{
+    background:#e09b00;
+}
+
+
+/* =========================================
+   RESULT CARD
+========================================= */
+
+.result-card::before{
+    background:#198754;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:600px){
+
+    .live-matches{
+        padding:50px 15px 70px;
+    }
+
+    .score-card h2{
+        font-size:22px;
+    }
+
+    .score-card .score{
+        font-size:22px;
+    }
+
+}
+
+/* =====================================================
+   CRICXZ MATCH DETAILS PAGE
+===================================================== */
+
+
+/* =========================
+   MATCH HERO
+========================= */
+
+.match-hero{
+
+    padding:150px 20px 70px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #006d77,
+            #003f46
+        );
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+
+.match-container{
+
+    width:90%;
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+}
+
+
+.match-status{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    margin-bottom:20px;
+
+}
+
+
+.live-status{
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+}
+
+
+.match-hero h1{
+
+    font-size:52px;
+
+    line-height:1.2;
+
+    margin:0 0 15px;
+
+    font-weight:800;
+
+}
+
+
+.match-format{
+
+    font-size:20px;
+
+    margin-bottom:12px;
+
+    opacity:.95;
+
+}
+
+
+.match-venue{
+
+    font-size:17px;
+
+    opacity:.9;
+
+}
+
+
+
+/* =========================
+   SCOREBOARD
+========================= */
+
+.match-scoreboard{
+
+    background:#f5f7fa;
+
+    padding:55px 20px 30px;
+
+}
+
+
+.scoreboard-card{
+
+    display:grid;
+
+    grid-template-columns:1fr 100px 1fr;
+
+    align-items:center;
+
+    gap:20px;
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:22px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+}
+
+
+.team-score{
+
+    text-align:center;
+
+}
+
+
+.team-score h2{
+
+    margin-bottom:18px;
+
+    color:#006d77;
+
+    font-size:27px;
+
+}
+
+
+.big-score{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#222;
+
+    margin-bottom:8px;
+
+}
+
+
+.team-score p{
+
+    color:#666;
+
+    font-size:17px;
+
+}
+
+
+.score-divider{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.score-divider span{
+
+    width:60px;
+
+    height:60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#006d77;
+
+    color:#fff;
+
+    font-weight:800;
+
+}
+
+
+.match-result{
+
+    max-width:700px;
+
+    margin:25px auto 0;
+
+    padding:15px 25px;
+
+    background:#e8f5f3;
+
+    color:#006d77;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    font-size:17px;
+
+}
+
+
+
+/* =========================
+   MATCH INFORMATION
+========================= */
+
+.match-information{
+
+    padding:65px 20px;
+
+    background:#fff;
+
+}
+
+
+.match-information h2{
+
+    text-align:center;
+
+    color:#006d77;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+
+}
+
+
+.match-info-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+}
+
+
+.match-info-card{
+
+    background:#f8fafb;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 7px 22px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+.match-info-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 14px 30px rgba(0,0,0,.10);
+
+}
+
+
+.match-info-card span{
+
+    display:block;
+
+    color:#777;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+}
+
+
+.match-info-card strong{
+
+    display:block;
+
+    color:#222;
+
+    font-size:17px;
+
+    line-height:1.5;
+
+}
+
+
+
+/* =========================
+   SCORECARD SECTION
+========================= */
+
+.scorecard-section{
+
+    padding:65px 20px;
+
+    background:#f5f7fa;
+
+}
+
+
+.scorecard-section h2{
+
+    color:#006d77;
+
+    font-size:34px;
+
+    margin-bottom:30px;
+
+}
+
+
+.table-wrapper{
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+
+.scorecard-table{
+
+    width:100%;
+
+    min-width:650px;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+}
+
+
+.scorecard-table th{
+
+    background:#006d77;
+
+    color:#fff;
+
+    padding:17px;
+
+    text-align:left;
+
+    font-size:15px;
+
+}
+
+
+.scorecard-table td{
+
+    padding:17px;
+
+    border-bottom:1px solid #eee;
+
+    color:#444;
+
+    font-size:16px;
+
+}
+
+
+.scorecard-table tbody tr{
+
+    transition:.2s;
+
+}
+
+
+.scorecard-table tbody tr:hover{
+
+    background:#f0f8f7;
+
+}
+
+
+.scorecard-table td:not(:first-child),
+.scorecard-table th:not(:first-child){
+
+    text-align:center;
+
+}
+
+
+.scorecard-table tbody tr:last-child td{
+
+    border-bottom:none;
+
+}
+
+
+
+/* =========================
+   PARTNERSHIP
+========================= */
+
+.partnership-section{
+
+    padding:65px 20px;
+
+    background:#fff;
+
+}
+
+
+.partnership-section h2{
+
+    text-align:center;
+
+    color:#006d77;
+
+    font-size:36px;
+
+    margin-bottom:35px;
+
+}
+
+
+.partnership-card{
+
+    max-width:650px;
+
+    margin:auto;
+
+    padding:35px;
+
+    text-align:center;
+
+    background:#f8fafb;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+}
+
+
+.partnership-card h3{
+
+    color:#333;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+
+.partnership-score{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    color:#006d77;
+
+    margin-bottom:8px;
+
+}
+
+
+.partnership-card p{
+
+    color:#777;
+
+    font-size:16px;
+
+}
+
+
+
+/* =========================
+   MATCH SUMMARY
+========================= */
+
+.match-summary{
+
+    padding:70px 20px;
+
+    background:#f5f7fa;
+
+}
+
+
+.match-summary h2{
+
+    text-align:center;
+
+    color:#006d77;
+
+    font-size:38px;
+
+    margin-bottom:35px;
+
+}
+
+
+.summary-card{
+
+    max-width:850px;
+
+    margin:auto;
+
+    background:#fff;
+
+    padding:40px 45px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+}
+
+
+.summary-card p{
+
+    font-size:18px;
+
+    line-height:1.85;
+
+    color:#444;
+
+    margin-bottom:22px;
+
+}
+
+
+.summary-card p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+
+/* =========================
+   BACK TO LIVE SCORES
+========================= */
+
+.back-to-live{
+
+    text-align:center;
+
+    padding:50px 20px;
+
+    background:#fff;
+
+}
+
+
+.back-to-live a{
+
+    display:inline-block;
+
+    padding:14px 30px;
+
+    border-radius:50px;
+
+    background:#006d77;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+
+.back-to-live a:hover{
+
+    background:#004f55;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* =========================
+   MATCH PAGE MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .match-hero h1{
+
+        font-size:42px;
+
+    }
+
+
+    .scoreboard-card{
+
+        grid-template-columns:1fr;
+
+        gap:25px;
+
+        padding:35px 25px;
+
+    }
+
+
+    .score-divider{
+
+        order:2;
+
+    }
+
+
+    .score-divider span{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+
+    .team-score{
+
+        order:1;
+
+    }
+
+
+    .match-info-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .match-hero{
+
+        padding:130px 15px 55px;
+
+    }
+
+
+    .match-hero h1{
+
+        font-size:32px;
+
+    }
+
+
+    .match-format{
+
+        font-size:17px;
+
+    }
+
+
+    .match-venue{
+
+        font-size:15px;
+
+    }
+
+
+    .match-scoreboard{
+
+        padding:35px 15px 25px;
+
+    }
+
+
+    .scoreboard-card{
+
+        padding:30px 18px;
+
+        border-radius:16px;
+
+    }
+
+
+    .team-score h2{
+
+        font-size:23px;
+
+    }
+
+
+    .big-score{
+
+        font-size:32px;
+
+    }
+
+
+    .match-information{
+
+        padding:45px 15px;
+
+    }
+
+
+    .match-information h2{
+
+        font-size:30px;
+
+    }
+
+
+    .match-info-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .match-info-card{
+
+        padding:24px;
+
+    }
+
+
+    .scorecard-section{
+
+        padding:45px 15px;
+
+    }
+
+
+    .scorecard-section h2{
+
+        font-size:28px;
+
+    }
+
+
+    .partnership-section{
+
+        padding:50px 15px;
+
+    }
+
+
+    .partnership-section h2{
+
+        font-size:30px;
+
+    }
+
+
+    .partnership-card{
+
+        padding:28px 20px;
+
+    }
+
+
+    .partnership-score{
+
+        font-size:34px;
+
+    }
+
+
+    .match-summary{
+
+        padding:50px 15px;
+
+    }
+
+
+    .match-summary h2{
+
+        font-size:30px;
+
+    }
+
+
+    .summary-card{
+
+        padding:28px 22px;
+
+    }
+
+
+    .summary-card p{
+
+        font-size:16px;
+
+        line-height:1.75;
+
+    }
+
+}
+
+/* =====================================================
+   CRICXZ MATCH DETAILS PAGE
+===================================================== */
+
+/* Match Hero */
+
+.match-hero {
+    padding: 120px 20px 80px;
+    background: linear-gradient(135deg, #006d77, #003f46);
+    color: #ffffff;
+    text-align: center;
+}
+
+.match-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.match-status {
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.live-status {
+    background: rgba(255,255,255,0.16);
+    color: #ffffff;
+}
+
+.match-hero h1 {
+    margin: 25px 0 15px;
+    font-size: 56px;
+    line-height: 1.15;
+}
+
+.match-format {
+    display: inline-block;
+    padding: 8px 25px;
+    background: rgba(255,255,255,0.85);
+    color: #444;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.match-venue {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+/* =====================================================
+   SCOREBOARD
+===================================================== */
+
+.match-scoreboard {
+    padding: 60px 20px 30px;
+    background: #f5f7fa;
+}
+
+.scoreboard-card {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    align-items: center;
+    gap: 30px;
+    background: #ffffff;
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+.team-score {
+    text-align: center;
+}
+
+.team-score h2 {
+    margin-bottom: 20px;
+    color: #006d77;
+    font-size: 30px;
+}
+
+.big-score {
+    font-size: 48px;
+    font-weight: 900;
+    color: #111;
+}
+
+.team-score p {
+    margin-top: 8px;
+    color: #666;
+    font-weight: 600;
+}
+
+.score-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.score-divider span {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #006d77;
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.match-result {
+    max-width: 850px;
+    margin: 25px auto 0;
+
+    padding: 18px 25px;
+
+    background: #e8f5f3;
+
+    color: #006d77;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+
+/* =====================================================
+   MATCH INFORMATION
+===================================================== */
+
+.match-information {
+    padding: 60px 20px;
+    background: #f5f7fa;
+}
+
+.match-information h2,
+.scorecard-section h2,
+.partnership-section h2,
+.match-summary h2 {
+    margin-bottom: 30px;
+    color: #006d77;
+    font-size: 34px;
+}
+
+.match-info-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.match-info-card {
+    background: #ffffff;
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+    min-height: 120px;
+}
+
+.match-info-card span {
+    display: block;
+    margin-bottom: 12px;
+
+    color: #777;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.match-info-card strong {
+    color: #222;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SCORECARD TABLE
+===================================================== */
+
+.scorecard-section {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+}
+
+.scorecard-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    min-width: 650px;
+}
+
+.scorecard-table thead {
+    background: #006d77;
+    color: #ffffff;
+}
+
+.scorecard-table th {
+    padding: 17px 20px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    white-space: nowrap;
+}
+
+.scorecard-table td {
+    padding: 17px 20px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #333;
+
+    font-size: 16px;
+}
+
+.scorecard-table tbody tr:hover {
+    background: #f1f8f8;
+}
+
+.scorecard-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.scorecard-table td:first-child {
+    font-weight: 700;
+    color: #006d77;
+}
+
+
+/* =====================================================
+   PARTNERSHIP
+===================================================== */
+
+.partnership-section {
+    padding: 60px 20px;
+    background: #f5f7fa;
+}
+
+.partnership-card {
+    max-width: 700px;
+    margin: auto;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.partnership-card h3 {
+    margin-bottom: 15px;
+
+    color: #006d77;
+
+    font-size: 26px;
+}
+
+.partnership-score {
+    font-size: 45px;
+
+    font-weight: 900;
+
+    color: #111;
+
+    margin: 10px 0;
+}
+
+.partnership-card p {
+    color: #777;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   MATCH SUMMARY
+===================================================== */
+
+.match-summary {
+    padding: 60px 20px;
+
+    background: #ffffff;
+}
+
+.summary-card {
+    max-width: 900px;
+    margin: auto;
+
+    padding: 35px 40px;
+
+    background: #f5f9f9;
+
+    border-left: 5px solid #006d77;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.summary-card p {
+    margin-bottom: 20px;
+
+    color: #444;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+.summary-card p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =====================================================
+   BACK TO LIVE SCORES
+===================================================== */
+
+.back-to-live {
+    padding: 45px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.back-to-live a {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #006d77;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.back-to-live a:hover {
+    background: #004f55;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   MOBILE MATCH PAGE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .match-hero h1 {
+        font-size: 44px;
+    }
+
+    .scoreboard-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 35px 25px;
+    }
+
+    .score-divider {
+        margin: 5px 0;
+    }
+
+    .score-divider span {
+        width: 55px;
+        height: 55px;
+    }
+
+    .match-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .match-hero {
+        padding: 90px 15px 60px;
+    }
+
+    .match-hero h1 {
+        font-size: 34px;
+    }
+
+    .match-format {
+        font-size: 16px;
+    }
+
+    .match-venue {
+        font-size: 17px;
+    }
+
+    .match-scoreboard {
+        padding: 35px 15px 20px;
+    }
+
+    .scoreboard-card {
+        padding: 30px 18px;
+        border-radius: 18px;
+    }
+
+    .team-score h2 {
+        font-size: 25px;
+    }
+
+    .big-score {
+        font-size: 38px;
+    }
+
+    .match-information,
+    .scorecard-section,
+    .partnership-section,
+    .match-summary {
+        padding: 45px 15px;
+    }
+
+    .match-information h2,
+    .scorecard-section h2,
+    .partnership-section h2,
+    .match-summary h2 {
+        font-size: 28px;
+    }
+
+    .match-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partnership-card {
+        padding: 28px 20px;
+    }
+
+    .partnership-score {
+        font-size: 36px;
+    }
+
+    .summary-card {
+        padding: 25px 20px;
+    }
+
+    .summary-card p {
+        font-size: 16px;
+    }
+
+}
+
+/* =====================================================
+   CRICXZ - PLAYING XI
+===================================================== */
+
+.playing-xi{
+    padding:70px 20px 80px;
+    background:#f5f7fa;
+}
+
+.playing-xi .match-container{
+    width:90%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.playing-xi h2{
+    text-align:center;
+    font-size:40px;
+    font-weight:800;
+    color:#006d77;
+    margin-bottom:45px;
+}
+
+
+/* =========================
+   TEAM GRID
+========================= */
+
+.playing-xi-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+
+/* =========================
+   TEAM CARD
+========================= */
+
+.team-squad{
+    background:#ffffff;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s ease;
+}
+
+.team-squad:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,.13);
+}
+
+
+/* =========================
+   TEAM HEADER
+========================= */
+
+.team-squad > h3{
+    margin:0;
+    padding:22px 25px;
+
+    background:linear-gradient(
+        135deg,
+        #006d77,
+        #004f55
+    );
+
+    color:#ffffff;
+
+    font-size:26px;
+    font-weight:800;
+}
+
+
+/* =========================
+   PLAYER LIST
+========================= */
+
+.player-list{
+    padding:10px 20px 20px;
+}
+
+
+/* =========================
+   PLAYER ROW
+========================= */
+
+.squad-player{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:15px 10px;
+
+    border-bottom:1px solid #eeeeee;
+
+    transition:.25s ease;
+}
+
+.squad-player:last-child{
+    border-bottom:none;
+}
+
+.squad-player:hover{
+    background:#f3fafa;
+    padding-left:15px;
+}
+
+
+/* Player Number */
+
+.squad-player > span{
+    width:32px;
+    height:32px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#e8f5f3;
+
+    color:#006d77;
+
+    font-size:14px;
+    font-weight:800;
+}
+
+
+/* Player Name */
+
+.squad-player strong{
+    flex:1;
+
+    color:#222;
+
+    font-size:17px;
+}
+
+
+/* Player Role */
+
+.squad-player small{
+    padding:6px 11px;
+
+    border-radius:20px;
+
+    background:#f3f5f6;
+
+    color:#666;
+
+    font-size:13px;
+
+    white-space:nowrap;
+}
+
+
+/* =========================
+   CAPTAIN
+========================= */
+
+.squad-player:first-child > span{
+    background:#006d77;
+    color:#ffffff;
+}
+
+.squad-player:first-child small{
+    background:#e8f5f3;
+    color:#006d77;
+    font-weight:700;
+}
+
+
+/* =========================
+   WICKETKEEPER
+========================= */
+
+.squad-player small{
+    transition:.2s;
+}
+
+
+/* =========================
+   PLAYER OF THE MATCH
+========================= */
+
+.player-of-match{
+    padding:70px 20px 80px;
+    background:#ffffff;
+}
+
+.player-of-match .match-container{
+    width:90%;
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.player-of-match h2{
+    text-align:center;
+
+    color:#006d77;
+
+    font-size:38px;
+
+    margin-bottom:40px;
+}
+
+
+/* POM CARD */
+
+.player-of-match-card{
+    display:flex;
+    align-items:center;
+
+    gap:35px;
+
+    max-width:750px;
+    margin:auto;
+
+    padding:35px;
+
+    background:#f5f9f9;
+
+    border-radius:22px;
+
+    border:1px solid #e1eeee;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s ease;
+}
+
+.player-of-match-card:hover{
+    transform:translateY(-6px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+
+/* Trophy */
+
+.pom-icon{
+    width:100px;
+    height:100px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#006d77;
+
+    font-size:48px;
+}
+
+
+/* POM Information */
+
+.pom-info{
+    flex:1;
+}
+
+.pom-info > span{
+    display:inline-block;
+
+    margin-bottom:8px;
+
+    color:#006d77;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+.pom-info h3{
+    margin:0 0 8px;
+
+    font-size:32px;
+
+    color:#222;
+}
+
+.pom-info > p{
+    margin:0 0 22px;
+
+    color:#666;
+
+    font-size:17px;
+}
+
+
+/* POM Stats */
+
+.pom-stats{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.pom-stats div{
+    min-width:85px;
+
+    padding:12px 15px;
+
+    text-align:center;
+
+    background:#ffffff;
+
+    border-radius:12px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.pom-stats strong{
+    display:block;
+
+    color:#006d77;
+
+    font-size:22px;
+}
+
+.pom-stats small{
+    display:block;
+
+    margin-top:4px;
+
+    color:#777;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .playing-xi-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .playing-xi{
+        padding:50px 15px 60px;
+    }
+
+    .playing-xi .match-container{
+        width:100%;
+    }
+
+    .playing-xi h2{
+        font-size:32px;
+        margin-bottom:30px;
+    }
+
+    .team-squad > h3{
+        font-size:22px;
+        padding:18px 20px;
+    }
+
+    .player-list{
+        padding:8px 15px 15px;
+    }
+
+    .squad-player{
+        gap:9px;
+        padding:13px 5px;
+    }
+
+    .squad-player strong{
+        font-size:15px;
+    }
+
+    .squad-player small{
+        font-size:11px;
+        padding:5px 7px;
+    }
+
+    .squad-player > span{
+        width:29px;
+        height:29px;
+        font-size:12px;
+    }
+
+
+    /* Player of Match */
+
+    .player-of-match{
+        padding:50px 15px 60px;
+    }
+
+    .player-of-match .match-container{
+        width:100%;
+    }
+
+    .player-of-match h2{
+        font-size:30px;
+    }
+
+    .player-of-match-card{
+        flex-direction:column;
+        text-align:center;
+        padding:28px 20px;
+    }
+
+    .pom-icon{
+        width:80px;
+        height:80px;
+        font-size:38px;
+    }
+
+    .pom-info h3{
+        font-size:27px;
+    }
+
+    .pom-stats{
+        justify-content:center;
+        gap:10px;
+    }
+
+}
+
+/* =====================================================
+   HOME FEATURED PLAYERS — FINAL CLEAN OVERRIDE
+===================================================== */
+
+.featured-players .player-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:35px;
+
+    max-width:1400px;
+    margin:0 auto;
+}
+
+
+/* Player Card */
+
+.featured-players .player-card{
+    background:#ffffff;
+    border-radius:20px;
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:transform .3s ease,
+               box-shadow .3s ease;
+}
+
+
+.featured-players .player-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.14);
+}
+
+
+/* Player Image */
+
+.featured-players .player-card img{
+    display:block;
+
+    width:100%;
+    height:400px;
+
+    object-fit:contain;
+
+    background:#ffffff;
+}
+
+
+/* Player Information */
+
+.featured-players .player-info{
+    padding:25px 20px 28px;
+
+    text-align:center;
+}
+
+
+/* Player Name */
+
+.featured-players .player-info h3{
+    margin:0 0 12px;
+
+    font-size:27px;
+    line-height:1.25;
+
+    color:#1f1f1f;
+
+    font-weight:800;
+}
+
+
+/* Country */
+
+.featured-players .player-info p{
+    margin:0 0 18px;
+
+    font-size:18px;
+
+    color:#333;
+}
+
+
+/* Player Role */
+
+.featured-players .player-role{
+    display:block;
+
+    margin-bottom:18px;
+
+    font-size:16px;
+
+    color:#666;
+}
+
+
+/* View Profile Button */
+
+.featured-players .player-btn{
+    display:inline-block;
+
+    padding:12px 28px;
+
+    background:#007f86;
+    color:#ffffff;
+
+    border-radius:30px;
+
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+
+.featured-players .player-btn:hover{
+    background:#00676d;
+    transform:translateY(-2px);
+}
+
+
+/* Tablet */
+
+@media (max-width:1100px){
+
+    .featured-players .player-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width:600px){
+
+    .featured-players .player-grid{
+        grid-template-columns:1fr;
+    }
+
+    .featured-players .player-card img{
+        height:360px;
+    }
+
+    .featured-players .player-info h3{
+        font-size:24px;
+    }
+
+}
+
+/* =====================================================
+   HOME FEATURED PLAYERS — 5 CARD DESKTOP LAYOUT
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .featured-players .player-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 24px;
+        max-width: 1450px;
+    }
+
+    .featured-players .player-card img {
+        height: 330px;
+    }
+
+    .featured-players .player-info {
+        padding: 22px 15px 25px;
+    }
+
+    .featured-players .player-info h3 {
+        font-size: 23px;
+    }
+
+    .featured-players .player-info p {
+        font-size: 16px;
+    }
+
+    .featured-players .player-role {
+        font-size: 14px;
+    }
+
+    .featured-players .player-btn {
+        padding: 10px 22px;
+        font-size: 14px;
+    }
+
+}
+
+/* =====================================================
+   FEATURED PLAYERS — FINAL PROPORTION FIX
+===================================================== */
+
+@media (min-width: 1200px) {
+
+    .featured-players {
+        padding: 70px 20px 80px;
+    }
+
+    .featured-players .player-grid {
+        max-width: 1450px;
+        margin: 0 auto;
+
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 28px;
+    }
+
+    .featured-players .player-card {
+        min-height: 0;
+    }
+
+    .featured-players .player-card img {
+        width: 100%;
+        height: 300px;
+
+        object-fit: contain;
+        object-position: center bottom;
+
+        background: #ffffff;
+    }
+
+    .featured-players .player-info {
+        padding: 20px 14px 24px;
+    }
+
+    .featured-players .player-info h3 {
+        margin: 0 0 10px;
+
+        font-size: 20px;
+        line-height: 1.25;
+
+        color: #1f1f1f;
+        font-weight: 800;
+
+        white-space: nowrap;
+    }
+
+    .featured-players .player-info p {
+        margin: 0 0 14px;
+
+        font-size: 15px;
+    }
+
+    .featured-players .player-role {
+        margin-bottom: 16px;
+
+        font-size: 14px;
+    }
+
+    .featured-players .player-btn {
+        padding: 10px 21px;
+
+        font-size: 14px;
+    }
+
+}
+
+/* =====================================================
+   HOME PAGE — FINAL VISUAL POLISH
+===================================================== */
+
+
+/* HERO TITLE */
+
+.home-page .hero-content h1 {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.home-page .hero-content > p {
+    font-size: 19px;
+}
+
+
+/* =====================================================
+   LATEST NEWS — DESKTOP 3 CARDS
+===================================================== */
+
+.home-page .latest-news .news-grid {
+    width: 100%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    padding: 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 30px;
+}
+
+.home-page .latest-news .news-card {
+    width: 100%;
+    min-width: 0;
+}
+
+.home-page .latest-news .news-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .home-page .latest-news .news-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .home-page .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .home-page .hero-content > p {
+        font-size: 16px;
+    }
+
+    .home-page .latest-news .news-grid {
+        grid-template-columns: 1fr;
+    }
+
 }

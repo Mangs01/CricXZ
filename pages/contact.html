@@ -7,7 +7,12 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Contact Us | CricXZ</title>
+    <title>Contact Us | CRICXZ</title>
+
+    <meta name="description"
+          content="Contact CricXZ with questions, feedback or enquiries about our cricket news, scores and player coverage.">
+
+    <link rel="canonical" href="https://cricxz.com/pages/contact.html">
 
     <link rel="stylesheet" href="../assets/css/style.css">
 
@@ -23,7 +28,20 @@
             <h1>CRICXZ</h1>
         </div>
 
-        <ul class="menu">
+        <!-- Mobile Menu Button -->
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="menu" id="mainMenu">
 
             <li><a href="../index.html">Home</a></li>
             <li><a href="news.html">News</a></li>
@@ -61,15 +79,13 @@
 
             <p><strong>Email:</strong> info@cricxz.com</p>
 
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-
             <p><strong>Location:</strong> India</p>
 
         </div>
 
         <div class="contact-form">
 
-            <form>
+            <form id="contactForm">
 
                 <input type="text"
                        placeholder="Your Name"
@@ -86,6 +102,11 @@
                 <button type="submit">
                     Send Message
                 </button>
+
+                <p id="contactFormMessage" role="status" hidden>
+                    Message sending is not available yet. Please contact CricXZ by email at
+                    <a href="mailto:info@cricxz.com">info@cricxz.com</a>.
+                </p>
 
             </form>
 
@@ -133,10 +154,10 @@
 
                 <ul>
 
-                    <li><a href="#">IPL</a></li>
-                    <li><a href="#">ICC</a></li>
-                    <li><a href="#">ODI</a></li>
-                    <li><a href="#">Test Cricket</a></li>
+                    <li><span>IPL</span></li>
+                    <li><span>ICC</span></li>
+                    <li><span>ODI</span></li>
+                    <li><span>Test Cricket</span></li>
 
                 </ul>
 
@@ -151,6 +172,9 @@
         </div>
 
     </footer>
+
+<script src="../assets/js/navbar.js"></script>
+<script src="../assets/js/contact.js"></script>
 
 </body>
 

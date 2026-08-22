@@ -5,14 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CRICXZ | Everything Cricket</title>
+    <title>CRICXZ - Latest Cricket News, Live Scores &amp; Player Stats</title>
+
+    <meta name="description"
+          content="CRICXZ brings you the latest cricket news, live scores, player profiles, cricket statistics, rankings and match updates from around the world.">
+
+    <meta property="og:title"
+          content="CRICXZ - Latest Cricket News, Live Scores &amp; Player Stats">
+
+    <meta property="og:description"
+          content="CRICXZ brings you the latest cricket news, live scores, player profiles, cricket statistics, rankings and match updates from around the world.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:url" content="https://cricxz.com/">
+
+    <meta property="og:image"
+          content="https://cricxz.com/assets/images/stadium.jpg">
+
+    <meta name="keywords"
+          content="cricket news, live cricket scores, cricket players, cricket stats, IPL, ICC, India cricket, cricket rankings">
+
+    <meta name="author" content="CRICXZ">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://cricxz.com/">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="home-page">
 
-<!-- Navbar -->
+<!-- =========================
+     NAVBAR
+========================= -->
 
 <nav class="navbar">
 
@@ -20,25 +47,66 @@
         <h1>CRICXZ</h1>
     </div>
 
-    <ul class="menu">
+    <!-- Mobile Menu Button -->
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <ul class="menu" id="mainMenu">
 
         <li><a href="index.html">Home</a></li>
-
         <li><a href="pages/news.html">News</a></li>
-
         <li><a href="pages/live-scores.html">Live Scores</a></li>
-
         <li><a href="pages/players.html">Players</a></li>
-
         <li><a href="pages/about.html">About</a></li>
-
         <li><a href="pages/contact.html">Contact</a></li>
 
     </ul>
 
 </nav>
 
-<!-- Hero -->
+
+<!-- =========================
+     GLOBAL SEARCH
+========================= -->
+
+<section class="global-search">
+
+    <h2>🔍 Search CricXZ</h2>
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Players, News, Teams..."
+            autocomplete="off"
+        >
+
+        <button id="searchBtn" type="button">
+            Search
+        </button>
+
+        <div
+            id="searchSuggestions"
+            class="search-suggestions"
+        ></div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -57,6 +125,30 @@
             <a href="pages/live-scores.html" class="btn btn-secondary">
                 Live Scores
             </a>
+
+        </div>
+
+        <div class="news-slider">
+
+            <button class="slide-btn prev">&#10094;</button>
+
+            <div class="slider-container">
+
+                <div class="slide active">
+                    🏏 Virat Kohli scores brilliant century against Australia
+                </div>
+
+                <div class="slide">
+                     🔥 Rohit Sharma to lead India in upcoming Test Series
+                </div>
+
+                <div class="slide">
+                   🚨 Jasprit Bumrah returns after injury
+                </div>
+
+            </div>
+
+            <button class="slide-btn next">&#10095;</button>
 
         </div>
 
@@ -104,7 +196,7 @@
 
                 <p>Team India begins preparations with intensive practice sessions.</p>
 
-                <a href="pages/news.html">Read More →</a>
+                <a href="articles/india-test-series.html">Read More →</a>
 
             </div>
 
@@ -116,7 +208,7 @@
 
                 <p>Big franchises spend heavily on star players.</p>
 
-                <a href="pages/news.html">Read More →</a>
+                <a href="articles/ipl-2026-mega-auction.html">Read More →</a>
 
             </div>
 
@@ -128,7 +220,7 @@
 
                 <p>Latest ICC rankings released this week.</p>
 
-                <a href="pages/news.html">Read More →</a>
+                <a href="articles/icc-odi-rankings.html">Read More →</a>
 
             </div>
 
@@ -147,16 +239,25 @@
         <div class="score-grid">
 
             <div class="score-card live">
+
                 <span class="status">LIVE</span>
 
-                <h3>India vs Australia</h3>
+                <h3 id="matchTitle"></h3>
 
-                <p><strong>India:</strong> 245/4 (42.5)</p>
+                <p id="matchScore"></p>
 
-                <p>Australia yet to bat</p>
+                <p id="matchStatus"></p>
+
+                <small id="matchUpdate"></small>
+
+                <a href="pages/match.html" class="score-btn">
+                    View Scorecard →
+                </a>
+
             </div>
 
             <div class="score-card live">
+
                 <span class="status">LIVE</span>
 
                 <h3>England vs Pakistan</h3>
@@ -164,17 +265,10 @@
                 <p><strong>England:</strong> 156/2 (27.0)</p>
 
                 <p>Pakistan bowling</p>
-            </div>
 
-            <div class="score-card upcoming">
-
-                <span class="status upcoming-status">UPCOMING</span>
-
-                <h3>South Africa vs New Zealand</h3>
-
-                <p>Today</p>
-
-                <p>7:00 PM IST</p>
+                <a href="pages/live-scores.html" class="score-btn">
+                    View Match →
+                </a>
 
             </div>
 
@@ -290,6 +384,36 @@
 
             </div>
 
+            <!-- Hardik -->
+
+            <div class="player-card">
+
+                <img
+                    src="assets/images/players/hardik.jpg"
+                    alt="Hardik Pandya"
+                >
+
+                <div class="player-info">
+
+                    <h3>Hardik Pandya</h3>
+
+                    <p>🇮🇳 India</p>
+
+                    <span class="player-role">
+                        All-Rounder
+                    </span>
+
+                    <a
+                        href="pages/hardik.html"
+                        class="player-btn"
+                    >
+                        View Profile
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
@@ -336,13 +460,13 @@
 
             <ul>
 
-                <li><a href="#">IPL</a></li>
+                <li><span>IPL</span></li>
 
-                <li><a href="#">ICC</a></li>
+                <li><span>ICC</span></li>
 
-                <li><a href="#">ODI</a></li>
+                <li><span>ODI</span></li>
 
-                <li><a href="#">Test Cricket</a></li>
+                <li><span>Test Cricket</span></li>
 
             </ul>
 
@@ -357,6 +481,10 @@
     </div>
 
 </footer>
+
+<script src="assets/js/search-data.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/navbar.js"></script>
 
 </body>
 

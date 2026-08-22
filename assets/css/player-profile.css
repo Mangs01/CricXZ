@@ -1,0 +1,1008 @@
+/* =========================================================
+   CRICXZ — PLAYER PROFILE PAGE
+   CLEAN / FINAL VERSION
+   ========================================================= */
+
+
+/* =========================================================
+   PROFILE HERO
+   ========================================================= */
+
+.profile-hero {
+    padding: 130px 20px 80px;
+    background: #f5f7fa;
+}
+
+.profile-hero-container {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 70px;
+}
+
+
+/* =========================================================
+   PROFILE IMAGE
+   ========================================================= */
+
+.profile-image {
+    flex: 0 0 360px;
+}
+
+.profile-image img {
+    display: block;
+
+    width: 360px;
+    max-width: 100%;
+
+    border-radius: 22px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PROFILE INTRO
+   ========================================================= */
+
+.profile-intro {
+    max-width: 620px;
+}
+
+
+/* TEAM INDIA BADGE */
+
+.profile-label {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 8px 16px;
+
+    background: #ffffff;
+    color: #007f86;
+
+    border: 1px solid rgba(0, 127, 134, 0.18);
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.08);
+}
+
+
+/* PLAYER NAME */
+
+.profile-intro h1 {
+    margin: 0 0 10px;
+
+    font-size: 60px;
+
+    color: #006d77;
+}
+
+
+/* PLAYER ROLE */
+
+.profile-intro h3 {
+    margin: 0 0 20px;
+
+    font-size: 28px;
+
+    color: #444;
+}
+
+
+/* PLAYER DESCRIPTION */
+
+.profile-intro p {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   PROFILE TAGS
+   ========================================================= */
+
+.profile-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.profile-tags span {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    background: #e9f5f4;
+    color: #006d77;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   COMMON CONTAINER
+   ========================================================= */
+
+.profile-hero .container,
+.quick-stats .container,
+.profile-information .container,
+.profile-statistics .container,
+.profile-achievements .container,
+.career-timeline .container,
+.profile-records .container,
+.related-news .container {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
+
+.quick-stats h2,
+.profile-information h2,
+.profile-statistics h2,
+.profile-achievements h2,
+.career-timeline h2,
+.profile-records h2,
+.related-news h2 {
+    margin: 0 0 35px;
+
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #006d77;
+}
+
+
+/* =========================================================
+   QUICK STATS
+   ========================================================= */
+
+.quick-stats {
+    padding: 70px 20px;
+
+    background: #ffffff;
+}
+
+.quick-stats-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.quick-stat {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #f8fbfb;
+
+    border: 1px solid #e5eeee;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.quick-stat h3 {
+    margin: 0 0 10px;
+
+    font-size: 38px;
+
+    color: #006d77;
+}
+
+.quick-stat p {
+    margin: 0;
+
+    font-size: 16px;
+
+    color: #555;
+}
+
+
+/* =========================================================
+   PLAYER INFORMATION
+   ========================================================= */
+
+.profile-information {
+    padding: 70px 20px;
+
+    background: #f5f7fa;
+}
+
+.information-card {
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 10px 30px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.information-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 18px 10px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.information-row:last-child {
+    border-bottom: none;
+}
+
+.information-row strong {
+    color: #333;
+}
+
+.information-row span {
+    color: #555;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   CAREER STATISTICS
+   ========================================================= */
+
+.profile-statistics {
+    padding: 70px 20px;
+
+    background: #ffffff;
+}
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border-radius: 16px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.profile-statistics table {
+    width: 100%;
+
+    min-width: 650px;
+
+    border-collapse: collapse;
+
+    background: #ffffff;
+}
+
+.profile-statistics th {
+    padding: 17px;
+
+    background: #006d77;
+    color: #ffffff;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+.profile-statistics td {
+    padding: 16px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    color: #444;
+
+    font-size: 15px;
+
+    text-align: center;
+}
+
+.profile-statistics tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS
+   ========================================================= */
+
+.profile-achievements {
+    padding: 70px 20px;
+
+    background: #f5f7fa;
+}
+
+.achievement-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.achievement-card {
+    padding: 30px 25px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+
+    border-top: 4px solid #006d77;
+}
+
+.achievement-card span {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #d62828;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.achievement-card h3 {
+    margin: 0 0 12px;
+
+    font-size: 20px;
+
+    color: #006d77;
+}
+
+.achievement-card p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   PREMIUM CAREER TIMELINE
+   Year Box → Gap → Vertical Line → Gap → Content
+   ========================================================= */
+
+.career-timeline {
+    padding: 70px 20px;
+
+    background: #ffffff;
+}
+
+
+/* Timeline wrapper */
+
+.profile-page .career-timeline .timeline {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 42px 35px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 42px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   TIMELINE ITEM
+   ========================================================= */
+
+.profile-page .career-timeline .timeline-item {
+    display: grid;
+
+    /*
+       Year | Vertical Line | Content
+    */
+
+    grid-template-columns: 165px 5px minmax(0, 1fr);
+
+    column-gap: 28px;
+
+    position: relative;
+
+    align-items: stretch;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   YEAR BOX
+   ========================================================= */
+
+.profile-page .career-timeline .timeline-year {
+    grid-column: 1;
+
+    width: 150px;
+    min-width: 150px;
+
+    height: 58px;
+
+    align-self: center;
+    justify-self: center;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+
+    background: #007f86;
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    font-size: 21px;
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(0, 127, 134, 0.20);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   VERTICAL LINE
+   ========================================================= */
+
+/*
+   IMPORTANT:
+
+   The line is positioned BETWEEN
+   the Year Box and Content Card.
+
+   No circle.
+   No dot.
+   No connector attached to card.
+*/
+
+.profile-page .career-timeline .timeline-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 193px;
+
+    top: 0;
+    bottom: 0;
+
+    width: 5px;
+
+    background: #007f86;
+
+    border-radius: 5px;
+
+    z-index: 1;
+}
+
+
+/* Remove any old pseudo-element */
+
+.profile-page .career-timeline .timeline-item::after {
+    display: none !important;
+}
+
+
+/* =========================================================
+   TIMELINE CONTENT CARD
+   ========================================================= */
+
+.profile-page .career-timeline .timeline-content {
+    grid-column: 3;
+
+    min-width: 0;
+    min-height: 118px;
+
+    padding: 26px 30px;
+
+    background: #ffffff;
+
+    border: none !important;
+    border-left: none !important;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.07);
+
+    position: relative;
+
+    z-index: 2;
+
+    box-sizing: border-box;
+}
+
+
+/* Timeline heading */
+
+.profile-page .career-timeline .timeline-content h3 {
+    margin: 0 0 12px;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    color: #1f2937;
+}
+
+
+/* Timeline description */
+
+.profile-page .career-timeline .timeline-content p {
+    margin: 0;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #5b6470;
+}
+
+
+/* =========================================================
+   RECORDS
+   ========================================================= */
+
+.profile-records {
+    padding: 70px 20px;
+
+    background: #f5f7fa;
+}
+
+.records-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.record-card {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+}
+
+.record-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 38px;
+
+    color: #006d77;
+}
+
+.record-card p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   RELATED NEWS
+   ========================================================= */
+
+.related-news {
+    padding: 70px 20px;
+
+    background: #ffffff;
+}
+
+.related-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+.related-card {
+    display: block;
+
+    padding: 30px;
+
+    background: #f5f7fa;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.10);
+}
+
+.related-card h3 {
+    margin: 0 0 12px;
+
+    color: #006d77;
+
+    font-size: 20px;
+}
+
+.related-card p {
+    margin: 0 0 18px;
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+.related-card span {
+    color: #008c8c;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   BACK TO PLAYERS
+   ========================================================= */
+
+.back-to-players {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+}
+
+.back-to-players a {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background: #006d77;
+
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.back-to-players a:hover {
+    background: #008c8c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .profile-hero-container {
+        gap: 40px;
+    }
+
+    .profile-image {
+        flex: 0 0 300px;
+    }
+
+    .profile-image img {
+        width: 300px;
+    }
+
+    .profile-intro h1 {
+        font-size: 48px;
+    }
+
+    .quick-stats-grid,
+    .achievement-grid,
+    .records-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Timeline */
+
+    .profile-page .career-timeline .timeline {
+        max-width: 900px;
+    }
+
+    .profile-page .career-timeline .timeline-item {
+        grid-template-columns: 145px 5px minmax(0, 1fr);
+
+        column-gap: 24px;
+    }
+
+    .profile-page .career-timeline .timeline-year {
+        width: 135px;
+        min-width: 135px;
+
+        font-size: 20px;
+    }
+
+    .profile-page .career-timeline .timeline-item::before {
+        left: 169px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+    .profile-hero {
+        padding: 100px 15px 60px;
+    }
+
+    .profile-hero-container {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 35px;
+    }
+
+    .profile-image {
+        flex: none;
+    }
+
+    .profile-image img {
+        width: 280px;
+    }
+
+    .profile-intro {
+        max-width: 100%;
+    }
+
+    .profile-intro h1 {
+        font-size: 42px;
+    }
+
+    .profile-intro h3 {
+        font-size: 23px;
+    }
+
+    .profile-intro p {
+        font-size: 16px;
+    }
+
+    .profile-tags {
+        justify-content: center;
+    }
+
+    .quick-stats,
+    .profile-information,
+    .profile-statistics,
+    .profile-achievements,
+    .career-timeline,
+    .profile-records,
+    .related-news {
+        padding: 55px 15px;
+    }
+
+    .quick-stats h2,
+    .profile-information h2,
+    .profile-statistics h2,
+    .profile-achievements h2,
+    .career-timeline h2,
+    .profile-records h2,
+    .related-news h2 {
+        font-size: 32px;
+    }
+
+    .information-card {
+        padding: 5px 18px;
+    }
+
+    .information-row {
+        gap: 15px;
+
+        font-size: 14px;
+    }
+
+    .achievement-grid,
+    .records-grid,
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================================
+       MOBILE TIMELINE
+       ===================================================== */
+
+    .profile-page .career-timeline .timeline {
+        padding: 28px 10px;
+
+        gap: 30px;
+    }
+
+    .profile-page .career-timeline .timeline-item {
+        grid-template-columns: 95px 4px minmax(0, 1fr);
+
+        column-gap: 18px;
+    }
+
+    .profile-page .career-timeline .timeline-year {
+        width: 90px;
+        min-width: 90px;
+
+        height: 50px;
+
+        font-size: 17px;
+    }
+
+    .profile-page .career-timeline .timeline-item::before {
+        left: 113px;
+
+        width: 4px;
+    }
+
+    .profile-page .career-timeline .timeline-content {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+    .profile-page .career-timeline .timeline-content h3 {
+        font-size: 19px;
+    }
+
+    .profile-page .career-timeline .timeline-content p {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .profile-intro h1 {
+        font-size: 36px;
+    }
+
+    .profile-intro h3 {
+        font-size: 20px;
+    }
+
+    .profile-image img {
+        width: 240px;
+    }
+
+    .quick-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-stat {
+        padding: 25px 15px;
+    }
+
+    .quick-stat h3 {
+        font-size: 34px;
+    }
+
+    .information-row {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .information-row span {
+        text-align: left;
+    }
+
+
+    /* Small mobile timeline */
+
+    .profile-page .career-timeline .timeline {
+        padding: 25px 5px;
+
+        gap: 25px;
+    }
+
+    .profile-page .career-timeline .timeline-item {
+        grid-template-columns: 80px 4px minmax(0, 1fr);
+
+        column-gap: 14px;
+    }
+
+    .profile-page .career-timeline .timeline-year {
+        width: 76px;
+        min-width: 76px;
+
+        height: 46px;
+
+        font-size: 15px;
+    }
+
+    .profile-page .career-timeline .timeline-item::before {
+        left: 94px;
+
+        width: 4px;
+    }
+
+    .profile-page .career-timeline .timeline-content {
+        padding: 17px;
+    }
+
+    .profile-page .career-timeline .timeline-content h3 {
+        font-size: 17px;
+    }
+
+    .profile-page .career-timeline .timeline-content p {
+        font-size: 14px;
+        line-height: 1.55;
+    }
+}

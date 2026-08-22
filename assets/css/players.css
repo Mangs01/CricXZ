@@ -1,304 +1,322 @@
-/* ===========================
-   PLAYER PAGE
-=========================== */
+/* =========================================================
+   PLAYERS PAGE
+========================================================= */
 
-.player-hero{
-    text-align:center;
-    padding:140px 20px 60px;
-    background:#f5f7fa;
+.players-page {
+    padding: 120px 20px 80px;
+    background: #f5f7fa;
+    min-height: 600px;
 }
 
-.player-hero img{
-    width:320px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-.player-hero h1{
-    font-size:52px;
-    color:#006d6f;
-    margin-top:25px;
-}
-
-.player-hero p{
-    font-size:22px;
-    color:#555;
-}
-
-.player-details{
-    width:90%;
-    max-width:900px;
-    margin:50px auto;
-}
-
-.player-card-info{
-    background:#fff;
-    padding:40px;
-    border-radius:20px;
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-}
-
-.player-card-info h2{
-    color:#006d6f;
-    margin-bottom:30px;
-}
-
-.player-card-info table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-.player-card-info td{
-    padding:18px;
-    border-bottom:1px solid #ddd;
-    font-size:18px;
-}
-
-/* ===========================
-   Career Statistics
-=========================== */
-
-.player-stats{
-    width:90%;
-    max-width:1100px;
-    margin:60px auto;
-}
-
-.player-stats h2{
-    text-align:center;
-    font-size:40px;
-    color:#006d6f;
-    margin-bottom:40px;
-}
-
-.stats-grid{
-
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:25px;
-
-}
-
-.stat-box{
-
-    background:#fff;
-    padding:35px;
-    text-align:center;
-    border-radius:18px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-
-}
-
-.stat-box:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.stat-box h3{
-
-    font-size:42px;
-    color:#006d6f;
-    margin-bottom:10px;
-
-}
-
-.stat-box p{
-
-    font-size:20px;
-    color:#555;
-
-}
-
-/* ===========================
-   PLAYER PROFILE PAGE
-=========================== */
-
-.player-profile{
-    max-width:1200px;
-    margin:80px auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:80px;
-    padding:40px;
-}
-
-.player-image img{
-    width:360px;
-    border-radius:20px;
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-    transition:.3s;
-}
-
-.player-image img:hover{
-    transform:scale(1.03);
-}
-
-.player-details{
-    max-width:600px;
-}
-
-.player-details h1{
-    font-size:60px;
-    color:#006d77;
-    margin-bottom:10px;
-}
-
-.player-details h3{
-    font-size:28px;
-    color:#444;
-    margin-bottom:15px;
-}
-
-.player-details h2{
-    font-size:36px;
-    color:#222;
-    margin-bottom:25px;
-}
-
-.player-details p{
-    font-size:20px;
-    line-height:1.8;
-    color:#555;
+.players-page .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 
-/* ===========================
-PLAYER INFORMATION
-=========================== */
+/* =========================================================
+   PAGE TITLE
+========================================================= */
 
-.player-info{
-    max-width:1100px;
-    margin:80px auto;
-    background:#fff;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.player-info h2{
-    color:#006d77;
-    margin-bottom:30px;
-}
-
-.player-info table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-.player-info th,
-.player-info td{
-    padding:18px;
-    border-bottom:1px solid #eee;
-    text-align:left;
-}
-
-.player-info th{
-    width:35%;
+.players-page h1 {
+    text-align: center;
+    font-size: 48px;
+    color: #006d77;
+    margin: 0 0 30px;
 }
 
 
-/* ===========================
-CAREER STATS
-=========================== */
+/* =========================================================
+   PLAYER SEARCH
+========================================================= */
 
-.player-stats{
-    max-width:1100px;
-    margin:80px auto;
+.players-page .player-search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto 50px;
 }
 
-.player-stats h2{
-    text-align:center;
-    color:#006d77;
-    font-size:42px;
-    margin-bottom:40px;
+.players-page .player-search input {
+    width: 600px;
+    max-width: 70%;
+    padding: 16px 22px;
+
+    border: 2px solid #008c8c;
+    border-radius: 40px;
+
+    background: #ffffff;
+    color: #222;
+
+    font-size: 18px;
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: 0.3s ease;
 }
 
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
+.players-page .player-search input::placeholder {
+    color: #888;
 }
 
-.stat-box{
-    background:#fff;
-    border-radius:20px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.stat-box:hover{
-    transform:translateY(-8px);
-}
-
-.stat-box h3{
-    font-size:42px;
-    color:#006d77;
-}
-
-.stat-box p{
-    margin-top:10px;
-    font-size:18px;
+.players-page .player-search input:focus {
+    border-color: #006d6f;
+    box-shadow: 0 0 0 3px rgba(0, 109, 111, 0.10);
 }
 
 
-/* ===========================
-ACHIEVEMENTS & RECORDS
-=========================== */
+/* SEARCH BUTTON */
 
-.player-achievements,
-.player-records{
-    max-width:1100px;
-    margin:70px auto;
-    background:#fff;
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+.players-page .player-search button {
+    padding: 16px 30px;
+
+    border: none;
+    border-radius: 40px;
+
+    background: #006d6f;
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
 }
 
-.player-achievements h2,
-.player-records h2{
-    color:#006d77;
-    margin-bottom:25px;
-}
-
-.player-achievements ul,
-.player-records ul{
-    padding-left:25px;
-}
-
-.player-achievements li,
-.player-records li{
-    margin:18px 0;
-    font-size:19px;
-    line-height:1.8;
+.players-page .player-search button:hover {
+    background: #008c8c;
+    transform: translateY(-2px);
 }
 
 
-/* ===========================
-BACK BUTTON
-=========================== */
+/* =========================================================
+   PLAYERS GRID
+========================================================= */
 
-.back-button{
-    text-align:center;
-    margin:60px 0;
+.players-page .players-grid {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 32px;
+
+    align-items: start;
 }
 
-.back-button .btn{
-    display:inline-block;
-    padding:14px 35px;
-    background:#006d77;
-    color:#fff;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:.3s;
+
+/* =========================================================
+   PLAYER CARD
+========================================================= */
+
+.players-page .player-card {
+    width: 100%;
+    min-width: 0;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s ease;
 }
 
-.back-button .btn:hover{
-    background:#0096a6;
+.players-page .player-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 16px 35px rgba(0, 0, 0, 0.13);
+}
+
+
+/* =========================================================
+   PLAYER LINK
+========================================================= */
+
+.players-page .player-link {
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PLAYER IMAGE
+========================================================= */
+
+.players-page .player-card img {
+    display: block;
+
+    width: 100%;
+    height: 330px;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    margin: 0 auto;
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+}
+
+.players-page .player-card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* =========================================================
+   PLAYER NAME
+========================================================= */
+
+.players-page .player-card h3 {
+    margin: 18px 0 8px;
+
+    font-size: 22px;
+
+    line-height: 1.3;
+    word-break: normal;
+    overflow-wrap: normal;
+
+    color: #0096a6;
+
+    transition: 0.3s ease;
+}
+
+.players-page .player-card:hover h3 {
+    color: #006d77;
+}
+
+
+/* =========================================================
+   PLAYER COUNTRY
+========================================================= */
+
+.players-page .player-card > p {
+    margin: 0 0 18px;
+
+    font-size: 15px;
+
+    color: #666;
+}
+
+
+/* =========================================================
+   PROFILE BUTTON
+========================================================= */
+
+.players-page .profile-btn {
+    display: inline-block;
+
+    padding: 11px 22px;
+
+    background: #006d77;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.players-page .profile-btn:hover {
+    background: #008c8c;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SINGLE SEARCH RESULT
+========================================================= */
+
+.players-page .players-grid.single-result {
+    grid-template-columns: 280px;
+
+    justify-content: center;
+}
+
+.players-page .players-grid.single-result .player-card {
+    width: 280px;
+}
+
+/* =========================================================
+   PLAYERS PAGE — FINAL RESPONSIVE SAFETY
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .players-page .players-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .players-page .player-search {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .players-page .player-search input,
+    .players-page .player-search button {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .players-page .players-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .players-page .player-card {
+        width: 100%;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    .players-page .player-card img {
+        width: 100%;
+        height: 340px;
+        object-fit: contain;
+    }
+
+    .players-page .player-card h3 {
+        font-size: 22px;
+    }
+
+    .players-page .players-grid.single-result {
+        grid-template-columns: 1fr;
+    }
+
+    .players-page .players-grid.single-result .player-card {
+        width: 100%;
+    }
+
 }

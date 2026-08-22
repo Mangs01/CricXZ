@@ -7,182 +7,491 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Live Scores | CRICXZ</title>
+    <title>Live Cricket Scores | CRICXZ</title>
+
+    <meta name="description"
+          content="Follow live cricket scores, match results, upcoming fixtures and cricket match updates on CRICXZ.">
+
+    <link rel="canonical" href="https://cricxz.com/pages/live-scores.html">
 
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/live-score.css">
 
 </head>
 
-<body>
+<body class="live-scores-page">
 
-    <!-- Navbar -->
-    <nav class="navbar">
+<!-- =========================
+     NAVBAR
+========================= -->
 
-        <div class="logo">
-            <h1>CRICXZ</h1>
-        </div>
+<nav class="navbar">
 
-        <ul class="menu">
+    <div class="logo">
+        <h1>CRICXZ</h1>
+    </div>
 
-            <li><a href="../index.html">Home</a></li>
+    <!-- Mobile Menu Button -->
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+    >
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-            <li><a href="news.html">News</a></li>
+    <ul class="menu" id="mainMenu">
 
-            <li><a href="live-scores.html">Live Scores</a></li>
+        <li><a href="../index.html">Home</a></li>
 
-            <li><a href="players.html">Players</a></li>
+        <li><a href="news.html">News</a></li>
 
-            <li><a href="about.html">About</a></li>
+        <li><a href="live-scores.html">Live Scores</a></li>
 
-            <li><a href="contact.html">Contact</a></li>
+        <li><a href="players.html">Players</a></li>
 
-        </ul>
+        <li><a href="about.html">About</a></li>
 
-    </nav>
+        <li><a href="contact.html">Contact</a></li>
 
+    </ul>
 
-    <!-- Hero Section -->
-    <section class="live-hero">
-
-        <div class="container">
-
-            <h1>Live Cricket Scores</h1>
-
-            <p>
-                Follow Live Scores, Match Results, Upcoming Fixtures and
-                International Cricket Updates.
-            </p>
-
-        </div>
-
-    </section>
+</nav>
 
 
-    <!-- Live Matches -->
-    <section class="live-matches">
+<!-- =========================
+     LIVE SCORE HERO
+========================= -->
 
-        <div class="container">
+<section class="live-hero">
 
-            <!-- Match 1 -->
-            <div class="match-card">
+    <div class="container">
 
-                <span class="status live-text">● LIVE</span>
+        <span class="live-label">
+            🏏 CRICXZ SCORE CENTER
+        </span>
 
-                <h2>India vs Australia</h2>
+        <h1>
+            Live Cricket Scores
+        </h1>
 
-                <p class="score">
-                    India 287/5 (46.2 Overs)
-                </p>
+        <p>
+            Follow live matches, latest results, upcoming fixtures
+            and important cricket updates from around the world.
+        </p>
 
-                <p>Australia yet to bat</p>
+    </div>
 
-                <a href="#" class="match-btn">
-                    View Scorecard
-                </a>
+</section>
+
+
+<!-- =========================
+     SCORE FILTER
+========================= -->
+
+<section class="score-filter">
+
+    <div class="container">
+
+        <button class="score-tab active" data-filter="all">
+            All Matches
+        </button>
+
+        <button class="score-tab" data-filter="live">
+            🔴 Live
+        </button>
+
+        <button class="score-tab" data-filter="upcoming">
+            Upcoming
+        </button>
+
+        <button class="score-tab" data-filter="result">
+            Results
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MATCHES
+========================= -->
+
+<section class="live-matches">
+
+    <div class="container">
+
+
+        <!-- =========================
+             LIVE MATCHES
+        ========================= -->
+
+        <div class="match-group" data-status="live">
+
+        <h2 class="section-title">
+            🔴 Live Matches
+        </h2>
+
+
+        <!-- INDIA VS AUSTRALIA -->
+
+        <div class="score-card live-card"
+             data-status="live"
+             data-match-id="india-australia-001">
+
+            <div class="score-card-top">
+
+                <span class="match-status live">
+                    ● LIVE
+                </span>
+
+                <span class="match-format">
+                    ODI
+                </span>
 
             </div>
 
 
-            <!-- Match 2 -->
-            <div class="match-card">
+            <div class="teams">
 
-                <span class="status upcoming-text">
+                <div class="team">
+
+                    <div class="team-name">
+                        🇮🇳 India
+                    </div>
+
+                    <div class="team-score">
+                        287/5
+                    </div>
+
+                    <div class="overs">
+                        46.2 Overs
+                    </div>
+
+                </div>
+
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+                <div class="team">
+
+                    <div class="team-name">
+                        🇦🇺 Australia
+                    </div>
+
+                    <div class="team-score">
+                        —
+                    </div>
+
+                    <div class="overs">
+                        Yet to Bat
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="match-message">
+                India batting • Live update
+            </div>
+
+
+            <a href="match.html?id=india-australia-001"
+               class="score-btn">
+
+                View Scorecard →
+
+            </a>
+
+        </div>
+
+        </div>
+
+
+        <!-- =========================
+             UPCOMING MATCHES
+        ========================= -->
+
+        <div class="match-group" data-status="upcoming">
+
+        <h2 class="section-title">
+            📅 Upcoming Matches
+        </h2>
+
+
+        <!-- ENGLAND VS PAKISTAN -->
+
+        <div class="score-card upcoming-card"
+             data-status="upcoming"
+             data-match-id="england-pakistan-001">
+
+            <div class="score-card-top">
+
+                <span class="match-status upcoming">
                     UPCOMING
                 </span>
 
-                <h2>England vs Pakistan</h2>
-
-                <p class="score">
-                    Tomorrow • 2:00 PM
-                </p>
-
-                <p>Lord's Cricket Ground</p>
-
-                <a href="#" class="match-btn">
-                    Match Preview
-                </a>
-
-            </div>
-
-
-            <!-- Match 3 -->
-            <div class="match-card">
-
-                <span class="status finished-text">
-                    RESULT
+                <span class="match-format">
+                    Test
                 </span>
 
-                <h2>South Africa vs New Zealand</h2>
+            </div>
 
-                <p class="score">
-                    South Africa won by 5 wickets
-                </p>
 
-                <p>Player of the Match: Klaasen</p>
+            <div class="teams">
 
-                <a href="#" class="match-btn">
-                    Match Report
-                </a>
+                <div class="team">
+
+                    <div class="team-name">
+                        🏴 England
+                    </div>
+
+                    <div class="team-score">
+                        —
+                    </div>
+
+                </div>
+
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+                <div class="team">
+
+                    <div class="team-name">
+                        🇵🇰 Pakistan
+                    </div>
+
+                    <div class="team-score">
+                        —
+                    </div>
+
+                </div>
 
             </div>
+
+
+            <div class="match-message">
+
+                Tomorrow • 2:00 PM
+                <br>
+                Lord's Cricket Ground
+
+            </div>
+
+
+            <span class="score-btn"
+                  aria-disabled="true">
+
+                Match Preview →
+
+            </span>
 
         </div>
 
-    </section>
+        </div>
+
+
+        <!-- =========================
+             LATEST RESULTS
+        ========================= -->
+
+        <div class="match-group" data-status="result">
+
+        <h2 class="section-title">
+            🏆 Latest Results
+        </h2>
+
+
+        <!-- SOUTH AFRICA VS NEW ZEALAND -->
+
+        <div class="score-card result-card"
+             data-status="result"
+             data-match-id="south-africa-new-zealand-001">
+
+            <div class="score-card-top">
+
+                <span class="match-status result">
+                    RESULT
+                </span>
+
+                <span class="match-format">
+                    T20I
+                </span>
+
+            </div>
+
+
+            <div class="teams">
+
+                <div class="team">
+
+                    <div class="team-name">
+                        🇿🇦 South Africa
+                    </div>
+
+                    <div class="team-score">
+                        Won
+                    </div>
+
+                </div>
+
+
+                <div class="vs">
+                    VS
+                </div>
+
+
+                <div class="team">
+
+                    <div class="team-name">
+                        🇳🇿 New Zealand
+                    </div>
+
+                    <div class="team-score">
+                        Lost
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="match-message">
+
+                South Africa won by 5 wickets
+                <br>
+                Player of the Match: Klaasen
+
+            </div>
+
+
+            <span class="score-btn"
+                  aria-disabled="true">
+
+                Match Report →
+
+            </span>
+
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer class="footer">
 
     <div class="footer-container">
 
+
         <div>
 
-            <h2 class="footer-logo">CRICXZ</h2>
+            <h2 class="footer-logo">
+                CRICXZ
+            </h2>
 
             <p>
                 CricXZ brings you the latest cricket news,
-                live scores, player profiles,
-                rankings and match updates from around the world.
+                live scores, player profiles, rankings and
+                match updates from around the world.
             </p>
 
         </div>
 
+
         <div>
 
-            <h3>Quick Links</h3>
+            <h3>
+                Quick Links
+            </h3>
 
             <ul>
 
-                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
 
-                <li><a href="pages/news.html">News</a></li>
+                <li>
+                    <a href="news.html">
+                        News
+                    </a>
+                </li>
 
-                <li><a href="pages/live-scores.html">Live Scores</a></li>
+                <li>
+                    <a href="live-scores.html">
+                        Live Scores
+                    </a>
+                </li>
 
-                <li><a href="pages/players.html">Players</a></li>
+                <li>
+                    <a href="players.html">
+                        Players
+                    </a>
+                </li>
 
             </ul>
 
         </div>
 
+
         <div>
 
-            <h3>Categories</h3>
+            <h3>
+                Categories
+            </h3>
 
             <ul>
 
-                <li><a href="#">IPL</a></li>
+                <li>
+                    <span>
+                        IPL
+                    </span>
+                </li>
 
-                <li><a href="#">ICC</a></li>
+                <li>
+                    <span>
+                        ICC
+                    </span>
+                </li>
 
-                <li><a href="#">ODI</a></li>
+                <li>
+                    <span>
+                        ODI
+                    </span>
+                </li>
 
-                <li><a href="#">Test Cricket</a></li>
+                <li>
+                    <span>
+                        Test Cricket
+                    </span>
+                </li>
 
             </ul>
 
         </div>
 
     </div>
+
 
     <div class="footer-bottom">
 
@@ -191,6 +500,10 @@
     </div>
 
 </footer>
+
+
+<script src="../assets/js/live-scores.js"></script>
+<script src="../assets/js/navbar.js"></script>
 
 </body>
 

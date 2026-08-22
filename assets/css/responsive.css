@@ -1,0 +1,169 @@
+/* =========================================================
+   CRICXZ — GLOBAL RESPONSIVE SAFETY
+   Keep page-specific responsive rules in their own CSS files.
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL BOX MODEL
+========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PAGE WIDTH SAFETY
+========================================================= */
+
+html {
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   RESPONSIVE MEDIA
+========================================================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+========================================================= */
+
+input,
+button,
+textarea,
+select {
+    max-width: 100%;
+
+    font: inherit;
+}
+
+
+/* =========================================================
+   LONG TEXT / LINKS
+========================================================= */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   TABLE SAFETY
+========================================================= */
+
+table {
+    max-width: 100%;
+}
+
+.table-wrapper,
+.scorecard-table-wrapper {
+    max-width: 100%;
+
+    overflow-x: auto;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    body {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /*
+       Prevent large headings from causing
+       horizontal overflow.
+
+       Page-specific CSS can still define
+       smaller sizes where required.
+    */
+
+    h1,
+    h2,
+    h3 {
+        max-width: 100%;
+    }
+
+
+    /* Touch-friendly buttons */
+
+    button,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* Prevent form fields from overflowing */
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        min-width: 0;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+}
