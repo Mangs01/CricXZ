@@ -53,6 +53,25 @@
 }
 
 
+/* Compact news-page intro on desktop */
+
+@media (min-width: 1001px) {
+
+    .news-page .global-search {
+        padding: 38px 20px;
+    }
+
+    .news-page .global-search h2 {
+        margin-bottom: 20px;
+    }
+
+    .news-page .news-hero {
+        padding: 56px 20px 52px;
+    }
+
+}
+
+
 /* =========================================================
    NEWS GRID
 ========================================================= */
