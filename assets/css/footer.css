@@ -12,6 +12,10 @@
     color: #ffffff;
 }
 
+.short-page > .footer {
+    margin-top: auto;
+}
+
 
 /* =========================================================
    FOOTER LAYOUT

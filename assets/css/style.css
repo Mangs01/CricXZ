@@ -20,6 +20,16 @@ body{
     padding-top:95px;
 }
 
+body.short-page{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+body.short-page > main{
+    flex:1 0 auto;
+}
+
 .hero{
     height:100vh;
 
@@ -4379,6 +4389,12 @@ text-decoration:none;
 /* MOBILE */
 
 @media (max-width: 650px) {
+
+    .home-page .hero {
+        height:auto;
+        min-height:calc(100vh - 95px);
+        padding:80px 16px 60px;
+    }
 
     .home-page .hero-content h1 {
         font-size: 40px;
