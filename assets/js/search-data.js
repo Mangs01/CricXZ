@@ -40,6 +40,12 @@ const searchData = [
     // =========================
 
     {
+        title: "India vs Sri Lanka 2nd Test 2026",
+        type: "News",
+        url: "articles/india-vs-sri-lanka-2nd-test-2026.html"
+    },
+
+    {
         title: "India begins preparation for upcoming Test Series",
         type: "News",
         url: "articles/india-test-series.html"
