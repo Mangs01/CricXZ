@@ -4409,3 +4409,6 @@ text-decoration:none;
     }
 
 }
+
+/* Preserve the approved Bumrah editorial illustration without cropping. */
+.featured-players .player-card img.bumrah-editorial-card-image{height:auto;aspect-ratio:3/2;object-fit:contain;object-position:center}
