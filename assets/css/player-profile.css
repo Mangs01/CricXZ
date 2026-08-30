@@ -1020,3 +1020,16 @@
 @media(max-width:900px){.bumrah-profile .bumrah-stats-grid,.bumrah-profile .bumrah-detail-grid,.bumrah-profile .bumrah-format-sections{grid-template-columns:1fr}}
 @media(max-width:750px){.bumrah-profile .bumrah-statistics,.bumrah-profile .bumrah-debuts,.bumrah-profile .bumrah-career-copy,.bumrah-profile .bumrah-achievements,.bumrah-profile .bumrah-update,.bumrah-profile .bumrah-sources{padding:55px 15px}}
 @media(max-width:500px){.bumrah-profile .profile-intro h1{font-size:36px}.bumrah-profile .bumrah-stat-card,.bumrah-profile .bumrah-detail-grid article,.bumrah-profile .bumrah-format-sections article{padding:22px 18px}.bumrah-profile .bumrah-stat-card dl div{gap:12px}}
+
+/* Mobile fixed-navbar scroll offset for player profiles. */
+@media (max-width: 768px) {
+    html {
+        scroll-padding-top: 88px;
+    }
+
+    .profile-page main > section,
+    .profile-page main h1,
+    .profile-page main h2 {
+        scroll-margin-top: 88px;
+    }
+}
