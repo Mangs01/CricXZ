@@ -6,6 +6,17 @@
 @import url("footer.css");
 @import url("responsive.css");
 
+/* Match the approved News-page search spacing on wide Home layouts. */
+@media (min-width: 1001px) {
+    .home-page .global-search {
+        padding: 38px 20px;
+    }
+
+    .home-page .global-search h2 {
+        margin-bottom: 20px;
+    }
+}
+
 *{
     margin:0;
     padding:0;
