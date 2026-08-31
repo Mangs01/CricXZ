@@ -35,6 +35,7 @@
     flex-shrink: 0;
 }
 
+.navbar .logo,
 .navbar .logo h1,
 .navbar .logo .site-title {
     margin: 0;
@@ -47,6 +48,8 @@
     letter-spacing: 2px;
 
     line-height: 1;
+
+    text-decoration: none;
 }
 
 
@@ -189,6 +192,7 @@
         padding: 18px 30px;
     }
 
+    .navbar .logo,
     .navbar .logo h1,
     .navbar .logo .site-title {
         font-size: 40px;
@@ -215,6 +219,7 @@
         padding: 16px 20px;
     }
 
+    .navbar .logo,
     .navbar .logo h1,
     .navbar .logo .site-title {
         font-size: 34px;
@@ -320,6 +325,7 @@
         padding: 14px 16px;
     }
 
+    .navbar .logo,
     .navbar .logo h1,
     .navbar .logo .site-title {
         font-size: 30px;
