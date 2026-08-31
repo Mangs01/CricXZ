@@ -1,0 +1,198 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CricXZ Article Data V1",
+  "description": "Editorial worksheet data for one CricXZ article. Stable site constants and deterministic URLs are intentionally derived outside this object.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slug",
+    "seoTitle",
+    "headline",
+    "metaDescription",
+    "categoryLabel",
+    "filterCategories",
+    "articleType",
+    "deck",
+    "publicationDatetime",
+    "heroImageFilename",
+    "heroImageAlt",
+    "heroImageWidth",
+    "heroImageHeight",
+    "articleBodyHtml",
+    "sources"
+  ],
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Stable lowercase, hyphen-separated article slug. Temporary wording such as latest or breaking is an editorial warning, not a schema error."
+    },
+    "seoTitle": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Article-specific SEO title without the template-appended | CricXZ suffix."
+    },
+    "headline": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Reviewed visible article headline used as the page H1 and schema headline."
+    },
+    "metaDescription": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Factual article-specific description for search and social metadata."
+    },
+    "categoryLabel": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Human-readable category label displayed on the article and News card."
+    },
+    "filterCategories": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "News-page filter tokens written to the card data-category value.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "india",
+          "ipl",
+          "icc",
+          "test",
+          "odi"
+        ]
+      }
+    },
+    "articleType": {
+      "type": "string",
+      "enum": [
+        "news",
+        "match-report",
+        "rankings",
+        "squad",
+        "feature"
+      ],
+      "description": "Controlled editorial type; a renderer may map it to optional visible report-type wording."
+    },
+    "deck": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Concise reviewed summary displayed beneath the headline and reused for cards unless overridden."
+    },
+    "publicationDatetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Real ISO 8601 publication date and time. It must never be inferred from a file or system date."
+    },
+    "modifiedDatetime": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Optional genuine post-publication editorial or factual update time. When present it must be strictly later than publicationDatetime; cross-field comparison is a future validator responsibility. When absent, schema dateModified derives from publicationDatetime."
+    },
+    "heroImageFilename": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*-cricxz\\.(?:webp|jpg|jpeg|png)$",
+      "description": "Local filename only, following a <slug>-cricxz.<format>-compatible pattern. Exact agreement with slug and local file existence are future validator responsibilities."
+    },
+    "heroImageAlt": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Meaningful alternative text describing the editorial image."
+    },
+    "heroImageWidth": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Positive intrinsic hero-image width in pixels."
+    },
+    "heroImageHeight": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Positive intrinsic hero-image height in pixels."
+    },
+    "heroImageCaption": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Optional meaningful caption or image-provenance wording. Omit when unnecessary."
+    },
+    "sourceCutoff": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Optional factual cutoff for evolving matches, rankings, squads, injuries, or other changing information."
+    },
+    "articleBodyHtml": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Original, reviewed CricXZ article-body HTML. It must not contain an H1; full HTML and heading validation are future validator responsibilities."
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Genuine external sources only; URLs must never be fabricated. Original CricXZ reporting requires transparent handling in a future source-model extension rather than an invented external URL.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "url"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "pattern": "\\S",
+            "description": "Descriptive source label; do not store copied excerpts or source text."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https://",
+            "description": "Genuine HTTPS URL for the external source."
+          }
+        }
+      }
+    },
+    "relatedArticles": {
+      "type": "array",
+      "description": "Optional manually curated internal CricXZ links; no recommendation behavior is implied.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "url"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "pattern": "\\S",
+            "description": "Visible related-content title."
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^(?:articles|pages)/[a-z0-9]+(?:-[a-z0-9]+)*\\.html$",
+            "description": "Internal repository-style article or page URL."
+          },
+          "summary": {
+            "type": "string",
+            "pattern": "\\S",
+            "description": "Optional concise explanation of the related item's relevance."
+          }
+        }
+      }
+    },
+    "cardHeadline": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Optional card-only headline override. Omit when the normal headline works."
+    },
+    "cardSummary": {
+      "type": "string",
+      "pattern": "\\S",
+      "description": "Optional card-only summary override. Omit when the normal deck works."
+    },
+    "homepageFeatured": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the article is approved for homepage promotion; this is an editorial decision."
+    }
+  }
+}
