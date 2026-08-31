@@ -63,6 +63,24 @@ const searchData = [
         url: "articles/icc-odi-rankings.html"
     },
 
+    {
+        title: "ICC Updates Latest Test Rankings",
+        type: "News",
+        url: "articles/icc-test-rankings.html"
+    },
+
+    {
+        title: "India Announces Squad for Upcoming ODI Series",
+        type: "News",
+        url: "articles/india-odi-squad.html"
+    },
+
+    {
+        title: "Young Players to Watch in the Upcoming IPL Season",
+        type: "News",
+        url: "articles/ipl-young-players.html"
+    },
+
 
     // =========================
     // MAIN PAGES

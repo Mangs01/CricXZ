@@ -60,10 +60,10 @@
          NAVBAR
     ========================== -->
 
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Primary navigation">
 
         <div class="logo">
-            <h1>CRICXZ</h1>
+            <div class="site-title">CRICXZ</div>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -123,6 +123,7 @@
             <input
                 type="text"
                 id="searchInput"
+                aria-label="Search news"
                 placeholder="Search players, news, pages..."
                 autocomplete="off"
             >
@@ -268,12 +269,12 @@
         <a
             href="../articles/ipl-2026-mega-auction.html"
             class="news-card"
+            data-category="ipl"
         >
 
             <img
                 src="../assets/images/stadium.jpg"
                 alt="IPL 2026 Mega Auction"
-                data-category="ipl"
             >
 
             <div class="news-content">
