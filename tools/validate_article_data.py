@@ -146,6 +146,43 @@ def validate(data: dict[str, Any], allow_missing_image: bool) -> list[Finding]:
     for field in sorted(data.keys() - allowed_fields):
         add(findings, "ERROR", "UNKNOWN_FIELD", f"Unknown top-level field: {field}")
 
+    required_text_fields = (
+        "seoTitle",
+        "headline",
+        "metaDescription",
+        "categoryLabel",
+        "deck",
+        "heroImageAlt",
+    )
+
+    for field in required_text_fields:
+        value = data.get(field)
+        if not isinstance(value, str) or not value.strip():
+            add(
+                findings,
+                "ERROR",
+                "TEXT_FIELD_INVALID",
+                f"{field} must be a non-empty string.",
+            )
+
+    optional_text_fields = (
+        "heroImageCaption",
+        "sourceCutoff",
+        "cardHeadline",
+        "cardSummary",
+    )
+
+    for field in optional_text_fields:
+        if field in data:
+            value = data[field]
+            if not isinstance(value, str) or not value.strip():
+                add(
+                    findings,
+                    "ERROR",
+                    "OPTIONAL_TEXT_FIELD_INVALID",
+                    f"{field} must be a non-empty string when present.",
+                )
+
     slug = data.get("slug")
     if not isinstance(slug, str) or not SLUG_RE.fullmatch(slug):
         add(findings, "ERROR", "SLUG_INVALID", "slug must be lowercase alphanumeric segments separated by hyphens.")
