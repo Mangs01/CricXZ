@@ -40,6 +40,11 @@ const searchData = [
     // =========================
 
     // CRICXZ:NEWS-ARTICLES:START
+{
+    title: "India Women Open Asia Cup 2026 With 94-Run Win Over Thailand, Hong Kong Clash Next",
+    type: "News",
+    url: "articles/india-women-asia-cup-2026-thailand-win-hong-kong-next.html"
+},
 
     {
         title: "India vs Sri Lanka 2nd Test 2026",
