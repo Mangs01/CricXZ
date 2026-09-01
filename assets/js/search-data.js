@@ -39,6 +39,8 @@ const searchData = [
     // NEWS ARTICLES
     // =========================
 
+    // CRICXZ:NEWS-ARTICLES:START
+
     {
         title: "India vs Sri Lanka 2nd Test 2026",
         type: "News",
@@ -80,6 +82,8 @@ const searchData = [
         type: "News",
         url: "articles/ipl-young-players.html"
     },
+
+    // CRICXZ:NEWS-ARTICLES:END
 
 
     // =========================

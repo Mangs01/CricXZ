@@ -26,6 +26,8 @@
         <loc>https://cricxz.com/pages/contact.html</loc>
     </url>
 
+    <!-- CRICXZ:ARTICLE-URLS:START -->
+
     <url>
         <loc>https://cricxz.com/articles/india-test-series.html</loc>
     </url>
@@ -54,6 +56,8 @@
     <url>
         <loc>https://cricxz.com/articles/ipl-young-players.html</loc>
     </url>
+
+    <!-- CRICXZ:ARTICLE-URLS:END -->
 
     <url>
         <loc>https://cricxz.com/pages/virat.html</loc>
