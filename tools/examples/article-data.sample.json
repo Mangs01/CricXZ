@@ -1,0 +1,28 @@
+{
+  "slug": "cricxz-article-workflow-demo",
+  "seoTitle": "CricXZ Article Workflow Demonstration",
+  "headline": "CricXZ Article Workflow Demonstration",
+  "metaDescription": "A neutral non-production example showing how reviewed article inputs fit the CricXZ V1 publishing worksheet.",
+  "categoryLabel": "Editorial Workflow Demo",
+  "filterCategories": [
+    "icc"
+  ],
+  "articleType": "feature",
+  "deck": "This non-production demonstration exercises the CricXZ article worksheet without reporting a real cricket event.",
+  "publicationDatetime": "2026-08-31T12:00:00+05:30",
+  "heroImageFilename": "cricxz-article-workflow-demo-cricxz.webp",
+  "heroImageAlt": "Demonstration placeholder for the CricXZ article publishing workflow",
+  "heroImageWidth": 1200,
+  "heroImageHeight": 675,
+  "heroImageCaption": "Non-production demonstration placeholder; no image asset is included.",
+  "sourceCutoff": "Demonstration data only; no cricket facts are asserted.",
+  "articleBodyHtml": "<p class=\"article-lead\">This non-production sample tests the approved CricXZ article-data structure.</p><h2>Worksheet coverage</h2><p>It contains neutral demonstration copy and does not report a cricket event.</p>",
+  "sources": [
+    {
+      "label": "JSON Schema Draft 2020-12 specification used for this workflow demonstration",
+      "url": "https://json-schema.org/draft/2020-12/schema"
+    }
+  ],
+  "relatedArticles": [],
+  "homepageFeatured": false
+}
