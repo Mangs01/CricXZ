@@ -240,7 +240,19 @@ def strip_block_markers(template: str, start: str, end: str) -> str:
             f"Template optional block markers are reversed: {start}"
         )
 
-    return template.replace(start, "").replace(end, "")
+    for marker in (start, end):
+        pattern = re.compile(
+            rf"^[ \t]*{re.escape(marker)}[ \t]*\n?",
+            re.MULTILINE,
+        )
+        template, count = pattern.subn("", template, count=1)
+
+        if count != 1:
+            raise GeneratorError(
+                f"Template optional block marker must be on its own line: {marker}"
+            )
+
+    return template
 
 
 def remove_developer_header(template: str) -> str:
