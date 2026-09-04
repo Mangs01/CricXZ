@@ -41,6 +41,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Women vs Pakistan Women: Asia Cup 2026 Preview",
+    type: "News",
+    url: "articles/india-women-vs-pakistan-women-asia-cup-2026-preview.html"
+},
+{
     title: "Mandhana's 124 Powers India Past Hong Kong, China",
     type: "News",
     url: "articles/smriti-mandhana-124-india-hong-kong-asia-cup-2026.html"
