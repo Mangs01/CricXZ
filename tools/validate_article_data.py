@@ -300,7 +300,7 @@ def main() -> int:
         print(f"Input error: path is not a file: {path}", file=sys.stderr)
         return 2
     try:
-        with path.open("r", encoding="utf-8") as handle:
+        with path.open("r", encoding="utf-8-sig") as handle:
             data = json.load(handle)
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         print(f"Input error: could not read valid JSON from {path}: {exc}", file=sys.stderr)
