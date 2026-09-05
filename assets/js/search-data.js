@@ -47,6 +47,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India vs Japan Historic T20I Confirmed for September 2026",
+    type: "News",
+    url: "articles/india-vs-japan-historic-t20i-2026.html"
+},
+{
     title: "India Women vs Pakistan Women: Asia Cup 2026 Preview",
     type: "News",
     url: "articles/india-women-vs-pakistan-women-asia-cup-2026-preview.html"
