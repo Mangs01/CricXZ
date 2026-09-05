@@ -34,6 +34,12 @@ const searchData = [
         url: "pages/shubman.html"
     },
 
+    {
+        title: "Smriti Mandhana",
+        type: "Player",
+        url: "pages/smriti-mandhana.html"
+    },
+
 
     // =========================
     // NEWS ARTICLES
