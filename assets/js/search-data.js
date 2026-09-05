@@ -47,6 +47,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Women Crush Pakistan by 7 Wickets",
+    type: "News",
+    url: "articles/india-women-vs-pakistan-asia-cup-2026-result.html"
+},
+{
     title: "India vs Japan Historic T20I Confirmed for September 2026",
     type: "News",
     url: "articles/india-vs-japan-historic-t20i-2026.html"
