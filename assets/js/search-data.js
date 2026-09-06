@@ -47,6 +47,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Top Asia Cup Group A as Pakistan Face Semi-final Race",
+    type: "News",
+    url: "articles/womens-asia-cup-2026-group-a-india-pakistan-semifinal-race.html"
+},
+{
     title: "India Women Crush Pakistan by 7 Wickets",
     type: "News",
     url: "articles/india-women-vs-pakistan-asia-cup-2026-result.html"
