@@ -88,17 +88,6 @@ const searchData = [
         url: "articles/india-vs-sri-lanka-2nd-test-2026.html"
     },
 
-    {
-        title: "India begins preparation for upcoming Test Series",
-        type: "News",
-        url: "articles/india-test-series.html"
-    },
-
-    {
-        title: "IPL 2026 Mega Auction Highlights",
-        type: "News",
-        url: "articles/ipl-2026-mega-auction.html"
-    },
 
     {
         title: "ICC releases updated ODI Rankings",
@@ -106,23 +95,6 @@ const searchData = [
         url: "articles/icc-odi-rankings.html"
     },
 
-    {
-        title: "ICC Updates Latest Test Rankings",
-        type: "News",
-        url: "articles/icc-test-rankings.html"
-    },
-
-    {
-        title: "India Announces Squad for Upcoming ODI Series",
-        type: "News",
-        url: "articles/india-odi-squad.html"
-    },
-
-    {
-        title: "Young Players to Watch in the Upcoming IPL Season",
-        type: "News",
-        url: "articles/ipl-young-players.html"
-    },
 
     // CRICXZ:NEWS-ARTICLES:END
 
