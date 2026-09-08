@@ -90,7 +90,7 @@ const searchData = [
 
 
     {
-        title: "ICC releases updated ODI Rankings",
+        title: "ICC ODI Rankings 2026: India leads annual team rankings update",
         type: "News",
         url: "articles/icc-odi-rankings.html"
     },
