@@ -47,6 +47,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Face Bangladesh in Women's Asia Cup 2026 Semi-final",
+    type: "News",
+    url: "articles/india-women-vs-bangladesh-asia-cup-2026-semifinal-preview.html"
+},
+{
     title: "India Top Asia Cup Group A as Pakistan Face Semi-final Race",
     type: "News",
     url: "articles/womens-asia-cup-2026-group-a-india-pakistan-semifinal-race.html"
