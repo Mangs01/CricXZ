@@ -40,6 +40,12 @@ const searchData = [
         url: "pages/smriti-mandhana.html"
     },
 
+    {
+        title: "Shafali Verma",
+        type: "Player",
+        url: "pages/shafali-verma.html"
+    },
+
 
     // =========================
     // NEWS ARTICLES
