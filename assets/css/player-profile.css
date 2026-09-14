@@ -87,6 +87,22 @@
     color: #006d77;
 }
 
+.profile-heading-name,
+.profile-heading-details {
+    display: block;
+}
+
+.bumrah-profile .profile-heading-name {
+    margin-bottom: 8px;
+    color: #7eeaf2;
+}
+
+.bumrah-profile .profile-heading-details {
+    color: #ffffff;
+    font-size: 0.76em;
+    line-height: 1.12;
+}
+
 
 /* PLAYER ROLE */
 
