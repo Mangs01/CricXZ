@@ -47,6 +47,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Women Win Record Eighth Asia Cup Title",
+    type: "News",
+    url: "articles/india-women-win-asia-cup-2026-title.html"
+},
+{
     title: "India Face Bangladesh in Women's Asia Cup 2026 Semi-final",
     type: "News",
     url: "articles/india-women-vs-bangladesh-asia-cup-2026-semifinal-preview.html"
