@@ -53,6 +53,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Women Beat Japan to Reach Asian Games Semi-final",
+    type: "News",
+    url: "articles/india-women-beat-japan-asian-games-2026-semifinal.html"
+},
+{
     title: "India Women Win Record Eighth Asia Cup Title",
     type: "News",
     url: "articles/india-women-win-asia-cup-2026-title.html"
