@@ -1,17 +1,26 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    "use strict";
+
     const filterButtons = document.querySelectorAll(".score-tab");
     const matchesContainer = document.querySelector(".live-matches .container");
+    const refreshButton = document.querySelector("#refreshScores");
+    const updatedElement = document.querySelector("#scoresUpdatedAt");
+
+    if (!matchesContainer) {
+        return;
+    }
 
     // =========================================================
     // CRICXZ LIVE SCORE CONFIG
     // =========================================================
 
-    // For now we use local mock data.
-    // Later this will be replaced with the AWS API Gateway URL.
-    const USE_MOCK_DATA = true;
-
-    const API_URL = "";
+    // The public API Gateway endpoint is inserted locally during deployment.
+    // The CricketData API key remains private inside AWS Lambda.
+    const USE_MOCK_DATA = false;
+    const API_URL = "https://pgrwcoj8f3.execute-api.ap-south-1.amazonaws.com/scores";
+    const REQUEST_TIMEOUT_MS = 10000;
+    const AUTO_REFRESH_MS = 300000;
 
 
     // =========================================================
@@ -91,11 +100,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function loadMatches() {
 
+        if (refreshButton) {
+            refreshButton.disabled = true;
+            refreshButton.textContent = "Refreshing...";
+        }
+
         try {
 
             showLoading();
 
             let matches;
+            let cachedAt = null;
 
             if (USE_MOCK_DATA) {
 
@@ -103,12 +118,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } else {
 
-                const response = await fetch(API_URL, {
-                    method: "GET",
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                });
+                if (!/^https:\/\//i.test(API_URL)) {
+                    throw new Error("A valid HTTPS live-score API URL is not configured.");
+                }
+
+                const controller = new AbortController();
+                const timeout = window.setTimeout(function () {
+                    controller.abort();
+                }, REQUEST_TIMEOUT_MS);
+
+                let response;
+
+                try {
+                    response = await fetch(API_URL, {
+                        method: "GET",
+                        headers: {
+                            "Accept": "application/json"
+                        },
+                        signal: controller.signal,
+                        cache: "no-store"
+                    });
+                } finally {
+                    window.clearTimeout(timeout);
+                }
 
                 if (!response.ok) {
                     throw new Error(
@@ -116,7 +148,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     );
                 }
 
-                const result = await response.json();
+                const rawResult = await response.json();
+                const result = typeof rawResult.body === "string"
+                    ? JSON.parse(rawResult.body)
+                    : rawResult;
 
                 // Our future Lambda endpoint should return:
                 // { data: [...] }
@@ -124,9 +159,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     ? result.data
                     : [];
 
+                cachedAt = result.meta && result.meta.cachedAt
+                    ? result.meta.cachedAt
+                    : null;
+
             }
 
             renderMatches(matches);
+            updateTimestamp(cachedAt);
 
         } catch (error) {
 
@@ -134,7 +174,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
             showError();
 
+        } finally {
+
+            if (refreshButton) {
+                refreshButton.disabled = false;
+                refreshButton.textContent = "Refresh Scores";
+            }
+
         }
+
+    }
+
+
+    // =========================================================
+    // LAST UPDATED TIME
+    // =========================================================
+
+    function updateTimestamp(cachedAt) {
+
+        if (!updatedElement) {
+            return;
+        }
+
+        const cachedDate = cachedAt ? new Date(cachedAt) : new Date();
+        const displayDate = Number.isNaN(cachedDate.getTime())
+            ? new Date()
+            : cachedDate;
+
+        const time = new Intl.DateTimeFormat("en-IN", {
+            hour: "numeric",
+            minute: "2-digit",
+            second: "2-digit"
+        }).format(displayDate);
+
+        updatedElement.textContent = USE_MOCK_DATA
+            ? `Recent result data - Checked ${time}`
+            : `Scores cached ${time}`;
 
     }
 
@@ -551,13 +626,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     filterButtons.forEach(function (button) {
 
+        button.setAttribute(
+            "aria-pressed",
+            button.classList.contains("active") ? "true" : "false"
+        );
+
         button.addEventListener("click", function () {
 
             filterButtons.forEach(function (btn) {
                 btn.classList.remove("active");
+                btn.setAttribute("aria-pressed", "false");
             });
 
             button.classList.add("active");
+            button.setAttribute("aria-pressed", "true");
 
             applyCurrentFilter();
 
@@ -586,6 +668,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // START
     // =========================================================
 
+    if (refreshButton) {
+        refreshButton.addEventListener("click", loadMatches);
+    }
+
     loadMatches();
+
+    if (!USE_MOCK_DATA) {
+        window.setInterval(loadMatches, AUTO_REFRESH_MS);
+    }
 
 });
