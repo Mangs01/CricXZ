@@ -5,6 +5,12 @@ const searchData = [
     // =========================
 
     {
+        title: "Sachin Tendulkar",
+        type: "Player",
+        url: "pages/sachin-tendulkar.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
