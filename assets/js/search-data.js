@@ -11,6 +11,12 @@ const searchData = [
     },
 
     {
+        title: "MS Dhoni",
+        type: "Player",
+        url: "pages/ms-dhoni.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
