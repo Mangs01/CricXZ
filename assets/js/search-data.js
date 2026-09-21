@@ -23,6 +23,12 @@ const searchData = [
     },
 
     {
+        title: "Rahul Dravid",
+        type: "Player",
+        url: "pages/rahul-dravid.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
