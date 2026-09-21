@@ -77,6 +77,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Women Face Sri Lanka in Asian Games Gold Medal Final",
+    type: "News",
+    url: "articles/india-women-vs-sri-lanka-asian-games-2026-final-preview.html"
+},
+{
     title: "India Women Beat Japan to Reach Asian Games Semi-final",
     type: "News",
     url: "articles/india-women-beat-japan-asian-games-2026-semifinal.html"
