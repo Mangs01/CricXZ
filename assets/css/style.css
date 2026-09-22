@@ -4373,6 +4373,21 @@ text-decoration:none;
 .home-page .latest-news .news-card {
     width: 100%;
     min-width: 0;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Make the complete homepage news card activate its Read More link. */
+.home-page .latest-news .news-card > a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.home-page .latest-news .news-card:focus-within {
+    outline: 3px solid #009688;
+    outline-offset: 3px;
 }
 
 .home-page .latest-news .news-card img {
