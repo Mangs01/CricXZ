@@ -35,6 +35,12 @@ const searchData = [
     },
 
     {
+        title: "AB de Villiers",
+        type: "Player",
+        url: "pages/ab-de-villiers.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
