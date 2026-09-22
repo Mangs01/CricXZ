@@ -29,6 +29,12 @@ const searchData = [
     },
 
     {
+        title: "Anil Kumble",
+        type: "Player",
+        url: "pages/anil-kumble.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
