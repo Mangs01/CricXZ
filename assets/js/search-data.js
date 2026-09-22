@@ -41,6 +41,12 @@ const searchData = [
     },
 
     {
+        title: "Chris Gayle",
+        type: "Player",
+        url: "pages/chris-gayle.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
