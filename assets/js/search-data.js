@@ -53,6 +53,12 @@ const searchData = [
     },
 
     {
+        title: "Brian Lara",
+        type: "Player",
+        url: "pages/brian-lara.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
