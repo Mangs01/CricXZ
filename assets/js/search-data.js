@@ -65,6 +65,12 @@ const searchData = [
     },
 
     {
+        title: "Wasim Akram",
+        type: "Player",
+        url: "pages/wasim-akram.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
