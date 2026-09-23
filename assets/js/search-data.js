@@ -47,6 +47,12 @@ const searchData = [
     },
 
     {
+        title: "Muttiah Muralitharan",
+        type: "Player",
+        url: "pages/muttiah-muralitharan.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
