@@ -95,6 +95,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "England Beat Sri Lanka by 89 Runs in 1st ODI",
+    type: "News",
+    url: "articles/england-beat-sri-lanka-first-odi-2026.html"
+},
+{
     title: "India Women Win Asian Games Gold by 147 Runs",
     type: "News",
     url: "articles/india-women-vs-sri-lanka-asian-games-2026-final-preview.html"
