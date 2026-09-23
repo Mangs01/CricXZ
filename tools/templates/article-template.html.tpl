@@ -150,11 +150,19 @@
       </ul>
     </div>
     <div>
-      <h3>Categories</h3>
-      <ul><li><span>IPL</span></li><li><span>ICC</span></li><li><span>ODI</span></li><li><span>Test Cricket</span></li></ul>
+      <h3>Legal &amp; Editorial</h3>
+      <ul><li><a href="../pages/privacy-policy.html">Privacy Policy</a></li><li><a href="../pages/terms.html">Terms &amp; Conditions</a></li><li><a href="../pages/editorial-policy.html">Editorial Policy</a></li><li><a href="../pages/disclaimer.html">Disclaimer</a></li></ul>
     </div>
   </div>
-  <div class="footer-bottom">&copy; 2026 CricXZ &bull; All Rights Reserved.</div>
+  <div class="footer-bottom">
+    <nav class="footer-legal-links" aria-label="Legal and editorial information">
+      <a href="../pages/privacy-policy.html">Privacy Policy</a>
+      <a href="../pages/terms.html">Terms &amp; Conditions</a>
+      <a href="../pages/editorial-policy.html">Editorial Policy</a>
+      <a href="../pages/disclaimer.html">Disclaimer</a>
+    </nav>
+    &copy; 2026 CricXZ &bull; All Rights Reserved.
+  </div>
 </footer>
 <script src="../assets/js/navbar.js"></script>
 </body>

@@ -204,6 +204,30 @@ const searchData = [
         title: "Contact",
         type: "Page",
         url: "pages/contact.html"
+    },
+
+    {
+        title: "Privacy Policy",
+        type: "Page",
+        url: "pages/privacy-policy.html"
+    },
+
+    {
+        title: "Terms and Conditions",
+        type: "Page",
+        url: "pages/terms.html"
+    },
+
+    {
+        title: "Editorial Policy",
+        type: "Page",
+        url: "pages/editorial-policy.html"
+    },
+
+    {
+        title: "Disclaimer",
+        type: "Page",
+        url: "pages/disclaimer.html"
     }
 
 ];
