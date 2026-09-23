@@ -59,6 +59,12 @@ const searchData = [
     },
 
     {
+        title: "Ricky Ponting",
+        type: "Player",
+        url: "pages/ricky-ponting.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
