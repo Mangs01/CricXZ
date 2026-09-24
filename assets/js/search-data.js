@@ -125,6 +125,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "Asian Games 2026 Men's Cricket: India Squad, Schedule and Medal Path",
+    type: "News",
+    url: "articles/asian-games-2026-mens-cricket-india-squad-schedule.html"
+},
+{
     title: "England Beat Sri Lanka by 89 Runs in 1st ODI",
     type: "News",
     url: "articles/england-beat-sri-lanka-first-odi-2026.html"
