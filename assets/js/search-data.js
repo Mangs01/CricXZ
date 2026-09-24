@@ -161,6 +161,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "Australia Beat Zimbabwe by 1 Wicket in 3rd ODI",
+    type: "News",
+    url: "articles/australia-zimbabwe-third-odi-2026.html"
+},
+{
     title: "Asian Games 2026 Men's Cricket: Afghanistan and Malaysia Win Day 1",
     type: "News",
     url: "articles/asian-games-2026-mens-cricket-day-1-results.html"
