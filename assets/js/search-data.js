@@ -89,6 +89,12 @@ const searchData = [
     },
 
     {
+        title: "Kumar Sangakkara",
+        type: "Player",
+        url: "pages/kumar-sangakkara.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
