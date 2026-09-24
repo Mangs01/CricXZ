@@ -95,6 +95,12 @@ const searchData = [
     },
 
     {
+        title: "Mahela Jayawardene",
+        type: "Player",
+        url: "pages/mahela-jayawardene.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
