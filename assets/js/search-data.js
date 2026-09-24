@@ -71,6 +71,12 @@ const searchData = [
     },
 
     {
+        title: "Jacques Kallis",
+        type: "Player",
+        url: "pages/jacques-kallis.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
