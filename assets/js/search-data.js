@@ -101,6 +101,12 @@ const searchData = [
     },
 
     {
+        title: "Sunil Gavaskar",
+        type: "Player",
+        url: "pages/sunil-gavaskar.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
