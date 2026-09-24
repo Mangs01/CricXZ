@@ -161,6 +161,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "South Africa Beat Australia by 67 Runs in First ODI",
+    type: "News",
+    url: "articles/south-africa-beat-australia-first-odi-2026.html"
+},
+{
     title: "Australia Beat Zimbabwe by 1 Wicket in 3rd ODI",
     type: "News",
     url: "articles/australia-zimbabwe-third-odi-2026.html"
