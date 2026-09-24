@@ -83,6 +83,12 @@ const searchData = [
     },
 
     {
+        title: "Glenn McGrath",
+        type: "Player",
+        url: "pages/glenn-mcgrath.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
