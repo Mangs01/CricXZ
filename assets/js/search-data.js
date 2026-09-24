@@ -107,6 +107,12 @@ const searchData = [
     },
 
     {
+        title: "Sir Vivian Richards",
+        type: "Player",
+        url: "pages/vivian-richards.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
