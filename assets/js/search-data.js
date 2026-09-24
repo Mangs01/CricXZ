@@ -77,6 +77,12 @@ const searchData = [
     },
 
     {
+        title: "Shane Warne",
+        type: "Player",
+        url: "pages/shane-warne.html"
+    },
+
+    {
         title: "Virat Kohli",
         type: "Player",
         url: "pages/virat.html"
