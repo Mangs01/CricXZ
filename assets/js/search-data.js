@@ -161,6 +161,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "Hayley Matthews Smashes Record 182 as West Indies Beat Zimbabwe",
+    type: "News",
+    url: "articles/hayley-matthews-record-182-west-indies-zimbabwe-2026.html"
+},
+{
     title: "Sri Lanka Beat England by 16 Runs in Second ODI",
     type: "News",
     url: "articles/sri-lanka-beat-england-second-odi-2026.html"
