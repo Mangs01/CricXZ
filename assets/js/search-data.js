@@ -155,7 +155,13 @@ const searchData = [
     },
 
 
-    // =========================
+        {
+        title: "Yuvraj Singh",
+        type: "Player",
+        url: "pages/yuvraj-singh.html"
+    },
+
+// =========================
     // NEWS ARTICLES
     // =========================
 
