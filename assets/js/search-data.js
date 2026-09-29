@@ -1,4 +1,4 @@
-const searchData = [
+﻿const searchData = [
 
     // =========================
     // PLAYERS
@@ -332,4 +332,10 @@ const searchData = [
         url: "pages/disclaimer.html"
     }
 
-];
+  {
+    title: "India Beat West Indies by 8 Wickets as Kohli, Gill Shine in 1st ODI",
+    url: "articles/india-west-indies-first-odi-2026.html",
+    type: "article",
+    category: "ODI"
+  },];
+
