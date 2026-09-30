@@ -167,6 +167,11 @@
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India Beat West Indies by 8 Wickets in 2nd ODI as Shubman Gill Smashes Double Century",
+    type: "News",
+    url: "articles/india-west-indies-second-odi-2026.html"
+},
+{
     title: "Hayley Matthews Smashes Record 182 as West Indies Beat Zimbabwe",
     type: "News",
     url: "articles/hayley-matthews-record-182-west-indies-zimbabwe-2026.html"
@@ -338,4 +343,5 @@
     type: "article",
     category: "ODI"
   },];
+
 
