@@ -13,16 +13,17 @@
 </head>
 
 <body class="live-scores-page">
+
+<!-- 1. FIXED: Navbar ko Match Card se baahar nikalkar sabse upar kar diya -->
 <nav class="navbar" aria-label="Primary navigation">
     <div class="logo"><div class="site-title">CRICXZ</div></div>
-    <button class="menu-toggle" id="menuToggle" type="button"
-        aria-label="Open navigation menu" aria-expanded="false">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
         <span></span><span></span><span></span>
     </button>
     <ul class="menu" id="mainMenu">
         <li><a href="../index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="live-scores.html" aria-current="page">Live Scores</a></li>
+        <li><a href="live-scores.html">Live Scores</a></li>
         <li><a href="players.html">Players</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -30,36 +31,46 @@
 </nav>
 
 <main>
-    <section class="live-hero">
-        <div class="container">
-            <span class="live-label">🏏 CRICXZ SCORE CENTER</span>
-            <h1>Live Cricket Scores</h1>
-            <p>Follow live matches, recent results, upcoming fixtures and important cricket updates from around the world.</p>
-        </div>
-    </section>
-
-    <section class="score-filter" aria-label="Filter cricket matches">
-        <div class="container">
-            <button class="score-tab active" type="button" data-filter="all">All Matches</button>
-            <button class="score-tab" type="button" data-filter="live">🔴 Live</button>
-            <button class="score-tab" type="button" data-filter="upcoming">Upcoming</button>
-            <button class="score-tab" type="button" data-filter="result">Results</button>
-        </div>
-
-        <div class="score-tools">
-            <button id="refreshScores" class="refresh-scores" type="button">Refresh Scores</button>
-            <p id="scoresUpdatedAt" class="scores-updated" aria-live="polite">Preparing score data…</p>
-        </div>
-    </section>
-
-    <!-- HIGHLIGHTED IND VS PAK FINAL CARD (2ND INNINGS LIVE) -->
+    <!-- 2. FIXED: Asian Games Final ko "LIVE" se "RESULT" mein badal diya -->
     <section class="featured-match" style="margin-top: 30px;">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 20px; font-size: 24px; color: #0b1c2c;">🏆 Asian Games 2026 Gold Medal Match</h2>
             
-            <div class="match-card live-card" data-status="live" style="border: 2px solid #dc3545; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <div class="match-card result-card" data-status="result" style="border: 2px solid #198754; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                 <div class="match-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
                     <span class="match-format" style="font-weight: bold; color: #0b1c2c;">Men's T20 Final</span>
+                    <!-- Green Result Badge -->
+                    <span class="match-badge result-badge" style="background: #198754; padding: 4px 8px; border-radius: 4px; font-size: 14px; color: #fff; font-weight: bold;">RESULT</span>
+                </div>
+                
+                <div class="match-teams" style="margin-bottom: 15px;">
+                    <div class="team-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; font-weight: bold;">
+                        <span class="team-name">🇮🇳 India</span>
+                        <span class="team-score" style="color: #444;">215/6 <span style="font-size:14px; color:#888; font-weight:normal;">(20.0 Overs)</span></span>
+                    </div>
+                    <div class="team-row" style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
+                        <span class="team-name">🇵🇰 Pakistan</span>
+                        <span class="team-score" style="color: #444;">196/8 <span style="font-size:14px; color:#888; font-weight:normal;">(20.0 Overs)</span></span>
+                    </div>
+                </div>
+                
+                <div class="match-footer" style="text-align: center; margin-top: 15px;">
+                    <!-- Winning Status -->
+                    <p class="match-venue" style="color: #198754; margin-bottom: 0; font-size: 16px; font-weight: bold;">India won by 19 runs & secured the GOLD MEDAL 🥇</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- HIGHLIGHTED IND VS WI 3RD ODI (LIVE STATUS) -->
+    <section class="featured-match" style="margin-top: 30px;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; font-size: 24px; color: #0b1c2c;">🏏 India vs West Indies - 3rd ODI</h2>
+            
+            <div class="match-card live-card" data-status="live" style="border: 2px solid #dc3545; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+                <div class="match-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
+                    <span class="match-format" style="font-weight: bold; color: #0b1c2c;">One Day International</span>
+                    <!-- Red Live Badge -->
                     <span class="match-badge live-badge" style="background: #dc3545; padding: 4px 8px; border-radius: 4px; font-size: 14px; color: #fff; font-weight: bold;">🔴 LIVE</span>
                 </div>
                 
@@ -67,21 +78,20 @@
                     <!-- INDIA SCORE (1st Innings Completed) -->
                     <div class="team-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; font-weight: bold;">
                         <span class="team-name">🇮🇳 India</span>
-                        <!-- Yahan India ka Final Score likhein (Jaise 215/6) -->
-                        <span class="team-score" style="color: #444;">215/6 <span style="font-size:14px; color:#888; font-weight:normal;">(20.0 Overs)</span></span>
+                        <!-- India ka fixed score -->
+                        <span class="team-score" style="color: #444;">351/8 <span style="font-size:14px; color:#888; font-weight:normal;">(50.0 Overs)</span></span>
                     </div>
                     
-                    <!-- PAKISTAN SCORE (Currently Batting - LIVE) -->
+                    <!-- WEST INDIES SCORE (Currently Batting - LIVE) -->
                     <div class="team-row" style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
-                        <span class="team-name">🇵🇰 Pakistan</span>
-                        <!-- Yahan Pakistan ka Live Score aur Overs update karte rahein -->
-                        <span class="team-score" style="color: #dc3545; font-size: 22px;">192/6 <span style="font-size:14px; color:#666; font-weight:normal;">(20.0 Overs)</span></span>
+                        <span class="team-name">🌴 West Indies</span>
+                        <!-- West Indies ka Live Score yahan update karein -->
+                        <span class="team-score" style="color: #dc3545; font-size: 22px;">280/4 <span style="font-size:14px; color:#666; font-weight:normal;">(42.1 Overs)</span></span>
                     </div>
                 </div>
                 
                 <div class="match-footer" style="text-align: center; margin-top: 15px;">
-                    <!-- Match Target / Required Run Rate Update -->
-                    <p class="match-venue" style="color: #dc3545; margin-bottom: 15px; font-size: 15px; font-weight: bold;">INDIA Won by 19 runs</p>
+                    <p class="match-venue" style="color: #dc3545; margin-bottom: 15px; font-size: 15px; font-weight: bold;">West Indies need 72 runs in 47 balls</p>
                     <button onClick="window.location.reload();" class="preview-btn" style="background: #0b1c2c; color: #f4c522; padding: 10px 20px; border:none; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block;">
                         Refresh Score
                     </button>
