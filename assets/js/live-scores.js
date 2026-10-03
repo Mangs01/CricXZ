@@ -132,7 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 id: "ind-wi-3rd-odi-2026",
                 name: "India vs West Indies - 3rd ODI",
                 matchType: "odi",
-                status: "India look for a 3-0 whitewash.",
+                status: "India look for a 3-0 whitewash       Starts Oct 3, 02:00 PM IST..",
                 matchStarted: false,
                 matchEnded: false,
                 teams: ["India", "West Indies"],
