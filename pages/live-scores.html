@@ -52,32 +52,35 @@
         </div>
     </section>
 
-    <!-- HIGHLIGHTED IND VS PAK FINAL CARD -->
+<!-- HIGHLIGHTED IND VS PAK FINAL CARD (LIVE STATUS) -->
     <section class="featured-match" style="margin-top: 30px;">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 20px; font-size: 24px; color: #0b1c2c;">🏆 Asian Games 2026 Gold Medal Match</h2>
             
-            <div class="match-card upcoming-card" data-status="upcoming" style="border: 2px solid #f4c522; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <!-- Red border added for Live feel -->
+            <div class="match-card live-card" data-status="live" style="border: 2px solid #dc3545; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                 <div class="match-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
                     <span class="match-format" style="font-weight: bold; color: #0b1c2c;">Men's T20 Final</span>
-                    <span class="match-badge upcoming-badge" style="background: #e9ecef; padding: 4px 8px; border-radius: 4px; font-size: 14px; color: #333;">Starts Oct 3, 10:30 AM IST</span>
+                    <span class="match-badge live-badge" style="background: #dc3545; padding: 4px 8px; border-radius: 4px; font-size: 14px; color: #fff; font-weight: bold;">🔴 LIVE</span>
                 </div>
                 
                 <div class="match-teams" style="margin-bottom: 15px;">
                     <div class="team-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; font-weight: bold;">
                         <span class="team-name">🇮🇳 India</span>
-                        <span class="team-score" style="color: #666;">Upcoming</span>
+                        <!-- Yahan Score aur Overs update karein -->
+                        <span class="team-score" style="color: #dc3545;">15/0 <span style="font-size:14px; color:#666; font-weight:normal;">(2.0 Overs)</span></span>
                     </div>
                     <div class="team-row" style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
                         <span class="team-name">🇵🇰 Pakistan</span>
-                        <span class="team-score" style="color: #666;">Upcoming</span>
+                        <span class="team-score" style="color: #666;">Yet to bat</span>
                     </div>
                 </div>
                 
                 <div class="match-footer" style="text-align: center; margin-top: 15px;">
-                    <p class="match-venue" style="color: #555; margin-bottom: 15px; font-size: 14px;">📍 Korogi Sports Park, Nisshin, Japan</p>
-                    <a href="../articles/india-vs-pakistan-asian-games-2026-final-preview.html" class="preview-btn" style="background: #0b1c2c; color: #f4c522; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
-                        Read Full Match Preview &rarr;
+                    <!-- Match Status -->
+                    <p class="match-venue" style="color: #dc3545; margin-bottom: 15px; font-size: 15px; font-weight: bold;">India won the toss and elected to bat</p>
+                    <a href="live-scores.html" class="preview-btn" style="background: #0b1c2c; color: #f4c522; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+                        Refresh Score
                     </a>
                 </div>
             </div>
