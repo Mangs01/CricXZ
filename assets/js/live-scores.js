@@ -127,9 +127,22 @@ document.addEventListener("DOMContentLoaded", function () {
             // =========================================================
             // Yeh match hamesha API ke data ke sabse upar dikhega
             
+            // 1. India vs West Indies - 3rd ODI (Injected First)
+            matches.unshift({
+                id: "ind-wi-3rd-odi-2026",
+                name: "India vs West Indies - 3rd ODI",
+                matchType: "odi",
+                status: "India look for a 3-0 whitewash.",
+                matchStarted: false,
+                matchEnded: false,
+                teams: ["India", "West Indies"],
+                score: []
+            });
+
+            // 2. Asian Games Final: India vs Pakistan
             matches.unshift({
                 id: "ind-pak-asian-games-final-2026",
-                name: "Asian Games 2026: India vs Pakistan (Gold Medal Match)",
+                name: "Asian Games 2026: India vs Pakistan",
                 matchType: "t20i",
                 status: "Starts Oct 3, 10:30 AM IST.", 
                 matchStarted: false, 
