@@ -127,16 +127,19 @@ document.addEventListener("DOMContentLoaded", function () {
             // =========================================================
             // Yeh match hamesha API ke data ke sabse upar dikhega
             
-            // 1. India vs West Indies - 3rd ODI (Injected First)
+            // 3 & 4 FIXED: Corrected India's score and made it "Live" (which automatically removes it from Upcoming)
             matches.unshift({
                 id: "ind-wi-3rd-odi-2026",
                 name: "India vs West Indies - 3rd ODI",
                 matchType: "odi",
-                status: "India look for a 3-0 whitewash    -    Starts Oct 3, 02:00 PM IST..",
-                matchStarted: false,
+                status: "West Indies need 72 runs in 47 balls",
+                matchStarted: true,  // Isko true karne se ye sirf LIVE section me dikhega
                 matchEnded: false,
                 teams: ["India", "West Indies"],
-                score: []
+                score: [
+                    { inning: "India Inning 1", r: 351, w: 8, o: 50.0 }, // India ka sahi score (Target: 352)
+                    { inning: "West Indies Inning 1", r: 280, w: 4, o: 42.1 } // WI ka current score
+                ]
             });
 
             renderMatches(matches);
