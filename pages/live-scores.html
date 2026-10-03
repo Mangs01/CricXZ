@@ -52,12 +52,11 @@
         </div>
     </section>
 
-<!-- HIGHLIGHTED IND VS PAK FINAL CARD (LIVE STATUS) -->
+    <!-- HIGHLIGHTED IND VS PAK FINAL CARD (2ND INNINGS LIVE) -->
     <section class="featured-match" style="margin-top: 30px;">
         <div class="container">
             <h2 style="text-align: center; margin-bottom: 20px; font-size: 24px; color: #0b1c2c;">🏆 Asian Games 2026 Gold Medal Match</h2>
             
-            <!-- Red border added for Live feel -->
             <div class="match-card live-card" data-status="live" style="border: 2px solid #dc3545; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
                 <div class="match-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
                     <span class="match-format" style="font-weight: bold; color: #0b1c2c;">Men's T20 Final</span>
@@ -65,23 +64,27 @@
                 </div>
                 
                 <div class="match-teams" style="margin-bottom: 15px;">
+                    <!-- INDIA SCORE (1st Innings Completed) -->
                     <div class="team-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; font-weight: bold;">
                         <span class="team-name">🇮🇳 India</span>
-                        <!-- Yahan Score aur Overs update karein -->
-                        <span class="team-score" style="color: #dc3545;">211/6 <span style="font-size:14px; color:#666; font-weight:normal;">(20.0 Overs)</span></span>
+                        <!-- Yahan India ka Final Score likhein (Jaise 215/6) -->
+                        <span class="team-score" style="color: #444;">215/6 <span style="font-size:14px; color:#888; font-weight:normal;">(20.0 Overs)</span></span>
                     </div>
+                    
+                    <!-- PAKISTAN SCORE (Currently Batting - LIVE) -->
                     <div class="team-row" style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
                         <span class="team-name">🇵🇰 Pakistan</span>
-                        <span class="team-score" style="color: #666;">Yet to bat</span>
+                        <!-- Yahan Pakistan ka Live Score aur Overs update karte rahein -->
+                        <span class="team-score" style="color: #dc3545; font-size: 22px;">60/3 <span style="font-size:14px; color:#666; font-weight:normal;">(8.4 Overs)</span></span>
                     </div>
                 </div>
                 
                 <div class="match-footer" style="text-align: center; margin-top: 15px;">
-                    <!-- Match Status -->
-                    <p class="match-venue" style="color: #dc3545; margin-bottom: 15px; font-size: 15px; font-weight: bold;">India won the toss and elected to bat</p>
-                    <a href="live-scores.html" class="preview-btn" style="background: #0b1c2c; color: #f4c522; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+                    <!-- Match Target / Required Run Rate Update -->
+                    <p class="match-venue" style="color: #dc3545; margin-bottom: 15px; font-size: 15px; font-weight: bold;">Pakistan need 201 runs to win</p>
+                    <button onClick="window.location.reload();" class="preview-btn" style="background: #0b1c2c; color: #f4c522; padding: 10px 20px; border:none; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block;">
                         Refresh Score
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
