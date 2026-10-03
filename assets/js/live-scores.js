@@ -156,17 +156,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     // =========================================================
-    // LAST UPDATED TIME (Score Cached Text Updated Here)
+    // LAST UPDATED TIME (Forced to Current Live Time)
     // =========================================================
 
     function updateTimestamp(cachedAt) {
-
         if (!updatedElement) {
             return;
         }
 
-        const cachedDate = cachedAt ? new Date(cachedAt) : new Date();
-        const displayDate = Number.isNaN(cachedDate.getTime()) ? new Date() : cachedDate;
+        // API ke purane time ko ignore karke hamesha current time show karega
+        const displayDate = new Date();
 
         const time = new Intl.DateTimeFormat("en-IN", {
             hour: "numeric",
@@ -174,11 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
             second: "2-digit"
         }).format(displayDate);
 
-        // "Scores cached" ki jagah "Scores Updated" kar diya gaya hai
-        updatedElement.textContent = USE_MOCK_DATA
-            ? `Scores Updated: ${time}`
-            : `Scores Updated: ${time}`;
-
+        updatedElement.textContent = `Scores Updated: ${time}`;
     }
 
 
