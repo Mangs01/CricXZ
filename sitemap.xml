@@ -47,6 +47,33 @@
     </url>
 
     <!-- CRICXZ:ARTICLE-URLS:START -->
+<!-- New Player Profiles -->
+<url>
+  <loc>https://cricxz.com/pages/ishan.html</loc>
+  <lastmod>2026-10-02</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://cricxz.com/pages/vaibhav-sooryavanshi.html</loc>
+  <lastmod>2026-10-02</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<!-- High-Traffic Upcoming Previews -->
+<url>
+  <loc>https://cricxz.com/articles/india-vs-pakistan-asian-games-2026-final-preview.html</loc>
+  <lastmod>2026-10-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://cricxz.com/articles/india-vs-west-indies-3rd-odi-2026-preview.html</loc>
+  <lastmod>2026-10-02</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.9</priority>
+</url>
 <url>
   <loc>https://cricxz.com/articles/india-west-indies-second-odi-2026.html</loc>
   <lastmod>2026-09-30</lastmod>
