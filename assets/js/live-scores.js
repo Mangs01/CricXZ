@@ -132,22 +132,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 id: "ind-wi-3rd-odi-2026",
                 name: "India vs West Indies - 3rd ODI",
                 matchType: "odi",
-                status: "India look for a 3-0 whitewash       Starts Oct 3, 02:00 PM IST..",
+                status: "India look for a 3-0 whitewash    -    Starts Oct 3, 02:00 PM IST..",
                 matchStarted: false,
                 matchEnded: false,
                 teams: ["India", "West Indies"],
-                score: []
-            });
-
-            // 2. Asian Games Final: India vs Pakistan
-            matches.unshift({
-                id: "ind-pak-asian-games-final-2026",
-                name: "Asian Games 2026: India vs Pakistan",
-                matchType: "t20i",
-                status: "Starts Oct 3, 10:30 AM IST.", 
-                matchStarted: false, 
-                matchEnded: false,
-                teams: ["India", "Pakistan"],
                 score: []
             });
 
