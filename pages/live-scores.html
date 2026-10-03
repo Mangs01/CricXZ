@@ -62,44 +62,6 @@
         </div>
     </section>
 
-<!-- HIGHLIGHTED IND VS WI 3RD ODI (LIVE STATUS) -->
-    <section class="featured-match" style="margin-top: 30px;">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 20px; font-size: 24px; color: #0b1c2c;">🏏 India vs West Indies - 3rd ODI</h2>
-            
-            <div class="match-card live-card" data-status="live" style="border: 2px solid #dc3545; padding: 20px; border-radius: 10px; background: #fff; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <div class="match-header" style="display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px;">
-                    <span class="match-format" style="font-weight: bold; color: #0b1c2c;">One Day International</span>
-                    <!-- Red Live Badge -->
-                    <span class="match-badge live-badge" style="background: #dc3545; padding: 4px 8px; border-radius: 4px; font-size: 14px; color: #fff; font-weight: bold;">🔴 LIVE</span>
-                </div>
-                
-                <div class="match-teams" style="margin-bottom: 15px;">
-                    <!-- INDIA SCORE (1st Innings Completed) -->
-                    <div class="team-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 18px; font-weight: bold;">
-                        <span class="team-name">🇮🇳 India</span>
-                        <!-- India ka fixed score -->
-                        <span class="team-score" style="color: #444;">351/8 <span style="font-size:14px; color:#888; font-weight:normal;">(50.0 Overs)</span></span>
-                    </div>
-                    
-                    <!-- WEST INDIES SCORE (Currently Batting - LIVE) -->
-                    <div class="team-row" style="display: flex; justify-content: space-between; font-size: 18px; font-weight: bold;">
-                        <span class="team-name">🌴 West Indies</span>
-                        <!-- West Indies ka Live Score yahan update karein -->
-                        <span class="team-score" style="color: #dc3545; font-size: 22px;">352/5 <span style="font-size:14px; color:#666; font-weight:normal;">(48.2 Overs)</span></span>
-                    </div>
-                </div>
-                
-                <div class="match-footer" style="text-align: center; margin-top: 15px;">
-                    <p class="match-venue" style="color: #dc3545; margin-bottom: 15px; font-size: 15px; font-weight: bold;">West Indies Won by 5 wickets</p>
-                    <button onClick="window.location.reload();" class="preview-btn" style="background: #0b1c2c; color: #f4c522; padding: 10px 20px; border:none; border-radius: 5px; font-weight: bold; cursor: pointer; display: inline-block;">
-                        Refresh Score
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- DYNAMIC JS SCORES CONTAINER -->
     <section class="live-matches" aria-label="Cricket matches" style="margin-top: 20px;">
         <div class="container" aria-live="polite" aria-busy="true">
@@ -142,15 +104,6 @@
 
 <script src="../assets/js/live-scores.js"></script>
 <script src="../assets/js/navbar.js"></script>
-
-<!-- Auto-Refresh Script for Live Match -->
-<script>
-    // Page ko har 60 seconds (60000 ms) mein auto-reload karega
-    setTimeout(function() {
-        window.location.reload();
-    }, 60000);
-</script>
-
 <script src="../assets/js/live-scores.js"></script>
 <script src="../assets/js/navbar.js"></script>
 </body>

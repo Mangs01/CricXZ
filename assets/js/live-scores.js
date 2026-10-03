@@ -127,18 +127,18 @@ document.addEventListener("DOMContentLoaded", function () {
             // =========================================================
             // Yeh match hamesha API ke data ke sabse upar dikhega
             
-            // 3 & 4 FIXED: Corrected India's score and made it "Live" (which automatically removes it from Upcoming)
+            // 1. IND vs WI 3rd ODI (Final Result)
             matches.unshift({
                 id: "ind-wi-3rd-odi-2026",
                 name: "India vs West Indies - 3rd ODI",
                 matchType: "odi",
-                status: "West Indies need 72 runs in 47 balls",
-                matchStarted: true,  // Isko true karne se ye sirf LIVE section me dikhega
-                matchEnded: false,
+                status: "West Indies won by 5 wkts",
+                matchStarted: true,
+                matchEnded: true, // Isko true karne se ye sirf Latest Results me aayega
                 teams: ["India", "West Indies"],
                 score: [
-                    { inning: "India Inning 1", r: 351, w: 8, o: 50.0 }, // India ka sahi score (Target: 352)
-                    { inning: "West Indies Inning 1", r: 280, w: 4, o: 42.1 } // WI ka current score
+                    { inning: "India Inning 1", r: 351, w: 8, o: 50.0 }, // Correct India Score
+                    { inning: "West Indies Inning 1", r: 352, w: 5, o: 48.2 } // Correct WI Score
                 ]
             });
 
