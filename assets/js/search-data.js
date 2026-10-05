@@ -167,6 +167,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "Who Is Hasan Nawaz? Pakistan Batter Who Hit 96 Against India",
+    type: "News",
+    url: "articles/who-is-h-nawaz-pakistan-breakout-star-asian-games-2026.html"
+},
+{
     title: "Vaibhav Sooryavanshi Send-Off Controversy: Kamran Akmal Slams Saim Ayub",
     type: "News",
     url: "articles/vaibhav-sooryavanshi-saim-ayub-send-off-controversy-2026.html"
