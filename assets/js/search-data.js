@@ -167,6 +167,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "India vs West Indies 1st T20I 2026 Preview: Vaibhav in Focus",
+    type: "News",
+    url: "articles/india-vs-west-indies-first-t20i-2026-preview.html"
+},
+{
     title: "Who Is Hasan Nawaz? Pakistan Batter Who Hit 96 Against India",
     type: "News",
     url: "articles/who-is-h-nawaz-pakistan-breakout-star-asian-games-2026.html"
