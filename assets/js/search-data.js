@@ -1,4 +1,4 @@
-﻿const searchData = [
+const searchData = [
 
     // =========================
     // PLAYERS
@@ -166,6 +166,11 @@
     // =========================
 
     // CRICXZ:NEWS-ARTICLES:START
+{
+    title: "Vaibhav Sooryavanshi Send-Off Controversy: Kamran Akmal Slams Saim Ayub",
+    type: "News",
+    url: "articles/vaibhav-sooryavanshi-saim-ayub-send-off-controversy-2026.html"
+},
 {
     title: "India Beat West Indies by 8 Wickets in 2nd ODI as Shubman Gill Smashes Double Century",
     type: "News",
@@ -335,13 +340,12 @@
         title: "Disclaimer",
         type: "Page",
         url: "pages/disclaimer.html"
-    }
+    },
 
   {
     title: "India Beat West Indies by 8 Wickets as Kohli, Gill Shine in 1st ODI",
     url: "articles/india-west-indies-first-odi-2026.html",
     type: "article",
     category: "ODI"
-  },];
-
-
+  }
+];
