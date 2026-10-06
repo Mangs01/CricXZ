@@ -1,4 +1,5 @@
 const searchData = [
+  { title: "Naman Dhir Profile, Career Stats & Records", type: "Player", category: "India", description: "India batting all-rounder who took 3/31 on T20I debut.", url: "pages/naman-dhir.html", keywords: "Naman Dhir profile stats T20I debut 3/31 India IPL" },
   { title: "Shreyas Iyer Profile, Career Stats & Records", type: "Player", category: "India", description: "India middle-order batter and T20I captain with verified international records.", url: "pages/shreyas-iyer.html", keywords: "Shreyas Iyer stats profile records India captain 102" },
 
     // =========================
