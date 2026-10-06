@@ -167,6 +167,11 @@ const searchData = [
 
     // CRICXZ:NEWS-ARTICLES:START
 {
+    title: "Bhuvneshwar Kumar to Captain India at Hong Kong Sixes 2026",
+    type: "News",
+    url: "articles/bhuvneshwar-kumar-captain-india-hong-kong-sixes-2026.html"
+},
+{
     title: "India vs West Indies 1st T20I 2026 Preview: Vaibhav in Focus",
     type: "News",
     url: "articles/india-vs-west-indies-first-t20i-2026-preview.html"
