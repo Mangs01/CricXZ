@@ -380,4 +380,4 @@ const searchData = [
     description: "Delhi Capitals appoint Sourav Ganguly as head coach for the IPL 2027 season.",
     url: "articles/sourav-ganguly-delhi-capitals-head-coach-ipl-2027.html",
     keywords: "Sourav Ganguly Delhi Capitals head coach IPL 2027 DC coach"
-  },];
+  },  { title: "Shreyas Iyer Hits 102* as India Beat West Indies by 8 Wickets", type: "News", category: "T20I", description: "India chased 172 in 14.4 overs after Naman Dhir took 3/31 on debut.", url: "articles/india-vs-west-indies-first-t20i-2026-result.html", keywords: "India West Indies first T20I result Shreyas Iyer 102 Naman Dhir" },];
