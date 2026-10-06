@@ -2,7 +2,12 @@ const searchData = [
 
     // =========================
     // PLAYERS
-    // =========================
+
+    {
+        title: "Harmanpreet Kaur",
+        type: "Player",
+        url: "pages/harmanpreet-kaur.html"
+    },    // =========================
 
     {
         title: "Sachin Tendulkar",
