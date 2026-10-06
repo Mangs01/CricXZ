@@ -362,5 +362,10 @@ const searchData = [
     url: "articles/india-west-indies-first-odi-2026.html",
     type: "article",
     category: "ODI"
-  }
-];
+  },
+  {
+    title: "Harmanpreet Kaur Steps Down as India Women's Captain Across All Formats",
+    url: "articles/harmanpreet-kaur-steps-down-india-women-captain-2026.html",
+    type: "article",
+    category: "India Women"
+  }];
