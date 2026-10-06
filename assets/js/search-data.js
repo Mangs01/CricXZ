@@ -1,4 +1,5 @@
 const searchData = [
+  { title: "Shreyas Iyer Profile, Career Stats & Records", type: "Player", category: "India", description: "India middle-order batter and T20I captain with verified international records.", url: "pages/shreyas-iyer.html", keywords: "Shreyas Iyer stats profile records India captain 102" },
 
     // =========================
     // PLAYERS
