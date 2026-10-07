@@ -376,7 +376,7 @@ const searchData = [
     url: "articles/harmanpreet-kaur-steps-down-india-women-captain-2026.html",
     type: "article",
     category: "India Women"
-  }  {
+  },  {
     title: "Sourav Ganguly Appointed Delhi Capitals Head Coach for IPL 2027",
     type: "News",
     category: "IPL",

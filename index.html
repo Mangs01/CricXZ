@@ -34,6 +34,29 @@
     <link rel="canonical" href="https://cricxz.com/">
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Homepage-only safeguards for trust cards and desktop navigation. */
+        .home-page .stat-card h3 {
+            font-size: clamp(24px, 2.3vw, 32px);
+            overflow-wrap: normal;
+            word-break: normal;
+        }
+
+        @media (min-width: 769px) {
+            .home-page .navbar {
+                padding-left: clamp(20px, 4vw, 60px);
+                padding-right: clamp(20px, 4vw, 60px);
+            }
+
+            .home-page .navbar .menu {
+                gap: clamp(18px, 2.5vw, 40px);
+            }
+
+            .home-page .navbar .menu a {
+                font-size: clamp(16px, 1.45vw, 20px);
+            }
+        }
+    </style>
 </head>
 
 <body class="home-page">
@@ -137,15 +160,15 @@
             <div class="slider-container">
 
                 <div class="slide active">
-                    🏏 Virat Kohli scores brilliant century against West Indies
+                    Latest verified cricket reports and match analysis
                 </div>
 
                 <div class="slide">
-                     Rohit Sharma remains active for India in ODI cricket
+                     Detailed player profiles, records and career milestones
                 </div>
 
                 <div class="slide">
-                   🚨 Jasprit Bumrah returns after injury
+                   Source-led coverage with corrections and transparent citations
                 </div>
 
             </div>
@@ -157,23 +180,23 @@
         <div class="hero-stats">
 
             <div class="stat-card">
-                <h3>500+</h3>
-                <p>News Articles</p>
+                <h3>Original</h3>
+                <p>News &amp; Features</p>
             </div>
 
             <div class="stat-card">
-                <h3>150+</h3>
+                <h3>Detailed</h3>
                 <p>Player Profiles</p>
             </div>
 
             <div class="stat-card">
-                <h3>100+</h3>
-                <p>Live Matches</p>
+                <h3>Sourced</h3>
+                <p>Cricket Coverage</p>
             </div>
 
             <div class="stat-card">
-                <h3>24×7</h3>
-                <p>Updates</p>
+                <h3>Mobile</h3>
+                <p>Responsive Experience</p>
             </div>
 
         </div>
@@ -441,51 +464,17 @@
 </section>
 
 <section class="live-scores">
-
     <div class="container">
-
-        <h2>🏏 Live Scores</h2>
-
+        <h2>🏏 CricXZ Score Center</h2>
         <div class="score-grid">
-
-            <div class="score-card live">
-
-                <span class="status">LIVE</span>
-
-                <h3 id="matchTitle"></h3>
-
-                <p id="matchScore"></p>
-
-                <p id="matchStatus"></p>
-
-                <small id="matchUpdate"></small>
-
-                <a href="pages/match.html" class="score-btn">
-                    View Scorecard →
-                </a>
-
+            <div class="score-card">
+                <span class="status">MATCH CENTER</span>
+                <h3>Live scores, recent results and upcoming fixtures</h3>
+                <p>Visit the CricXZ Score Center for match information supplied through our configured cricket-data service.</p>
+                <a href="pages/live-scores.html" class="score-btn">Open Score Center →</a>
             </div>
-
-            <div class="score-card live">
-
-                <span class="status">LIVE</span>
-
-                <h3>England vs Pakistan</h3>
-
-                <p><strong>England:</strong> 156/2 (27.0)</p>
-
-                <p>Pakistan bowling</p>
-
-                <a href="pages/live-scores.html" class="score-btn">
-                    View Match →
-                </a>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
 
 <!-- Featured Players -->
@@ -706,4 +695,3 @@
 </body>
 
 </html>
-

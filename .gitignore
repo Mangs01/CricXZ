@@ -2,3 +2,6 @@
 # Python generated files
 __pycache__/
 *.py[cod]
+
+# Local CricXZ installer backups must never be deployed.
+.cricxz-backup/
