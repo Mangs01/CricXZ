@@ -122,26 +122,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 cachedAt = result.meta && result.meta.cachedAt ? result.meta.cachedAt : null;
             }
 
-            // =========================================================
-            // MANUAL MATCH INJECTION (IND VS PAK FINAL)
-            // =========================================================
-            // Yeh match hamesha API ke data ke sabse upar dikhega
-            
-            // 1. IND vs WI 3rd ODI (Final Result)
-            matches.unshift({
-                id: "ind-wi-3rd-odi-2026",
-                name: "India vs West Indies - 3rd ODI",
-                matchType: "odi",
-                status: "West Indies won by 5 wkts",
-                matchStarted: true,
-                matchEnded: true, // Isko true karne se ye sirf Latest Results me aayega
-                teams: ["India", "West Indies"],
-                score: [
-                    { inning: "India Inning 1", r: 351, w: 8, o: 50.0 }, // Correct India Score
-                    { inning: "West Indies Inning 1", r: 352, w: 5, o: 48.2 } // Correct WI Score
-                ]
+            // Remove contradictory completed results returned by the provider.
+            matches = matches.filter(function (match) {
+                const teams = Array.isArray(match.teams) ? match.teams.slice(0, 2) : [];
+                if (teams.length < 2 || match.matchEnded !== true || !/\bwon\b/i.test(String(match.status || ""))) {
+                    return true;
+                }
+                const firstScore = getTeamScore(match, teams[0]);
+                const secondScore = getTeamScore(match, teams[1]);
+                if (!firstScore || !secondScore) { return true; }
+                return !(Number(firstScore.r) === Number(secondScore.r) && Number(firstScore.w) === Number(secondScore.w));
             });
-
             renderMatches(matches);
             updateTimestamp(cachedAt);
 
