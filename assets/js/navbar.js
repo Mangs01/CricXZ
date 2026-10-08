@@ -32,6 +32,34 @@ document.addEventListener("DOMContentLoaded", function () {
         footerBottom.prepend(legalLinks);
     }
 
+
+    // -----------------------------------------------------
+    // ACCESSIBLE BACK-TO-TOP BUTTON
+    // -----------------------------------------------------
+
+    if (!document.querySelector(".back-to-top")) {
+        const backToTop = document.createElement("button");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        backToTop.type = "button";
+        backToTop.className = "back-to-top";
+        backToTop.setAttribute("aria-label", "Back to top");
+        backToTop.setAttribute("title", "Back to top");
+        backToTop.innerHTML = '<span aria-hidden="true">&uarr;</span>';
+        document.body.appendChild(backToTop);
+
+        const updateBackToTop = function () {
+            backToTop.classList.toggle("is-visible", window.scrollY > 500);
+        };
+
+        backToTop.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: reduceMotion.matches ? "auto" : "smooth" });
+        });
+
+        window.addEventListener("scroll", updateBackToTop, { passive: true });
+        updateBackToTop();
+    }
+
     if (!menuToggle || !mainMenu) {
         return;
     }
