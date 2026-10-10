@@ -1,4 +1,5 @@
 const searchData = [
+  { title: "Shai Hope Profile, Career Stats & Records", type: "Player", category: "West Indies", description: "West Indies captain with 6,590 ODI runs, two T20I hundreds and an unbeaten 102 against India.", url: "pages/shai-hope.html", keywords: "Shai Hope profile career stats records ODI T20I West Indies captain 102 India Ranchi" },
   { title: "Sanju Samson Profile, Career Stats & Records", type: "Player", category: "India", description: "India wicketkeeper-batter with 1,660 T20I runs, three T20I hundreds and 5,181 IPL runs.", url: "pages/sanju-samson.html", keywords: "Sanju Samson profile career stats records T20I IPL ODI India wicketkeeper 82 West Indies" },
   { title: "West Indies Beat India by 6 Wickets in 2nd T20I", type: "News", category: "T20I", description: "Shai Hope hit 102 not out as West Indies chased 250 in Ranchi to level the series 1-1.", url: "articles/india-vs-west-indies-second-t20i-2026-result.html", keywords: "India West Indies 2nd T20I 2026 result Shai Hope 102 Rutherford 84 Ranchi record chase" },
   {
