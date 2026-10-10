@@ -1,4 +1,12 @@
 const searchData = [
+  { title: "West Indies Beat India by 6 Wickets in 2nd T20I", type: "News", category: "T20I", description: "Shai Hope hit 102 not out as West Indies chased 250 in Ranchi to level the series 1-1.", url: "articles/india-vs-west-indies-second-t20i-2026-result.html", keywords: "India West Indies 2nd T20I 2026 result Shai Hope 102 Rutherford 84 Ranchi record chase" },
+  {
+    title: "Ishan Kishan Profile, Career Stats & Records",
+    description: "Ishan Kishan career statistics, ODI double century, Asian Games performances and major records.",
+    url: "pages/ishan-kishan.html",
+    type: "Player Profile",
+    keywords: "Ishan Kishan stats profile records 210 ODI India wicketkeeper batter"
+  },
   { title: "ICC New Cricket Rules 2026 Explained", type: "News", category: "ICC", description: "Pink-ball trial in daytime Tests, batter time-wasting penalties and other new playing conditions.", url: "articles/icc-new-cricket-rules-2026-pink-ball-time-wasting.html", keywords: "ICC new cricket rules 2026 pink ball daytime Test time wasting penalty T20I interval wide" },
   { title: "Bhuvneshwar Kumar", type: "Player", category: "India", description: "India swing bowler with 295 international wickets and a 2026 T20I comeback call-up.", url: "pages/bhuvneshwar-kumar.html", keywords: "Bhuvneshwar Kumar profile career stats records Test ODI T20I wickets" },
   { title: "Bhuvneshwar Kumar Returns to India T20I Squad After Four Years", type: "News", category: "India", description: "Bhuvneshwar returns for India's five-match T20I tour of New Zealand beginning 22 October 2026.", url: "articles/bhuvneshwar-kumar-india-t20i-comeback-new-zealand-2026.html", keywords: "Bhuvneshwar Kumar comeback India New Zealand T20I squad 2026 Shreyas Iyer" },
