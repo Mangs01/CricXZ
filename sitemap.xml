@@ -113,12 +113,6 @@
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>https://cricxz.com/pages/ishan.html</loc>
-  <lastmod>2026-10-02</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
   <loc>https://cricxz.com/pages/vaibhav-sooryavanshi.html</loc>
   <lastmod>2026-10-02</lastmod>
   <changefreq>weekly</changefreq>
@@ -344,12 +338,12 @@
 
     <url>
         <loc>https://cricxz.com/pages/smriti-mandhana.html</loc>
-        <lastmod>2026-09-14</lastmod>
+        <lastmod>2026-10-13</lastmod>
     </url>
 
     <url>
         <loc>https://cricxz.com/pages/shafali-verma.html</loc>
-        <lastmod>2026-09-14</lastmod>
+        <lastmod>2026-10-13</lastmod>
     </url>
 
     <url>
@@ -466,5 +460,11 @@
     <lastmod>2026-10-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url></urlset>
+  </url>  <url>
+    <loc>https://cricxz.com/articles/shubman-gill-shafali-verma-icc-player-of-month-september-2026.html</loc>
+    <lastmod>2026-10-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>
 
