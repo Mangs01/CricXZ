@@ -1,5 +1,7 @@
 const searchData = [
 
+
+{ title: "Pragyan Ojha Named BCCI Chief Selector", type: "News", category: "India", description: "Pragyan Ojha succeeds Ajit Agarkar as chairman, with Ramesh Powar joining the men's selection committee.", url: "articles/pragyan-ojha-bcci-chief-selector-ramesh-powar-2026.html", keywords: "Pragyan Ojha BCCI chief selector Ajit Agarkar Ramesh Powar selection committee India 2026" },
 { title: "India Women vs Zimbabwe Women 3rd T20I Preview", type: "News", category: "T20I", description: "India Women target a 3-0 series sweep in the Raipur finale after taking an unassailable 2-0 lead.", url: "articles/india-women-vs-zimbabwe-women-third-t20i-2026-preview.html", keywords: "India Women Zimbabwe Women 3rd T20I preview 2026 Raipur probable XI Smriti Mandhana Shafali Verma" },
 { title: "India Women Beat Zimbabwe by 9 Wickets in 2nd T20I", type: "News", category: "T20I", description: "Shafali Verma hit 55 and Niki Prasad took 2/7 as India sealed the series 2-0 in Raipur.", url: "articles/india-women-vs-zimbabwe-women-second-t20i-2026-result.html", keywords: "India Women Zimbabwe Women 2nd T20I result 2026 Shafali Verma 55 Smriti Mandhana 47 Niki Prasad 2/7 series 2-0" },
 { title: "Rain Abandons India-West Indies 5th T20I; Series Drawn 2-2", type: "News", category: "T20I", description: "India made 118/5 in 7.4 overs before rain ended the Bengaluru decider without a result.", url: "articles/india-vs-west-indies-fifth-t20i-2026-no-result.html", keywords: "India West Indies 5th T20I 2026 no result rain Bengaluru series 2-2 Shai Hope 539" },
