@@ -2,6 +2,8 @@ const searchData = [
 
 
 
+
+{ title: "India vs New Zealand 1st T20I 2026 Preview", type: "News", category: "T20I", description: "Match time, squads, probable XIs and key battles for the Christchurch series opener.", url: "articles/india-vs-new-zealand-first-t20i-2026-preview.html", keywords: "India New Zealand 1st T20I 2026 preview probable XI Christchurch Hagley Oval Vaibhav Sooryavanshi Bhuvneshwar Kumar" },
 { title: "Harmanpreet Kaur Hits 91* as India Women Sweep Zimbabwe 3-0", type: "News", category: "T20I", description: "India Women beat Zimbabwe Women by 92 runs after scoring 216/7 in the third T20I in Raipur.", url: "articles/india-women-vs-zimbabwe-women-third-t20i-2026-result.html", keywords: "India Women Zimbabwe Women 3rd T20I 2026 result Harmanpreet Kaur 91 Shafali Verma 69 series 3-0 Raipur" },
 { title: "Pragyan Ojha Named BCCI Chief Selector", type: "News", category: "India", description: "Pragyan Ojha succeeds Ajit Agarkar as chairman, with Ramesh Powar joining the men's selection committee.", url: "articles/pragyan-ojha-bcci-chief-selector-ramesh-powar-2026.html", keywords: "Pragyan Ojha BCCI chief selector Ajit Agarkar Ramesh Powar selection committee India 2026" },
 { title: "India Women vs Zimbabwe Women 3rd T20I Preview", type: "News", category: "T20I", description: "India Women target a 3-0 series sweep in the Raipur finale after taking an unassailable 2-0 lead.", url: "articles/india-women-vs-zimbabwe-women-third-t20i-2026-preview.html", keywords: "India Women Zimbabwe Women 3rd T20I preview 2026 Raipur probable XI Smriti Mandhana Shafali Verma" },
