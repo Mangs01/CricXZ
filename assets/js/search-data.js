@@ -1,4 +1,5 @@
 const searchData = [
+{ title: "Mitchell Santner Profile, Career Stats & Records", type: "Player", category: "New Zealand", description: "New Zealand white-ball captain Mitchell Santner profile with verified Test, ODI and T20I statistics and records.", url: "pages/mitchell-santner.html", keywords: "Mitchell Santner profile career stats records New Zealand captain Test ODI T20I wickets" },
 { title: "Vaibhav Sooryavanshi Profile, Career Stats & Records", type: "Player", category: "India", description: "Vaibhav Sooryavanshi profile with verified T20I, IPL 2026 and Asian Games records plus his New Zealand tour challenge.", url: "pages/vaibhav-sooryavanshi.html", keywords: "Vaibhav Sooryavanshi profile stats records age India New Zealand T20I IPL 2026 Asian Games" },
 
 
