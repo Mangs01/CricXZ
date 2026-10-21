@@ -1,4 +1,5 @@
 const searchData = [
+{ title: "Vaibhav Sooryavanshi Profile, Career Stats & Records", type: "Player", category: "India", description: "Vaibhav Sooryavanshi profile with verified T20I, IPL 2026 and Asian Games records plus his New Zealand tour challenge.", url: "pages/vaibhav-sooryavanshi.html", keywords: "Vaibhav Sooryavanshi profile stats records age India New Zealand T20I IPL 2026 Asian Games" },
 
 
 
