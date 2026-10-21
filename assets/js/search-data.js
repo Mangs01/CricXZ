@@ -1,5 +1,6 @@
 const searchData = [
-{ title: "Mitchell Santner Profile, Career Stats & Records", type: "Player", category: "New Zealand", description: "New Zealand white-ball captain Mitchell Santner profile with verified Test, ODI and T20I statistics and records.", url: "pages/mitchell-santner.html", keywords: "Mitchell Santner profile career stats records New Zealand captain Test ODI T20I wickets" },
+
+{ title: "Mohammed Shami Not Giving Up on India Comeback", type: "News", category: "India", description: "Mohammed Shami remains determined to return after missing India's New Zealand tour squads.", url: "articles/mohammed-shami-india-comeback-new-zealand-tour-snub-2026.html", keywords: "Mohammed Shami India comeback New Zealand tour snub fitness latest news 2026" },{ title: "Mitchell Santner Profile, Career Stats & Records", type: "Player", category: "New Zealand", description: "New Zealand white-ball captain Mitchell Santner profile with verified Test, ODI and T20I statistics and records.", url: "pages/mitchell-santner.html", keywords: "Mitchell Santner profile career stats records New Zealand captain Test ODI T20I wickets" },
 { title: "Vaibhav Sooryavanshi Profile, Career Stats & Records", type: "Player", category: "India", description: "Vaibhav Sooryavanshi profile with verified T20I, IPL 2026 and Asian Games records plus his New Zealand tour challenge.", url: "pages/vaibhav-sooryavanshi.html", keywords: "Vaibhav Sooryavanshi profile stats records age India New Zealand T20I IPL 2026 Asian Games" },
 
 
