@@ -158,8 +158,10 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // API ke purane time ko ignore karke hamesha current time show karega
-        const displayDate = new Date();
+        const cachedDate = cachedAt ? new Date(cachedAt) : null;
+        const displayDate = cachedDate && !Number.isNaN(cachedDate.getTime())
+            ? cachedDate
+            : new Date();
 
         const time = new Intl.DateTimeFormat("en-IN", {
             hour: "numeric",
@@ -167,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
             second: "2-digit"
         }).format(displayDate);
 
-        updatedElement.textContent = `Scores Updated: ${time}`;
+        updatedElement.textContent = `Score data updated: ${time}`;
     }
 
 
@@ -347,6 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
 
     function renderMatches(matches) {
+        setBusy(false);
         if (!Array.isArray(matches) || matches.length === 0) {
             matchesContainer.innerHTML = `
                 <div class="score-state-message">No cricket matches are available right now.</div>
@@ -375,15 +378,24 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
 
     function showLoading() {
+        setBusy(true);
         matchesContainer.innerHTML = `
             <div class="score-state-message">Loading cricket scores...</div>
         `;
     }
 
     function showError() {
+        setBusy(false);
+        if (updatedElement) {
+            updatedElement.textContent = "Score data temporarily unavailable";
+        }
         matchesContainer.innerHTML = `
             <div class="score-state-message">Live scores are temporarily unavailable. Please try again shortly.</div>
         `;
+    }
+
+    function setBusy(isBusy) {
+        matchesContainer.setAttribute("aria-busy", isBusy ? "true" : "false");
     }
 
 

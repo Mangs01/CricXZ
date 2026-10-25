@@ -55,6 +55,140 @@
     line-height: 1.7;
 }
 
+.live-scores-page .live-hero .live-hero-note {
+    margin-top: 14px;
+}
+
+.live-scores-page .live-hero a,
+.live-scores-page .score-methodology a {
+    color: #007f86;
+    font-weight: 700;
+}
+
+.live-scores-page .score-state-message,
+.live-scores-page .no-script-message {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    line-height: 1.7;
+    background: #ffffff;
+    border: 1px solid #dceaea;
+    border-radius: 14px;
+}
+
+.live-scores-page .score-guide,
+.live-scores-page .verified-coverage,
+.live-scores-page .score-methodology {
+    padding: 64px 20px;
+}
+
+.live-scores-page .score-guide,
+.live-scores-page .score-methodology {
+    background: #ffffff;
+}
+
+.live-scores-page .verified-coverage {
+    background: #f5f7f9;
+}
+
+.live-scores-page .score-guide .container,
+.live-scores-page .verified-coverage .container,
+.live-scores-page .score-methodology .container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.live-scores-page .score-guide h2,
+.live-scores-page .verified-coverage h2,
+.live-scores-page .score-methodology h2 {
+    margin: 0 0 14px;
+    text-align: center;
+    color: #007f86;
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.live-scores-page .section-intro {
+    max-width: 780px;
+    margin: 0 auto 30px;
+    text-align: center;
+    color: #526060;
+    line-height: 1.7;
+}
+
+.live-scores-page .score-guide-grid,
+.live-scores-page .coverage-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.live-scores-page .score-guide-grid article,
+.live-scores-page .coverage-grid a {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dceaea;
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0, 58, 58, 0.06);
+}
+
+.live-scores-page .score-guide-grid h3,
+.live-scores-page .coverage-grid h3 {
+    margin: 0 0 12px;
+    color: #006d6f;
+    font-size: 20px;
+}
+
+.live-scores-page .score-guide-grid p,
+.live-scores-page .coverage-grid p,
+.live-scores-page .score-methodology p {
+    color: #3f4d4d;
+    line-height: 1.75;
+}
+
+.live-scores-page .coverage-grid a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.live-scores-page .coverage-grid span {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007f86;
+    font-weight: 700;
+}
+
+.live-scores-page .score-methodology .container {
+    max-width: 850px;
+}
+
+@media (max-width: 760px) {
+    .live-scores-page .live-hero {
+        padding: 65px 18px 40px;
+    }
+
+    .live-scores-page .live-hero h1 {
+        font-size: 34px;
+    }
+
+    .live-scores-page .score-guide-grid,
+    .live-scores-page .coverage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .live-scores-page .score-update-bar .container {
+        align-items: stretch;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .live-scores-page .refresh-scores-button {
+        width: 100%;
+    }
+}
+
 
 /* =========================================================
    SCORE FILTER
@@ -650,4 +784,17 @@
         padding: 21px 14px;
     }
 
+}
+
+/* CRICXZ MOBILE FILTER GRID */
+@media (max-width: 480px) {
+    .live-scores-page .score-filter .container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 320px;
+    }
+
+    .live-scores-page .score-tab {
+        width: 100%;
+    }
 }

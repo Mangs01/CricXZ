@@ -9,9 +9,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4846563918248244" crossorigin="anonymous"></script>
     <title>Live Cricket Scores &amp; Recent Results | CricXZ</title>
-    <meta name="description" content="Follow live cricket scores, recent results and upcoming fixtures in the CricXZ Score Center.">
-    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="Follow live cricket scores, recent results and upcoming fixtures with score-status explanations, verified CricXZ match reports and transparent data-source notes.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
     <link rel="canonical" href="https://cricxz.com/pages/live-scores.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Live Cricket Scores &amp; Recent Results | CricXZ">
+    <meta property="og:description" content="Track current cricket matches and use CricXZ's verified reports for completed-match context.">
+    <meta property="og:url" content="https://cricxz.com/pages/live-scores.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"CricXZ Live Cricket Score Center","url":"https://cricxz.com/pages/live-scores.html","description":"Live cricket scores, recent results, upcoming fixtures and links to independently checked CricXZ match reports.","dateModified":"2026-10-24","isPartOf":{"@type":"WebSite","name":"CricXZ","url":"https://cricxz.com/"},"publisher":{"@type":"Organization","name":"CricXZ","url":"https://cricxz.com/"}}</script>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/live-score.css">
 </head>
@@ -27,7 +32,7 @@
     <ul class="menu" id="mainMenu">
         <li><a href="../index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
-        <li><a href="live-scores.html">Live Scores</a></li>
+        <li><a href="live-scores.html" aria-current="page">Live Scores</a></li>
         <li><a href="players.html">Players</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -35,11 +40,28 @@
 </nav>
 
 <main>
-    <section class="featured-match" style="margin-top: 30px;">
+    <section class="live-hero">
         <div class="container">
-            <h1 style="text-align:center;color:#0b1c2c;">CricXZ Score Center</h1>
-            <p style="max-width:760px;margin:12px auto;text-align:center;line-height:1.7;">Follow current matches, recent results and upcoming fixtures. Score information is supplied through CricXZ's configured cricket-data service and may be delayed during provider maintenance.</p>
-            <p style="max-width:760px;margin:12px auto 24px;text-align:center;line-height:1.7;">For completed matches, visit our <a href="news.html">verified match reports</a>, where key performances and results are checked against cited sources.</p>
+            <span class="live-label">CRICXZ SCORE CENTER</span>
+            <h1>Live Cricket Scores &amp; Match Updates</h1>
+            <p>Follow current matches, recent results and upcoming fixtures. Scores are supplied through CricXZ's configured cricket-data service and can be delayed during provider maintenance.</p>
+            <p class="live-hero-note">For completed matches, use our <a href="news.html">verified match reports</a>, where scores, awards and key performances are checked against cited sources.</p>
+        </div>
+    </section>
+
+    <section class="score-filter" aria-label="Filter matches by status">
+        <div class="container">
+            <button class="score-tab active" type="button" data-filter="all">All Matches</button>
+            <button class="score-tab" type="button" data-filter="live">Live</button>
+            <button class="score-tab" type="button" data-filter="upcoming">Upcoming</button>
+            <button class="score-tab" type="button" data-filter="result">Results</button>
+        </div>
+    </section>
+
+    <section class="score-update-bar" aria-label="Score refresh controls">
+        <div class="container">
+            <p class="scores-updated-at" id="scoresUpdatedAt">Checking score data…</p>
+            <button class="refresh-scores-button" id="refreshScores" type="button">Refresh Scores</button>
         </div>
     </section>
 
@@ -51,15 +73,48 @@
     </section>
 
     <noscript>
-        <p class="no-script-message">JavaScript is required to display the CricXZ Score Center.</p>
+        <p class="no-script-message">JavaScript is required for live score cards. CricXZ match reports and the score guide below remain available without JavaScript.</p>
     </noscript>
+
+    <section class="score-guide" aria-labelledby="score-guide-heading">
+        <div class="container">
+            <h2 id="score-guide-heading">How to Read the CricXZ Score Center</h2>
+            <p class="section-intro">The score center groups matches by their current status. This helps readers separate in-progress score information from scheduled fixtures and completed results.</p>
+            <div class="score-guide-grid">
+                <article><h3>Live matches</h3><p>A live label means play has started. Runs, wickets and overs may update after a short provider or network delay.</p></article>
+                <article><h3>Upcoming fixtures</h3><p>Upcoming cards identify scheduled matches that have not started. Final playing XIs remain subject to the toss.</p></article>
+                <article><h3>Latest results</h3><p>Result cards reproduce the provider's match status. CricXZ reports separately verify important results and performances against cited coverage.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="verified-coverage" aria-labelledby="verified-coverage-heading">
+        <div class="container">
+            <h2 id="verified-coverage-heading">Recent Verified Match Coverage</h2>
+            <p class="section-intro">Go beyond the numbers with CricXZ match context, selection updates and key-performance analysis.</p>
+            <div class="coverage-grid">
+                <a href="../articles/india-vs-new-zealand-second-t20i-2026-preview.html"><h3>India vs New Zealand 2nd T20I Preview</h3><p>Ishan Kishan's injury and India's top-order options in Christchurch.</p><span>Read Preview &rarr;</span></a>
+                <a href="../articles/india-vs-new-zealand-first-t20i-2026-result.html"><h3>India Win the 1st T20I</h3><p>Sanju Samson's 67 helped India complete a high-scoring chase.</p><span>Read Match Report &rarr;</span></a>
+                <a href="../articles/india-women-vs-zimbabwe-women-third-t20i-2026-result.html"><h3>India Women Complete 3-0 Sweep</h3><p>Harmanpreet Kaur's unbeaten 91 powered the series finale.</p><span>Read Match Report &rarr;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="score-methodology" aria-labelledby="methodology-heading">
+        <div class="container">
+            <h2 id="methodology-heading">Score Sources and Editorial Checks</h2>
+            <p>Live and scheduled match data is delivered through CricXZ's configured cricket-data provider. Provider data can change after official scoring corrections and may be temporarily unavailable during maintenance.</p>
+            <p>CricXZ does not treat an automated score card as a complete match report. Major results, Player of the Match awards and notable records are checked against cited match centres or reputable reports before publication in the News section.</p>
+            <p><strong>Last editorial review:</strong> 24 October 2026. To report a score-display problem, visit the <a href="contact.html">CricXZ contact page</a>.</p>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
     <div class="footer-container">
         <div>
             <h2 class="footer-logo">CRICXZ</h2>
-            <p>CricXZ brings you the latest cricket news, live scores, player profiles, rankings and match updates from around the world.</p>
+            <p>CricXZ brings you independently curated cricket news, player profiles and match coverage with cited sources and clear editorial labels.</p>
         </div>
         <div>
             <h3>Quick Links</h3>
