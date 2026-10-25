@@ -1,4 +1,5 @@
 const searchData = [
+{ title: "India Beat New Zealand by 4 Wickets in 2nd T20I", type: "News", category: "T20I", description: "Tilak Varma hit an unbeaten 51 as India chased 181 and took a 2-0 series lead in Christchurch.", url: "articles/india-vs-new-zealand-second-t20i-2026-result.html", keywords: "India New Zealand 2nd T20I 2026 result Tilak Varma 51 Nitish Kumar Reddy Mitchell Santner 4/21 Christchurch" },
 { title: "India vs New Zealand 2nd T20I Preview", type: "News", category: "T20I", description: "Ishan Kishan is ruled out as India consider Vaibhav Sooryavanshi for the second T20I in Christchurch.", url: "articles/india-vs-new-zealand-second-t20i-2026-preview.html", keywords: "India New Zealand 2nd T20I preview Ishan Kishan injury Vaibhav Sooryavanshi Christchurch" },
 
 { title: "India Beat New Zealand by 4 Wickets in 1st T20I", type: "News", category: "T20I", description: "Player of the Match Sanju Samson scored 67 as India chased 226 in Christchurch.", url: "articles/india-vs-new-zealand-first-t20i-2026-result.html", keywords: "India New Zealand 1st T20I 2026 result 230/6 225/4 Sanju Samson player of the match Naman Dhir Glenn Phillips" },
