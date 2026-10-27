@@ -1,4 +1,5 @@
 const searchData = [
+  { title: "Abhishek 113 Powers India to Series Win in 3rd T20I", type: "News", category: "T20I", description: "India chased 199 to beat New Zealand by six wickets and take a 3-0 series lead.", url: "articles/india-vs-new-zealand-third-t20i-2026-result.html", keywords: "India New Zealand third 3rd T20I 2026 Abhishek Sharma 113 Wellington series result" },
 { title: "India Beat New Zealand by 4 Wickets in 2nd T20I", type: "News", category: "T20I", description: "Tilak Varma hit an unbeaten 51 as India chased 181 and took a 2-0 series lead in Christchurch.", url: "articles/india-vs-new-zealand-second-t20i-2026-result.html", keywords: "India New Zealand 2nd T20I 2026 result Tilak Varma 51 Nitish Kumar Reddy Mitchell Santner 4/21 Christchurch" },
 { title: "India vs New Zealand 2nd T20I Preview", type: "News", category: "T20I", description: "Ishan Kishan is ruled out as India consider Vaibhav Sooryavanshi for the second T20I in Christchurch.", url: "articles/india-vs-new-zealand-second-t20i-2026-preview.html", keywords: "India New Zealand 2nd T20I preview Ishan Kishan injury Vaibhav Sooryavanshi Christchurch" },
 
