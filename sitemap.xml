@@ -83,12 +83,6 @@
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>https://cricxz.com/pages/nawaz.html</loc>
-  <lastmod>2026-10-03</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.8</priority>
-</url>
-<url>
   <loc>https://cricxz.com/pages/abhishek.html</loc>
   <lastmod>2026-10-12</lastmod>
   <changefreq>weekly</changefreq>
@@ -591,5 +585,9 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <url><loc>https://cricxz.com/articles/india-vs-sri-lanka-asian-games-2026-semifinal.html</loc></url>
+  <url><loc>https://cricxz.com/articles/pakistan-vs-bangladesh-asian-games-2026-semifinal.html</loc></url>
+  <url><loc>https://cricxz.com/articles/ind-vs-wi-3rd-odi-2026-report.html</loc></url>
 </urlset>
 
