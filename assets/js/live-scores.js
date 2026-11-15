@@ -6,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const matchesContainer = document.querySelector(".live-matches .container");
     const refreshButton = document.querySelector("#refreshScores");
     const updatedElement = document.querySelector("#scoresUpdatedAt");
+    const checkedElement = document.querySelector("#scoresCheckedAt");
+    let isLoading = false;
 
     if (!matchesContainer) {
         return;
@@ -71,6 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // =========================================================
 
     async function loadMatches() {
+        if (isLoading) { return; }
+        isLoading = true;
 
         if (refreshButton) {
             refreshButton.disabled = true;
@@ -114,11 +118,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 const rawResult = await response.json();
-                const result = typeof rawResult.body === "string"
+                const result = rawResult && typeof rawResult.body === "string"
                     ? JSON.parse(rawResult.body)
                     : rawResult;
-
-                matches = Array.isArray(result.data) ? result.data : [];
+                if (!result || typeof result !== "object" || Array.isArray(result)
+                    || (result.status !== undefined && result.status !== "success")
+                    || !Array.isArray(result.data)) {
+                    throw new Error("Invalid live-score response.");
+                }
+                if (!result.data.every(function (match) {
+                    return match && typeof match === "object" && !Array.isArray(match)
+                        && Array.isArray(match.teams) && match.teams.length >= 2
+                        && match.teams.slice(0, 2).every(function (team) {
+                            return typeof team === "string" && team.trim().length > 0;
+                        });
+                })) {
+                    throw new Error("Invalid match data.");
+                }
+                matches = result.data;
                 cachedAt = result.meta && result.meta.cachedAt ? result.meta.cachedAt : null;
             }
 
@@ -140,6 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.error("CRICXZ Live Score Error:", error);
             showError();
         } finally {
+            updateCheckedTime();
+            isLoading = false;
             if (refreshButton) {
                 refreshButton.disabled = false;
                 refreshButton.textContent = "Refresh Scores";
@@ -149,29 +168,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    // =========================================================
-    // LAST UPDATED TIME (Forced to Current Live Time)
-    // =========================================================
-
-    function updateTimestamp(cachedAt) {
-        if (!updatedElement) {
-            return;
-        }
-
-        const cachedDate = cachedAt ? new Date(cachedAt) : null;
-        const displayDate = cachedDate && !Number.isNaN(cachedDate.getTime())
-            ? cachedDate
-            : new Date();
-
-        const time = new Intl.DateTimeFormat("en-IN", {
-            hour: "numeric",
-            minute: "2-digit",
-            second: "2-digit"
-        }).format(displayDate);
-
-        updatedElement.textContent = `Score data updated: ${time}`;
+    // Cache creation and browser checks are different from scoring events.
+    function formatTimestamp(date) {
+        return new Intl.DateTimeFormat("en-IN", {
+            day: "2-digit", month: "short", year: "numeric",
+            hour: "numeric", minute: "2-digit", second: "2-digit",
+            timeZoneName: "short"
+        }).format(date);
     }
 
+    function updateTimestamp(cachedAt) {
+        if (!updatedElement) { return; }
+        const date = typeof cachedAt === "string" && /^\d{4}-\d{2}-\d{2}T/.test(cachedAt)
+            ? new Date(cachedAt) : null;
+        if (date && Number.isFinite(date.getTime()) && date.getTime() <= Date.now() + 60000) {
+            updatedElement.textContent = `Data cached: ${formatTimestamp(date)}`;
+        } else {
+            updatedElement.textContent = "Data cache time unavailable";
+        }
+    }
+
+    function updateCheckedTime() {
+        if (checkedElement) {
+            checkedElement.textContent = `Last checked: ${formatTimestamp(new Date())}`;
+        }
+    }
 
     // =========================================================
     // CLASSIFY MATCH
@@ -390,7 +411,7 @@ document.addEventListener("DOMContentLoaded", function () {
             updatedElement.textContent = "Score data temporarily unavailable";
         }
         matchesContainer.innerHTML = `
-            <div class="score-state-message">Live scores are temporarily unavailable. Please try again shortly.</div>
+            <div class="score-state-message">Score data could not be loaded or verified. Please retry, or read our match reports below.</div>
         `;
     }
 
