@@ -222,6 +222,24 @@ document.addEventListener("DOMContentLoaded", function () {
         return innings.length ? innings[innings.length - 1] : null;
     }
 
+    function hasUnassignedInnings(match) {
+        if (!Array.isArray(match.score)) { return false; }
+        const teams = Array.isArray(match.teams) ? match.teams.slice(0, 2) : [];
+        return match.score.some(function (score) {
+            if (!score || typeof score !== "object") { return true; }
+            const label = normalizeText(score.inning).replace(/\s+innings?\s*\d*\s*$/i, "").trim();
+            return teams.filter(function (team) {
+                return normalizeText(team) === label;
+            }).length !== 1;
+        });
+    }
+
+    function getMissingInningsLabel(match) {
+        if (hasUnassignedInnings(match)) { return "Score unavailable"; }
+        if (getMatchStatus(match) === "upcoming") { return "Not started"; }
+        return "No innings reported";
+    }
+
     function prepareMatches(matches) {
         const seen = new Set();
         return matches.filter(function (match) {
@@ -328,7 +346,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // CREATE TEAM HTML
     // =========================================================
 
-    function createTeamHtml(teamName, score, hasScores) {
+    function createTeamHtml(teamName, score, missingLabel) {
         const safeTeamName = escapeHtml(teamName);
         const flag = getTeamFlag(teamName);
         const overs = formatOvers(score);
@@ -336,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return `
             <div class="team">
                 <div class="team-name">${flag} ${safeTeamName}</div>
-                <div class="team-score">${score ? escapeHtml(formatScore(score)) : (hasScores ? "Score unavailable" : "—")}</div>
+                <div class="team-score">${score ? escapeHtml(formatScore(score)) : escapeHtml(missingLabel)}</div>
                 ${overs ? `<div class="overs">${escapeHtml(overs)}</div>` : ""}
             </div>
         `;
@@ -364,12 +382,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <p class="match-message"><strong>${escapeHtml(match.name || teams.join(" vs "))}</strong><br>${escapeHtml(getMatchDateLabel(match))}</p>
                 <div class="teams">
-                    ${createTeamHtml(teamOne, teamOneScore, Array.isArray(match.score) && match.score.length > 0)}
+                    ${createTeamHtml(teamOne, teamOneScore, getMissingInningsLabel(match))}
                     <div class="vs">VS</div>
-                    ${createTeamHtml(teamTwo, teamTwoScore, Array.isArray(match.score) && match.score.length > 0)}
+                    ${createTeamHtml(teamTwo, teamTwoScore, getMissingInningsLabel(match))}
                 </div>
                 <div class="match-message">${escapeHtml(matchMessage)}</div>
-                ${Array.isArray(match.score) && match.score.length > 0 && (!teamOneScore || !teamTwoScore) ? `<p class="match-message">Some innings could not be assigned reliably to a team. Unavailable scores are not assumed to be zero.</p>` : ""}
+                ${hasUnassignedInnings(match) && (!teamOneScore || !teamTwoScore) ? `<p class="match-message">Some innings could not be assigned reliably to a team. Unavailable scores are not assumed to be zero.</p>` : ""}
             </div>
         `;
     }
