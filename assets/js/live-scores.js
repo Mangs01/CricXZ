@@ -139,18 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 cachedAt = result.meta && result.meta.cachedAt ? result.meta.cachedAt : null;
             }
 
-            // Remove contradictory completed results returned by the provider.
-            matches = matches.filter(function (match) {
-                const teams = Array.isArray(match.teams) ? match.teams.slice(0, 2) : [];
-                if (teams.length < 2 || match.matchEnded !== true || !/\bwon\b/i.test(String(match.status || ""))) {
-                    return true;
-                }
-                const firstScore = getTeamScore(match, teams[0]);
-                const secondScore = getTeamScore(match, teams[1]);
-                if (!firstScore || !secondScore) { return true; }
-                return !(Number(firstScore.r) === Number(secondScore.r) && Number(firstScore.w) === Number(secondScore.w));
-            });
-            renderMatches(matches);
+            renderMatches(prepareMatches(matches));
             updateTimestamp(cachedAt);
 
         } catch (error) {
@@ -212,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
     function formatMatchType(matchType) {
         if (!matchType) { return "CRICKET"; }
         const type = String(matchType).toLowerCase();
-        const formats = { t20: "T20", t20i: "T20I", odi: "ODI", test: "TEST" };
+        const formats = { t10: "T10", t20: "T20", t20i: "T20I", odi: "ODI", test: "TEST" };
         return formats[type] || String(matchType).toUpperCase();
     }
 
@@ -225,13 +214,53 @@ document.addEventListener("DOMContentLoaded", function () {
         if (!Array.isArray(match.score)) { return null; }
         const normalizedTeam = normalizeText(teamName);
         const innings = match.score.filter(function (score) {
-            const inningName = normalizeText(score.inning);
-            return inningName.includes(normalizedTeam);
+            if (!score || typeof score !== "object") { return false; }
+            // Require a single exact team label; combined labels are ambiguous.
+            const label = normalizeText(score.inning).replace(/\s+innings?\s*\d*\s*$/i, "").trim();
+            return label === normalizedTeam;
         });
-        if (innings.length === 0) { return null; }
-        return innings[innings.length - 1];
+        return innings.length ? innings[innings.length - 1] : null;
     }
 
+    function prepareMatches(matches) {
+        const seen = new Set();
+        return matches.filter(function (match) {
+            const id = typeof match.id === "string" ? match.id.trim() : "";
+            if (!id) { return true; }
+            if (seen.has(id)) { return false; }
+            seen.add(id);
+            return true;
+        }).sort(function (a, b) {
+            const first = getMatchTime(a);
+            const second = getMatchTime(b);
+            if (first === null) { return second === null ? 0 : 1; }
+            if (second === null) { return -1; }
+            return getMatchStatus(a) === "upcoming" && getMatchStatus(b) === "upcoming"
+                ? first - second : second - first;
+        });
+    }
+
+    function getMatchTime(match) {
+        const value = match.dateTimeGMT || match.date;
+        if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}(?:T|$)/.test(value)) { return null; }
+        const timestamp = Date.parse(/T/.test(value) && !/(Z|[+-]\d{2}:?\d{2})$/i.test(value)
+            ? value + "Z" : value);
+        return Number.isFinite(timestamp) ? timestamp : null;
+    }
+
+    function getMatchDateLabel(match) {
+        const timestamp = getMatchTime(match);
+        if (timestamp === null) { return "Match date unavailable"; }
+        const options = { day: "2-digit", month: "short", year: "numeric" };
+        if (match.dateTimeGMT) {
+            options.hour = "numeric";
+            options.minute = "2-digit";
+            options.timeZoneName = "short";
+        } else {
+            options.timeZone = "UTC";
+        }
+        return new Intl.DateTimeFormat("en-IN", options).format(new Date(timestamp));
+    }
 
     // =========================================================
     // NORMALIZE TEXT
@@ -299,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // CREATE TEAM HTML
     // =========================================================
 
-    function createTeamHtml(teamName, score) {
+    function createTeamHtml(teamName, score, hasScores) {
         const safeTeamName = escapeHtml(teamName);
         const flag = getTeamFlag(teamName);
         const overs = formatOvers(score);
@@ -307,7 +336,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return `
             <div class="team">
                 <div class="team-name">${flag} ${safeTeamName}</div>
-                <div class="team-score">${formatScore(score)}</div>
+                <div class="team-score">${score ? escapeHtml(formatScore(score)) : (hasScores ? "Score unavailable" : "—")}</div>
                 ${overs ? `<div class="overs">${escapeHtml(overs)}</div>` : ""}
             </div>
         `;
@@ -333,12 +362,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     <span class="match-status ${status}">${getStatusLabel(status)}</span>
                     <span class="match-format">${escapeHtml(formatMatchType(match.matchType))}</span>
                 </div>
+                <p class="match-message"><strong>${escapeHtml(match.name || teams.join(" vs "))}</strong><br>${escapeHtml(getMatchDateLabel(match))}</p>
                 <div class="teams">
-                    ${createTeamHtml(teamOne, teamOneScore)}
+                    ${createTeamHtml(teamOne, teamOneScore, Array.isArray(match.score) && match.score.length > 0)}
                     <div class="vs">VS</div>
-                    ${createTeamHtml(teamTwo, teamTwoScore)}
+                    ${createTeamHtml(teamTwo, teamTwoScore, Array.isArray(match.score) && match.score.length > 0)}
                 </div>
                 <div class="match-message">${escapeHtml(matchMessage)}</div>
+                ${Array.isArray(match.score) && match.score.length > 0 && (!teamOneScore || !teamTwoScore) ? `<p class="match-message">Some innings could not be assigned reliably to a team. Unavailable scores are not assumed to be zero.</p>` : ""}
             </div>
         `;
     }
@@ -388,7 +419,8 @@ document.addEventListener("DOMContentLoaded", function () {
         matchesContainer.innerHTML =
             createMatchGroup("live", groupedMatches.live) +
             createMatchGroup("upcoming", groupedMatches.upcoming) +
-            createMatchGroup("result", groupedMatches.result);
+            createMatchGroup("result", groupedMatches.result) +
+            `<div class="score-state-message" id="scoreFilterEmpty" role="status" hidden></div>`;
 
         applyCurrentFilter();
     }
@@ -432,10 +464,18 @@ document.addEventListener("DOMContentLoaded", function () {
     function applyCurrentFilter() {
         const filter = getActiveFilter();
         const matchGroups = document.querySelectorAll(".match-group");
+        let visibleCount = 0;
         matchGroups.forEach(function (group) {
             const status = group.dataset.status;
             group.hidden = filter !== "all" && status !== filter;
+            if (!group.hidden) { visibleCount += 1; }
         });
+        const empty = document.querySelector("#scoreFilterEmpty");
+        if (empty) {
+            const labels = { live: "live matches", upcoming: "upcoming fixtures", result: "completed results", all: "matches" };
+            empty.textContent = `No ${labels[filter] || "matches"} available in the current feed.`;
+            empty.hidden = visibleCount > 0;
+        }
     }
 
     filterButtons.forEach(function (button) {
